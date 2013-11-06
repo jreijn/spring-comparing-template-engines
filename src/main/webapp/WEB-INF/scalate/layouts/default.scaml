@@ -1,0 +1,15 @@
+-@ var body:String
+-@ var title : String = "JFall 2013 Presentations - Scalate"
+!!! 5
+%head
+    %title= title
+    %link(rel="stylesheet" href="/webjars/bootstrap/3.0.1/css/bootstrap.min.css")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(charset="UTF-8")
+%body
+    %div.container
+        %div.page-header
+            %h1= title
+            -unescape(body)
+    %script(type="text/javascript" src="/webjars/jquery/2.0.2/jquery.min.js")
+    %script(type="text/javascript" src="/webjars/bootstrap/3.0.1/js/bootstrap.min.js")

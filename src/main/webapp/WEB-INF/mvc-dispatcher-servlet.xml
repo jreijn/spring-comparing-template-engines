@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+  <context:component-scan base-package="com.jeroenreijn.examples.controller"/>
+
+  <mvc:resources mapping="/favicon.ico" location="/favicon.ico" order="0"/>
+  <mvc:resources mapping="/robots.txt" location="/robots.txt" order="0"/>
+  <mvc:resources mapping="/webjars/**" location="/webjars/" order="0"/>
+
+  <mvc:annotation-driven/>
+  <mvc:default-servlet-handler/>
+
+  <mvc:interceptors>
+    <ref bean="mustacheMessageInterceptor"/>
+  </mvc:interceptors>
+
+  <!-- JSP -->
+  <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+    <property name="prefix" value="/WEB-INF/jsp/"/>
+    <property name="viewNames" value="*-jsp"/>
+    <property name="suffix" value=".jsp"/>
+    <property name="order" value="6"/>
+  </bean>
+
+  <!-- Jade4j -->
+  <bean id="jade4jTemplateLoader" class="de.neuland.jade4j.spring.template.SpringTemplateLoader">
+    <property name="basePath" value="/WEB-INF/jade/" />
+  </bean>
+
+  <bean id="jadeConfiguration" class="de.neuland.jade4j.JadeConfiguration">
+    <property name="prettyPrint" value="false" />
+    <property name="templateLoader" ref="jade4jTemplateLoader" />
+  </bean>
+
+  <bean id="jadeViewResolver" class="de.neuland.jade4j.spring.view.JadeViewResolver">
+    <property name="prefix" value="/"/>
+    <property name="suffix" value=".jade"/>
+    <property name="viewNames" value="*-jade"/>
+    <property name="configuration" ref="jadeConfiguration" />
+    <!-- rendering nice html formatted error pages for development -->
+    <property name="renderExceptions" value="true" />
+    <property name="order" value="5"/>
+  </bean>
+
+  <!-- Mustache -->
+  <bean id="mustacheViewResolver" class="org.springframework.web.servlet.view.mustache.MustacheViewResolver">
+    <property name="order" value="7"/>
+    <property name="prefix" value="/WEB-INF/mustache/" />
+    <property name="suffix" value=".mustache" />
+    <property name="viewNames" value="*-mustache"/>
+    <property name="templateLoader">
+      <bean class="org.springframework.web.servlet.view.mustache.MustacheTemplateLoader" />
+    </property>
+  </bean>
+
+  <!-- THYMELEAF: Template Resolver for webapp pages   -->
+  <bean id="webTemplateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+    <property name="prefix" value="/WEB-INF/thymeleaf/"/>
+    <property name="suffix" value=".html"/>
+    <property name="templateMode" value="HTML5"/>
+    <property name="characterEncoding" value="UTF-8"/>
+  </bean>
+
+  <!-- THYMELEAF: Template Engine (Spring3-specific version) -->
+  <bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine">
+    <property name="templateResolvers">
+      <set>
+        <ref bean="webTemplateResolver"/>
+      </set>
+    </property>
+    <property name="additionalDialects">
+      <set>
+        <bean class="org.thymeleaf.extras.conditionalcomments.dialect.ConditionalCommentsDialect"/>
+      </set>
+    </property>
+  </bean>
+
+  <!-- THYMELEAF: View Resolver - implementation of Spring's ViewResolver interface -->
+  <bean id="thymeleafViewResolver" class="org.thymeleaf.spring3.view.ThymeleafViewResolver">
+    <property name="viewNames" value="*-thymeleaf"/>
+    <property name="templateEngine" ref="templateEngine"/>
+    <property name="characterEncoding" value="UTF-8"/>
+    <property name="order" value="2"/>
+  </bean>
+
+  <!-- freemarker config -->
+  <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+    <property name="templateLoaderPath" value="/WEB-INF/freemarker/"/>
+    <property name="defaultEncoding" value="UTF-8"/>
+    <property name="freemarkerSettings">
+      <props>
+        <!-- spring taglib -->
+        <prop key="auto_import">spring.ftl as spring</prop>
+      </props>
+    </property>
+  </bean>
+
+  <bean id="freemarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+    <property name="viewNames" value="*-freemarker"/>
+    <property name="prefix" value=""/>
+    <property name="suffix" value=".ftl"/>
+    <property name="order" value="0"/>
+  </bean>
+
+  <!-- velocity -->
+  <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+    <property name="resourceLoaderPath" value="/WEB-INF/velocity/"/>
+    <property name="velocityProperties">
+      <props>
+        <prop key="velocimacro.library">includes.vm</prop>
+      </props>
+    </property>
+  </bean>
+
+  <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+    <property name="viewNames" value="*-velocity"/>
+    <property name="prefix" value=""/>
+    <property name="suffix" value=".vm"/>
+    <property name="order" value="1"/>
+    <property name="toolboxConfigLocation" value="/WEB-INF/velocity/toolbox.xml"/>
+    <property name="exposeSpringMacroHelpers" value="true"/>
+  </bean>
+
+  <!-- Scalate -->
+  <bean id="scalateViewResolver" class="org.fusesource.scalate.spring.view.ScalateViewResolver">
+    <property name="prefix" value="/WEB-INF/scalate/" />
+    <property name="suffix" value=".scaml" />
+    <property name="order" value="7"/>
+  </bean>
+
+  <!-- Rythm -->
+  <bean id="rythmConfigurator" class="com.ctlok.springframework.web.servlet.view.rythm.RythmConfigurator">
+    <property name="mode" value="dev" />
+    <property name="rootDirectory" value="/WEB-INF/rythm/" />
+  </bean>
+
+  <bean id="rythmViewResolver" class="com.ctlok.springframework.web.servlet.view.rythm.RythmViewResolver">
+    <constructor-arg>
+      <ref bean="rythmConfigurator" />
+    </constructor-arg>
+    <property name="prefix" value="/WEB-INF/rythm/" />
+    <property name="suffix" value=".html" />
+    <property name="order" value="8"/>
+  </bean>
+
+  <!-- Httl -->
+  <bean id="httlViewResolver" class="httl.web.springmvc.HttlViewResolver">
+    <property name="prefix" value="/WEB-INF/httl/" />
+    <property name="suffix" value=".httl" />
+    <property name="order" value="9"/>
+    <property name="contentType" value="text/html; charset=UTF-8" />
+
+  </bean>
+
+  <bean id="localeResolver"
+        class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+    <property name="defaultLocale" value="en" />
+  </bean>
+
+  <bean id="mustacheMessageInterceptor" class="org.springframework.web.servlet.i18n.MustacheMessageInterceptor">
+    <property name="messageSource" ref="messageSource" />
+    <property name="localeResolver" ref="localeResolver" />
+    <property name="viewResolver" ref="mustacheViewResolver"/>
+  </bean>
+
+  <!-- Configuring messages.properties file -->
+  <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
+        p:basename="messages"/>
+
+  <util:properties id="messages" location="classpath:messages.properties"/>
+
+</beans>

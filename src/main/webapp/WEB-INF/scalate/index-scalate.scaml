@@ -1,0 +1,7 @@
+-@ val presentations: java.lang.Iterable[com.jeroenreijn.examples.model.Presentation]
+- for(item <- presentations)
+    %div.panel.panel-default
+        %div.panel-heading
+            %h3.panel-title= item.getTitle + " - " + item.getSpeakerName
+        %div.panel-body
+            != item.getSummary

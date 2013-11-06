@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbox>
+  <xhtml>true</xhtml>
+  <tool>
+    <key>escapeTool</key>
+    <scope>request</scope>
+    <class>org.apache.commons.lang3.StringEscapeUtils</class>
+  </tool>
+</toolbox>

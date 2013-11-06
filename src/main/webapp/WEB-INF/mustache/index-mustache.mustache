@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    {{>head}}
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>{{#i18n}}example.title{{/i18n}} - Mustache</h1>
+            </div>
+            {{#presentations}}
+                {{>presentation}}
+            {{/presentations}}
+        </div>
+        {{>scripts}}
+    </body>
+</html>

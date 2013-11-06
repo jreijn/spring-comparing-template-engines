@@ -1,0 +1,10 @@
+extend layout
+
+block content
+    for item in presentations
+        div.panel.panel-default
+            div.panel-heading
+                h3.panel-title= item.title + " - " + item.speakerName
+            div.panel-body!= item.summary
+    else
+        sorry, no presentations!
