@@ -10,6 +10,7 @@ This is a demo project to show the differences among several Java template engin
 * [Scalate](http://scalate.fusesource.org)  - v1.6.1
 * [Jade](https://github.com/neuland/jade4j) - v0.3.17
 * [Rythm](http://rythmengine.org/) - v1.4.0
+* [HTTL] (http://httl.github.io/en/) - v1.0.11
 
 
 ## Build and run
