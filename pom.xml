@@ -25,6 +25,8 @@
     <jade4j-spring.version>0.3.3</jade4j-spring.version>
     <jade4j.version>0.3.17</jade4j.version>
     <scalate-core_2.10.version>1.6.1</scalate-core_2.10.version>
+    <httl-springmvc.version>1.0.11</httl-springmvc.version>
+    <rythm-spring-webmvc.version>1.4.0</rythm-spring-webmvc.version>
   </properties>
 
   <dependencies>
@@ -144,7 +146,7 @@
     <dependency>
       <groupId>com.ctlok</groupId>
       <artifactId>spring-webmvc-rythm</artifactId>
-      <version>1.4.0</version>
+      <version>${rythm-spring-webmvc.version}</version>
     </dependency>
 
     <dependency>
@@ -168,7 +170,7 @@
     <dependency>
       <groupId>com.github.httl</groupId>
       <artifactId>httl-springmvc</artifactId>
-      <version>1.0.11</version>
+      <version>${httl-springmvc.version}</version>
     </dependency>
 
     <!-- Test -->

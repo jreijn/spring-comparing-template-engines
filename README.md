@@ -9,7 +9,8 @@ This is a demo project to show the differences among several Java template engin
 * Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.8
 * [Scalate](http://scalate.fusesource.org)  - v1.6.1
 * [Jade](https://github.com/neuland/jade4j) - v0.3.17
-* [Rythm](http://rythmengine.org/) - 
+* [Rythm](http://rythmengine.org/) - v1.4.0
+
 
 ## Build and run
 You need Java 7 and Maven 3 to build and run this project.
