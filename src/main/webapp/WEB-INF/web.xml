@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0" metadata-complete="true">
 
-  <display-name>Template engine demo project</display-name>
+  <display-name>Spring MVC template engines demo project</display-name>
 
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
