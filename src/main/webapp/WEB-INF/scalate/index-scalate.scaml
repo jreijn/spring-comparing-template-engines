@@ -1,7 +1,17 @@
+-@ var title : String = "JFall 2013 Presentations - Scalate"
 -@ val presentations: java.lang.Iterable[com.jeroenreijn.examples.model.Presentation]
-- for(item <- presentations)
-    %div.panel.panel-default
-        %div.panel-heading
-            %h3.panel-title= item.getTitle + " - " + item.getSpeakerName
-        %div.panel-body
-            != item.getSummary
+!!! 5
+%html
+    - render("head.scaml",Map("title" -> title))
+    %body
+        %div.container
+            %div.page-header
+                %h1= title
+                - for(item <- presentations)
+                    %div.panel.panel-default
+                        %div.panel-heading
+                            %h3.panel-title= item.getTitle + " - " + item.getSpeakerName
+                        %div.panel-body
+                            != item.getSummary
+        - render("scripts.scaml")
+

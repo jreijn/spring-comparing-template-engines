@@ -74,7 +74,7 @@ With 25 concurrent requests and 1000 repetitions this resulted in the following 
 ```
 Thymeleaf				28.47 seconds
 Jade4j					19.55 seconds
-Scalate - Scaml			46.66 seconds
+Scalate - Scaml			20.93 seconds
 Mustache (JMustache)	15.05 seconds
 Freemarker				14.55 seconds
 Velocity				14.56 seconds

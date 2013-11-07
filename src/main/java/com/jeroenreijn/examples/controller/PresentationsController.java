@@ -25,11 +25,6 @@ public class PresentationsController {
     public String showList(@PathVariable(value = "template") final String template,
                            final ModelMap model) {
         model.addAttribute("presentations", presentationsService.findAll());
-        // For Scalate the view name needs to be prefixed in order to be able to use a layout.
-        // Don't know why, but it works this way.
-        if(template.equals("scalate")) {
-            return "layout:index-"+template;
-        }
         return "index-" + template;
     }
 
