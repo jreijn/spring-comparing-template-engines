@@ -68,11 +68,10 @@ For creating my benchmarks I used Siege with the following settings:
 ```
 siege -q -b -r 1000 -c 25 http://localhost:8080/scalate
 ```
-
 With 25 concurrent requests and 1000 repetitions this resulted in the following numbers:
 
 ```
-Thymeleaf				28.47 seconds
+Thymeleaf				25.63 seconds
 Jade4j					19.55 seconds
 Scalate - Scaml			20.93 seconds
 Mustache (JMustache)	15.05 seconds
@@ -82,4 +81,24 @@ JSP						14.35 seconds
 						
 ```
 
-In case you see an improvement to the benchmark or know about ways to improve the results, please file and issue and send a pull request.
+***NOTE***
+
+Before the performance of each template engines was measured, there were at least 2 dry runs with the exact same settings, to make sure that initialization of the engines, warm up of the JVM and additional caches have taken place. There were at least 5 iterations of the same benchmark before calculating the average time it took.
+
+**NOTE For Mac OSX users**
+
+Mac OS X has only 16K ports available that won't be released until socket
+TIME_WAIT is passed. The default timeout for TIME_WAIT is 15 seconds.
+Consider reducing in case of available port bottleneck.
+
+You can check whether this is a problem with netstat:
+
+    # sysctl net.inet.tcp.msl
+    net.inet.tcp.msl: 15000
+
+Now if you want to change this you can do so by doing:
+
+    # sudo sysctl -w net.inet.tcp.msl=1000
+    net.inet.tcp.msl: 15000 -> 1000
+
+In case you see an improvement to the benchmark or know about ways to improve the results, please file an issue and send a pull request.

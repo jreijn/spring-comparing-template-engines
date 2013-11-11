@@ -65,7 +65,7 @@
   </bean>
 
   <!-- THYMELEAF: Template Resolver for webapp pages   -->
-  <bean id="webTemplateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+  <bean id="thymeleafTemplateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
     <property name="prefix" value="/WEB-INF/thymeleaf/"/>
     <property name="suffix" value=".html"/>
     <property name="templateMode" value="HTML5"/>
@@ -74,16 +74,7 @@
 
   <!-- THYMELEAF: Template Engine (Spring3-specific version) -->
   <bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine">
-    <property name="templateResolvers">
-      <set>
-        <ref bean="webTemplateResolver"/>
-      </set>
-    </property>
-    <property name="additionalDialects">
-      <set>
-        <bean class="org.thymeleaf.extras.conditionalcomments.dialect.ConditionalCommentsDialect"/>
-      </set>
-    </property>
+    <property name="templateResolver" ref="thymeleafTemplateResolver"/>
   </bean>
 
   <!-- THYMELEAF: View Resolver - implementation of Spring's ViewResolver interface -->

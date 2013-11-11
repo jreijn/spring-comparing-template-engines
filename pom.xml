@@ -100,12 +100,6 @@
       <artifactId>thymeleaf-spring3</artifactId>
       <version>${thymeleaf-spring3.version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.thymeleaf.extras</groupId>
-      <artifactId>thymeleaf-extras-conditionalcomments</artifactId>
-      <version>${thymeleaf-extras-conditionalcomments.version}</version>
-    </dependency>
-
 
     <dependency>
       <groupId>org.freemarker</groupId>
