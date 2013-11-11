@@ -72,11 +72,11 @@ JSP						8.8278 seconds
 						
 ```
 
-***NOTE***
+###How were the results measured?
 
 Before the performance of each template engines was measured, there were at least 2 dry runs with the exact same settings, to make sure that initialization of the engines, warm up of the JVM and additional caches have taken place. There were at least 5 iterations of the same benchmark before calculating the average time it took.
 
-**NOTE For Mac OSX users**
+###For Mac OSX users
 
 Mac OS X has only 16K ports available that won't be released until socket
 TIME_WAIT is passed. The default timeout for TIME_WAIT is 15 seconds.
