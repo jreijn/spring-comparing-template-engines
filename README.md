@@ -38,21 +38,12 @@ See the demo URLs:
 
 In case you want to benchmark the different template engines I would recommend using Apache HTTP server benchmarking tool or Siege an HTTP/HTTPS stress tester.
 
-    $ ab -n 10000 -c 4 http://localhost:8080/jsp
-    $ ab -n 10000 -c 4 http://localhost:8080/velocity
-    $ ab -n 10000 -c 4 http://localhost:8080/freemarker
-    $ ab -n 10000 -c 4 http://localhost:8080/thymeleaf
-    $ ab -n 10000 -c 4 http://localhost:8080/mustache
-    $ ab -n 10000 -c 4 http://localhost:8080/jade
-
-Or:
-
-    $ siege -b -r 2500 -c 4 http://localhost:8080/jsp
-    $ siege -b -r 2500 -c 4 http://localhost:8080/velocity
-    $ siege -b -r 2500 -c 4 http://localhost:8080/freemarker
-    $ siege -b -r 2500 -c 4 http://localhost:8080/thymeleaf
-    $ siege -b -r 2500 -c 4 http://localhost:8080/mustache
-    $ siege -b -r 2500 -c 4 http://localhost:8080/jade
+    $ ab -n 10000 -c 10 http://localhost:8080/jsp
+    $ ab -n 10000 -c 10 http://localhost:8080/velocity
+    $ ab -n 10000 -c 10 http://localhost:8080/freemarker
+    $ ab -n 10000 -c 10 http://localhost:8080/thymeleaf
+    $ ab -n 10000 -c 10 http://localhost:8080/mustache
+    $ ab -n 10000 -c 10 http://localhost:8080/jade
 
 On my local machine with the following specs I did some benchmarks.
 
@@ -63,21 +54,21 @@ Java(TM) SE Runtime Environment (build 1.7.0_21-b12)
 Tomcat 7.0.41 with 512M RAM
 ```
 
-For creating my benchmarks I used Siege with the following settings:
+For creating my benchmarks I used ApacheBench, Version 2.3 <$Revision: 1430300 $> with the following settings:
 
 ```
-siege -q -b -r 1000 -c 25 http://localhost:8080/scalate
+ab -n 25000 -c 25 http://localhost:8080/jsp
 ```
-With 25 concurrent requests and 1000 repetitions this resulted in the following numbers:
+With 25 concurrent requests and 25.000 requests in total this resulted in the following numbers:
 
 ```
-Thymeleaf				25.63 seconds
-Jade4j					19.55 seconds
-Scalate - Scaml			20.93 seconds
-Mustache (JMustache)	15.05 seconds
-Freemarker				14.55 seconds
-Velocity				14.56 seconds
-JSP						14.35 seconds
+Thymeleaf				21.8436 seconds
+Jade4j					13.7044 seconds
+Scalate - Scaml			12.1704 seconds
+Mustache (JMustache)	8.8148 seconds
+Freemarker				8.5574 seconds
+Velocity				8.5052 seconds
+JSP						8.8278 seconds
 						
 ```
 
