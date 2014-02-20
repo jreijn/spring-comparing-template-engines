@@ -1,4 +1,4 @@
-#Comparing Spring MVC Template engines
+#Comparing Template engines for Spring MVC
 
 This is a demo project to show the differences among several Java template engines in combination with Spring MVC. Template engines used in this project are:
 
