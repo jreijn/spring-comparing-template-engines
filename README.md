@@ -1,14 +1,16 @@
 #Comparing Template engines for Spring MVC
 
+[![Build Status](https://travis-ci.org/jreijn/spring-comparing-template-engines.png?branch=master)](https://travis-ci.org/jreijn/spring-comparing-template-engines)
+
 This is a demo project to show the differences among several Java template engines in combination with Spring MVC. Template engines used in this project are:
 
 * JSP + JSTL - v1.2
 * [Freemarker](http://www.freemarker.org) - v2.3.19
 * [Velocity](http://velocity.apache.org) - v1.7
-* [Thymeleaf](http://www.thymeleaf.org/) - v2.1.0.RELEASE
+* [Thymeleaf](http://www.thymeleaf.org/) - v2.1.2.RELEASE
 * Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.8
 * [Scalate](http://scalate.fusesource.org)  - v1.6.1
-* [Jade](https://github.com/neuland/jade4j) - v0.3.17
+* [Jade](https://github.com/neuland/jade4j) - v0.4.0
 * [Rythm](http://rythmengine.org/) - v1.4.0
 * [HTTL](http://httl.github.io/en/) - v1.0.11
 
