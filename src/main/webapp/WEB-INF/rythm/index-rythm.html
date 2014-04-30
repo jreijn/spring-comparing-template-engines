@@ -1,32 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <title>@message("example.title") - Rythm</title>
-    <link rel="stylesheet" href="@url("/webjars/bootstrap/3.0.1/css/bootstrap.min.css")" media="screen"/>
-</head>
-<body>
-@import com.jeroenreijn.examples.model.Presentation, org.apache.commons.lang3.StringEscapeUtils
 @args Iterable<Presentation> presentations
-
-    <div class="container">
-        <div class="page-header">
-            <h1>@message("example.title") - Rythm</h1>
-        </div>
-        @for(Presentation presentation : presentations) {
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">@presentation.getTitle() - @presentation.getSpeakerName()</h3>
-            </div>
-            <div class="panel-body">
-                @presentation.getSummary()
-            </div>
-        </div>
-        }
+@extends(layout)
+<div class="page-header">
+    <h1>@i18n("example.title") - Rythm</h1>
+</div>
+@for(Presentation presentation : presentations) {
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">@presentation.getTitle() - @presentation.getSpeakerName()</h3>
     </div>
-    <script src="@url("/webjars/jquery/2.0.2/jquery.min.js")"></script>
-    <script src="@url("/webjars/bootstrap/3.0.1/js/bootstrap.min.js")"></script>
-</body>
-</html>
+    <div class="panel-body">
+        @presentation.getSummary()
+    </div>
+</div>
+}

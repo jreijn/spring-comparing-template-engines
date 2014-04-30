@@ -11,7 +11,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <tomcat.version>7.0.41</tomcat.version>
     <javax.servlet-api.version>3.0.1</javax.servlet-api.version>
-    <spring.version>3.2.3.RELEASE</spring.version>
+    <spring.version>3.2.6.RELEASE</spring.version>
     <jquery.version>2.0.2</jquery.version>
 
     <!-- Template engine versions -->
@@ -26,10 +26,16 @@
     <jade4j.version>0.3.17</jade4j.version>
     <scalate-core_2.10.version>1.6.1</scalate-core_2.10.version>
     <httl-springmvc.version>1.0.11</httl-springmvc.version>
-    <rythm-spring-webmvc.version>1.4.0</rythm-spring-webmvc.version>
+    <spring-rythm.version>1.0-SNAPSHOT</spring-rythm.version>
   </properties>
 
-  <dependencies>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <dependencies>
 
     <!-- Core -->
     <dependency>
@@ -138,9 +144,9 @@
     </dependency>
 
     <dependency>
-      <groupId>com.ctlok</groupId>
-      <artifactId>spring-webmvc-rythm</artifactId>
-      <version>${rythm-spring-webmvc.version}</version>
+      <groupId>org.rythmengine</groupId>
+      <artifactId>spring-rythm</artifactId>
+      <version>${spring-rythm.version}</version>
     </dependency>
 
     <dependency>
@@ -308,8 +314,8 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.1</version>
           <configuration>
-            <source>1.7</source>
-            <target>1.7</target>
+            <source>1.6</source>
+            <target>1.6</target>
           </configuration>
         </plugin>
         <plugin>
