@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <title th:text="#{example.title} + ' - Thymeleaf'">Title</title>
-    <link rel="stylesheet" href="../../static/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/3.0.1/css/bootstrap.min.css}"/>
 </head>
 
 <body>
@@ -15,9 +14,6 @@
 </div>
 
 <section th:fragment="scripts" th:remove="tag">
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js"
-            th:src="@{/webjars/jquery/2.0.2/jquery.min.js}"></script>
-    <script src="../../static/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/3.0.1/js/bootstrap.min.js}"></script>
 </section>
 
 </body>

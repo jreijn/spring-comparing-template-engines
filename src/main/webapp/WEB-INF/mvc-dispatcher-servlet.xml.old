@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-  <context:component-scan base-package="com.jeroenreijn.examples.controller"/>
+  <context:component-scan base-package="com.jeroenreijn.examples"/>
 
   <mvc:resources mapping="/favicon.ico" location="/favicon.ico" order="0"/>
   <mvc:resources mapping="/robots.txt" location="/robots.txt" order="0"/>
@@ -73,12 +73,12 @@
   </bean>
 
   <!-- THYMELEAF: Template Engine (Spring3-specific version) -->
-  <bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine">
+  <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
     <property name="templateResolver" ref="thymeleafTemplateResolver"/>
   </bean>
 
   <!-- THYMELEAF: View Resolver - implementation of Spring's ViewResolver interface -->
-  <bean id="thymeleafViewResolver" class="org.thymeleaf.spring3.view.ThymeleafViewResolver">
+  <bean id="thymeleafViewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
     <property name="viewNames" value="*-thymeleaf"/>
     <property name="templateEngine" ref="templateEngine"/>
     <property name="characterEncoding" value="UTF-8"/>

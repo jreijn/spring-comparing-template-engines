@@ -5,9 +5,9 @@
 This is a demo project to show the differences among several Java template engines in combination with Spring MVC. Template engines used in this project are:
 
 * JSP + JSTL - v1.2
-* [Freemarker](http://www.freemarker.org) - v2.3.19
+* [Freemarker](http://www.freemarker.org) - v2.3.20
 * [Velocity](http://velocity.apache.org) - v1.7
-* [Thymeleaf](http://www.thymeleaf.org/) - v2.1.2.RELEASE
+* [Thymeleaf](http://www.thymeleaf.org/) - v2.1.3.RELEASE
 * Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.8
 * [Scalate](http://scalate.fusesource.org)  - v1.6.1
 * [Jade](https://github.com/neuland/jade4j) - v0.4.0

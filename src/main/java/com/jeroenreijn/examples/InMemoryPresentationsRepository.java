@@ -6,6 +6,9 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import com.jeroenreijn.examples.model.Presentation;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class InMemoryPresentationsRepository implements PresentationsRepository {
 
     private static AtomicLong counter = new AtomicLong();
