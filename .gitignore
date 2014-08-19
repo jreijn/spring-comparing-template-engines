@@ -5,3 +5,5 @@ target
 .settings
 .classpath
 
+
+atlassian-ide-plugin.xml
