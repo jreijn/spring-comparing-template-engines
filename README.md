@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/jreijn/spring-comparing-template-engines.png?branch=master)](https://travis-ci.org/jreijn/spring-comparing-template-engines)
 
-This is a demo project to show the differences among several Java template engines in combination with Spring MVC. Template engines used in this project are:
+This is a demo project, which accompanied my ["Shoot-out! Template engines for the JVM"](http://www.slideshare.net/jreijn/comparing-templateenginesjvm) presentation, which shows the differences among several Java template engines in combination with Spring MVC. Template engines used in this project are:
 
 * JSP + JSTL - v1.2
 * [Freemarker](http://www.freemarker.org) - v2.3.19
