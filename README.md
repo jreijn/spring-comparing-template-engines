@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/jreijn/spring-comparing-template-engines.png?branch=master)](https://travis-ci.org/jreijn/spring-comparing-template-engines)
 
-This is a demo project to show the differences among several Java template engines in combination with Spring MVC. Template engines used in this project are:
+This is a demo project, which accompanied my ["Shoot-out! Template engines for the JVM"](http://www.slideshare.net/jreijn/comparing-templateenginesjvm) presentation, which shows the differences among several Java template engines in combination with Spring MVC. Template engines used in this project are:
 
 * JSP + JSTL - v1.2
 * [Freemarker](http://www.freemarker.org) - v2.3.19
@@ -73,6 +73,8 @@ Velocity				8.5052 seconds
 JSP						8.8278 seconds
 						
 ```
+
+*Keep in mind that these results will differ depending on the complexity of the templates, hardware, etc, so it's just an indication and if you want to know the truth you will have to run the benchmark yourself to see how such a template engine performs in your specific environment.*
 
 ###How were the results measured?
 
