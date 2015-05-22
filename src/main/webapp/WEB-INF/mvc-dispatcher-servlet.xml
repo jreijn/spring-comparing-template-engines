@@ -17,7 +17,7 @@
   <mvc:resources mapping="/robots.txt" location="/robots.txt" order="0"/>
   <mvc:resources mapping="/webjars/**" location="/webjars/" order="0"/>
 
-  <!--<mvc:annotation-driven/>-->
+  <mvc:annotation-driven/>
   <mvc:default-servlet-handler/>
 
   <mvc:interceptors>
@@ -73,12 +73,12 @@
   </bean>
 
   <!-- THYMELEAF: Template Engine (Spring3-specific version) -->
-  <bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine">
+  <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
     <property name="templateResolver" ref="thymeleafTemplateResolver"/>
   </bean>
 
   <!-- THYMELEAF: View Resolver - implementation of Spring's ViewResolver interface -->
-  <bean id="thymeleafViewResolver" class="org.thymeleaf.spring3.view.ThymeleafViewResolver">
+  <bean id="thymeleafViewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
     <property name="viewNames" value="*-thymeleaf"/>
     <property name="templateEngine" ref="templateEngine"/>
     <property name="characterEncoding" value="UTF-8"/>
@@ -131,14 +131,15 @@
   </bean>
 
   <!-- Rythm -->
-  <bean id="rythmConfigurer" class="org.rythmengine.spring.web.RythmConfigurer">
-    <property name="resourceLoaderPath" value="/WEB-INF/rythm/"/>
-    <property name="autoImports"
-              value="com.jeroenreijn.examples.model.*"/>
-  </bean>
-  <bean class="org.rythmengine.spring.web.RythmViewResolver">
-    <property name="order" value="0"/>
-  </bean>
+  <!-- does not seem to work with Spring4 -->
+  <!--<bean id="rythmConfigurer" class="org.rythmengine.spring.web.RythmConfigurer">-->
+    <!--<property name="resourceLoaderPath" value="/WEB-INF/rythm/"/>-->
+    <!--<property name="autoImports"-->
+              <!--value="com.jeroenreijn.examples.model.*"/>-->
+  <!--</bean>-->
+  <!--<bean class="org.rythmengine.spring.web.RythmViewResolver">-->
+    <!--<property name="order" value="0"/>-->
+  <!--</bean>-->
 
   <!-- Httl -->
   <bean id="httlViewResolver" class="httl.web.springmvc.HttlViewResolver">
@@ -146,8 +147,23 @@
     <property name="suffix" value=".httl"/>
     <property name="order" value="9"/>
     <property name="contentType" value="text/html; charset=UTF-8"/>
-
   </bean>
+
+  <!-- Pebble -->
+  <bean id="pebbleEngine" class="com.mitchellbosecke.pebble.PebbleEngine">
+    <property name="loader">
+      <bean class="com.mitchellbosecke.pebble.spring.PebbleTemplateLoader" />
+    </property>
+  </bean>
+
+  <bean id="viewResolver" class="com.mitchellbosecke.pebble.spring.PebbleViewResolver">
+    <property name="prefix" value="/WEB-INF/pebble/" />
+    <property name="suffix" value=".html" />
+    <property name="pebbleEngine" ref="pebbleEngine" />
+  </bean>
+
+
+
 
   <bean id="localeResolver"
         class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
