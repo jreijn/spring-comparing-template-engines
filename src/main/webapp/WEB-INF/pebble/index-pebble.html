@@ -1,0 +1,19 @@
+{% extends 'base' %}
+
+{% block content %}
+<div class="page-header">
+    <h1>{{ i18n("messages","example.title") }} - Pebble</h1>
+</div>
+
+{% for presentation in presentations %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ presentation.title }} - {{presentation.speakerName }}</h3>
+    </div>
+    <div class="panel-body">
+        {{presentation.summary | raw}}
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content%}
