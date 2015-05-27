@@ -9,7 +9,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Velocity](http://velocity.apache.org) - v1.7
 * [Thymeleaf](http://www.thymeleaf.org/) - v2.1.4.RELEASE
 * Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.8
-* [Scalate](http://scalate.fusesource.org)  - v1.6.1
+* [Scalate](http://scalate.fusesource.org)  - v1.7.1
 * [Jade](https://github.com/neuland/jade4j) - v0.4.2
 * [HTTL](http://httl.github.io/en/) - v1.0.11
 * [Pebble] (http://www.mitchellbosecke.com/pebble/home) - v1.4.5
@@ -71,6 +71,8 @@ Apache Tomcat 7.0.53 with 512M RAM
 ```
 
 Results in order (high to low):
+
+Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
 
 ```
 Thymeleaf               3.7602 seconds
