@@ -156,14 +156,12 @@
     </property>
   </bean>
 
-  <bean id="viewResolver" class="com.mitchellbosecke.pebble.spring.PebbleViewResolver">
+  <bean id="pebbleViewResolver" class="com.mitchellbosecke.pebble.spring.PebbleViewResolver">
     <property name="prefix" value="/WEB-INF/pebble/" />
     <property name="suffix" value=".html" />
+    <property name="order" value="10"/>
     <property name="pebbleEngine" ref="pebbleEngine" />
   </bean>
-
-
-
 
   <bean id="localeResolver"
         class="org.springframework.web.servlet.i18n.SessionLocaleResolver">

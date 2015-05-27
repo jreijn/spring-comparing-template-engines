@@ -24,9 +24,11 @@
     <mustache-spring.version>1.1.1</mustache-spring.version>
     <jade4j-spring.version>0.4.2</jade4j-spring.version>
     <jade4j.version>0.4.2</jade4j.version>
-    <scalate-core_2.10.version>1.6.1</scalate-core_2.10.version>
+    <scalate-core_2.10.version>1.7.1</scalate-core_2.10.version>
     <httl-springmvc.version>1.0.11</httl-springmvc.version>
     <spring-rythm.version>1.0</spring-rythm.version>
+    <pebble-spring3.version>1.4.5</pebble-spring3.version>
+    <mustache-spring-view.version>1.2</mustache-spring-view.version>
   </properties>
 
   <dependencies>
@@ -126,13 +128,13 @@
     </dependency>
 
     <dependency>
-      <groupId>org.fusesource.scalate</groupId>
+      <groupId>org.scalatra.scalate</groupId>
       <artifactId>scalate-core_2.10</artifactId>
       <version>${scalate-core_2.10.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.fusesource.scalate</groupId>
+      <groupId>org.scalatra.scalate</groupId>
       <artifactId>scalate-spring-mvc_2.10</artifactId>
       <version>${scalate-core_2.10.version}</version>
     </dependency>
@@ -146,7 +148,7 @@
     <dependency>
       <groupId>com.github.sps.mustache</groupId>
       <artifactId>mustache-spring-view</artifactId>
-      <version>1.2</version>
+      <version>${mustache-spring-view.version}</version>
     </dependency>
 
     <dependency>
@@ -176,7 +178,7 @@
     <dependency>
       <groupId>com.mitchellbosecke</groupId>
       <artifactId>pebble-spring3</artifactId>
-      <version>1.4.5</version>
+      <version>${pebble-spring3.version}</version>
     </dependency>
 
     <dependency>
@@ -223,7 +225,7 @@
         <plugin>
           <groupId>org.apache.tomcat.maven</groupId>
           <artifactId>tomcat7-maven-plugin</artifactId>
-          <version>2.1</version>
+          <version>2.2</version>
           <configuration>
             <path>/</path>
             <port>8080</port>
@@ -324,10 +326,10 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.1</version>
+          <version>3.3</version>
           <configuration>
-            <source>1.6</source>
-            <target>1.6</target>
+            <source>1.8</source>
+            <target>1.8</target>
           </configuration>
         </plugin>
         <plugin>
