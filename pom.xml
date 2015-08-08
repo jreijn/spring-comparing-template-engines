@@ -29,6 +29,7 @@
     <spring-rythm.version>1.0</spring-rythm.version>
     <pebble-spring3.version>1.4.5</pebble-spring3.version>
     <mustache-spring-view.version>1.2</mustache-spring-view.version>
+    <handlebars.version>2.2.2</handlebars.version>
   </properties>
 
   <dependencies>
@@ -185,6 +186,12 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>1.6.6</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.jknack</groupId>
+      <artifactId>handlebars-springmvc</artifactId>
+      <version>${handlebars.version}</version>
     </dependency>
 
     <!-- Test -->

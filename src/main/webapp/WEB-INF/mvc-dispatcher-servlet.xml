@@ -157,10 +157,19 @@
   </bean>
 
   <bean id="pebbleViewResolver" class="com.mitchellbosecke.pebble.spring.PebbleViewResolver">
+    <property name="viewNames" value="*-pebble"/>
     <property name="prefix" value="/WEB-INF/pebble/" />
     <property name="suffix" value=".html" />
     <property name="order" value="10"/>
     <property name="pebbleEngine" ref="pebbleEngine" />
+  </bean>
+
+  <!-- Handlebars -->
+  <bean id="handlebarsViewResolver" class="com.github.jknack.handlebars.springmvc.HandlebarsViewResolver">
+    <property name="viewNames" value="*-handlebars"/>
+    <property name="prefix" value="/WEB-INF/handlebars/"/>
+    <property name="suffix" value=".hbs"/>
+    <property name="order" value="11"/>
   </bean>
 
   <bean id="localeResolver"
