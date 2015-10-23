@@ -29,7 +29,7 @@
     <spring-rythm.version>1.0</spring-rythm.version>
     <pebble-spring3.version>1.4.5</pebble-spring3.version>
     <mustache-spring-view.version>1.2</mustache-spring-view.version>
-    <handlebars.version>2.2.2</handlebars.version>
+    <handlebars.version>2.3.2</handlebars.version>
   </properties>
 
   <dependencies>
