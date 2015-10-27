@@ -13,7 +13,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Jade](https://github.com/neuland/jade4j) - v0.4.2
 * [HTTL](http://httl.github.io/en/) - v1.0.11
 * [Pebble] (http://www.mitchellbosecke.com/pebble/home) - v1.4.5
-* [Handlebars] (https://github.com/jknack/handlebars.java) - v2.2.2
+* [Handlebars] (https://github.com/jknack/handlebars.java) - v2.3.2
 
 
 ## Build and run
