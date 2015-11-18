@@ -1,3 +1,0 @@
-<div class="page-header">
-  <h1><spring:message code="example.title"/> - JSP</h1>
-</div>

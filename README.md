@@ -81,6 +81,7 @@ Results in order (high to low):
 Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
 
 ```
+jTwig                   5.040 seconds
 Thymeleaf               3.7602 seconds
 Scalate - Scaml         2.8304 seconds
 Mustache (JMustache)    2.2158 seconds

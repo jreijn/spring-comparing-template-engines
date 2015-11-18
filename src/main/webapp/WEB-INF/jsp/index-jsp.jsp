@@ -8,7 +8,9 @@
 <%@ include file="head.jspf" %>
 <body>
 <div class="container">
-  <%@ include file="pageTitle.jspf" %>
+  <div class="page-header">
+    <h1><spring:message code="example.title"/> - JSP</h1>
+  </div>
   <c:forEach items="${presentations}" var="item">
     <div class="panel panel-default">
       <div class="panel-heading">

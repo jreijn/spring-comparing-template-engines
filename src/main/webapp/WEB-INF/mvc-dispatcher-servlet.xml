@@ -170,6 +170,7 @@
     <property name="prefix" value="/WEB-INF/jtwig/"/>
     <property name="suffix" value=".twig"/>
     <property name="order" value="12"/>
+    <property name="cached" value="true"/>
   </bean>
 
   <!-- Handlebars -->
