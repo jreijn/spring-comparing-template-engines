@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        {% include 'head.twig' %}
+   </head>
+   <body>
+      <div class="container">
+         <div class="page-header">
+            <h1>{{ 'example.title' | translate }} - jtwig</h1>
+         </div>
+         {% for presentation in presentations %}  
+            {% block item %}
+            {% endblock %}
+         {% endfor %}
+      </div>
+   </body>
+</html>

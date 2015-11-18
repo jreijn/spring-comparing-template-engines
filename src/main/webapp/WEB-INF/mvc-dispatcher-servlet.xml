@@ -163,6 +163,14 @@
     <property name="order" value="10"/>
     <property name="pebbleEngine" ref="pebbleEngine" />
   </bean>
+  
+  <!-- jtwig -->
+  <bean id="jtwigViewResolver" class="com.lyncode.jtwig.mvc.JtwigViewResolver">
+    <property name="viewNames" value="*-jtwig"/>
+    <property name="prefix" value="/WEB-INF/jtwig/"/>
+    <property name="suffix" value=".twig"/>
+    <property name="order" value="12"/>
+  </bean>
 
   <!-- Handlebars -->
   <bean id="handlebarsViewResolver" class="com.github.jknack.handlebars.springmvc.HandlebarsViewResolver">

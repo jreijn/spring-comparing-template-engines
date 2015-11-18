@@ -14,6 +14,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [HTTL](http://httl.github.io/en/) - v1.0.11
 * [Pebble] (http://www.mitchellbosecke.com/pebble/home) - v1.4.5
 * [Handlebars] (https://github.com/jknack/handlebars.java) - v2.3.2
+* [jtwig] (https://github.com/jtwig/jtwig) - v3.1.1
 
 
 ## Build and run
@@ -37,6 +38,7 @@ See the demo URLs:
   - http://localhost:8080/mustache
   - http://localhost:8080/pebble
   - http://localhost:8080/handlebars
+  - http://localhost:8080/jtwig
   
 ## Benchmarking
 
@@ -51,6 +53,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/jade
     $ ab -n 10000 -c 10 http://localhost:8080/pebble
     $ ab -n 10000 -c 10 http://localhost:8080/handlebars
+    $ ab -n 10000 -c 10 http://localhost:8080/jtwig
 
 
 For creating the below benchmark results I used ApacheBench(Version 2.3) with the following settings:
