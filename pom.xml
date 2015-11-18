@@ -193,6 +193,12 @@
       <artifactId>handlebars-springmvc</artifactId>
       <version>${handlebars.version}</version>
     </dependency>
+    
+    <dependency>
+      <groupId>com.lyncode</groupId>
+      <artifactId>jtwig-spring</artifactId>
+      <version>3.1.1</version>
+    </dependency>
 
     <!-- Test -->
 

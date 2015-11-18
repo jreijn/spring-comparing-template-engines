@@ -1,0 +1,12 @@
+{% extends "base-layout.twig" %}
+
+{% block item %}
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h3 class="panel-title">{{ presentation.title }} - {{ presentation.speakerName }}</h3>
+            </div>
+            <div class="panel-body">
+               {{ presentation.summary }}
+            </div>
+         </div>
+{% endblock %}
