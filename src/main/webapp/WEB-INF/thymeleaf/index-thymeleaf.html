@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head th:substituteby="includes :: head">
-  <link rel="stylesheet" href="../../static/css/bootstrap.min.css"/>
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.0.1/css/bootstrap.min.css}"/>
 </head>
 <body>
-    <div class="container">
+	<div class="container">
         <div th:substituteby="includes :: pageHeader"></div>
         <div class="panel panel-default"  th:each="item : ${presentations}">
             <div class="panel-heading">
@@ -13,7 +13,7 @@
             <div class="panel-body" th:utext="${item.summary}">Summary</div>
         </div>
     </div>
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js" th:substituteby="includes :: scripts"></script>
-    <script th:remove="all" type="text/javascript" src="../../static/js/thymol.js"></script>
+    <script th:src="@{/webjars/jquery/2.0.2/jquery.min.js}" th:substituteby="includes :: scripts"></script>
+    <script th:remove="all" type="text/javascript" th:src="@{/static/js/thymol.js}"></script>
 </body>
 </html>

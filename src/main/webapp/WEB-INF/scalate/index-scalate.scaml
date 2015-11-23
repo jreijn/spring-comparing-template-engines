@@ -7,11 +7,11 @@
         %div.container
             %div.page-header
                 %h1= title
-                - for(item <- presentations)
-                    %div.panel.panel-default
-                        %div.panel-heading
-                            %h3.panel-title= item.getTitle + " - " + item.getSpeakerName
-                        %div.panel-body
-                            != item.getSummary
+            - for(item <- presentations)
+                %div.panel.panel-default
+                    %div.panel-heading
+                        %h3.panel-title= item.getTitle + " - " + item.getSpeakerName
+                    %div.panel-body
+                        != item.getSummary
         - render("scripts.scaml")
 

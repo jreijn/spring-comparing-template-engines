@@ -31,6 +31,7 @@
     <property name="viewNames" value="*-jsp"/>
     <property name="suffix" value=".jsp"/>
     <property name="order" value="6"/>
+    <property name="cache" value="true"/>
   </bean>
 
   <!-- Jade4j -->
@@ -41,6 +42,7 @@
   <bean id="jadeConfiguration" class="de.neuland.jade4j.JadeConfiguration">
     <property name="prettyPrint" value="false"/>
     <property name="templateLoader" ref="jade4jTemplateLoader"/>
+    <property name="caching" value="true"/>
   </bean>
 
   <bean id="jadeViewResolver" class="de.neuland.jade4j.spring.view.JadeViewResolver">
@@ -51,6 +53,8 @@
     <!-- rendering nice html formatted error pages for development -->
     <property name="renderExceptions" value="true"/>
     <property name="order" value="5"/>
+    <property name="requestContextAttribute" value="rc"/>
+    <property name="cache" value="true"/>
   </bean>
 
   <!-- Mustache -->
@@ -62,6 +66,7 @@
     <property name="templateLoader">
       <bean class="org.springframework.web.servlet.view.mustache.MustacheTemplateLoader"/>
     </property>
+    <property name="requestContextAttribute" value="rc"/>
   </bean>
 
   <!-- THYMELEAF: Template Resolver for webapp pages   -->
@@ -102,6 +107,8 @@
     <property name="prefix" value=""/>
     <property name="suffix" value=".ftl"/>
     <property name="order" value="0"/>
+    <property name="requestContextAttribute" value="rc" />
+    <property name="cache" value="true"/>
   </bean>
 
   <!-- velocity -->
@@ -121,6 +128,7 @@
     <property name="order" value="1"/>
     <property name="toolboxConfigLocation" value="/WEB-INF/velocity/toolbox.xml"/>
     <property name="exposeSpringMacroHelpers" value="true"/>
+    <property name="cache" value="true"/>
   </bean>
 
   <!-- Scalate -->
@@ -128,25 +136,31 @@
     <property name="prefix" value="/WEB-INF/scalate/"/>
     <property name="suffix" value=".scaml"/>
     <property name="order" value="7"/>
+    <property name="cache" value="true"/>
   </bean>
 
   <!-- Rythm -->
-  <!-- does not seem to work with Spring4 -->
-  <!--<bean id="rythmConfigurer" class="org.rythmengine.spring.web.RythmConfigurer">-->
-    <!--<property name="resourceLoaderPath" value="/WEB-INF/rythm/"/>-->
-    <!--<property name="autoImports"-->
-              <!--value="com.jeroenreijn.examples.model.*"/>-->
-  <!--</bean>-->
-  <!--<bean class="org.rythmengine.spring.web.RythmViewResolver">-->
-    <!--<property name="order" value="0"/>-->
-  <!--</bean>-->
+  <!-- does not seem to work with Spring4.
+       Known issue: https://github.com/greenlaw110/spring-rythm/issues/9  -->
+  <!--
+  <bean id="rythmConfigurer" class="org.rythmengine.spring.web.RythmConfigurer">
+    <property name="resourceLoaderPath" value="/WEB-INF/rythm/"/>
+    <property name="autoImports"
+              value="com.jeroenreijn.examples.model.*"/>
+  </bean>
+  <bean class="org.rythmengine.spring.web.RythmViewResolver">
+    <property name="order" value="0"/>
+    <property name="cache" value="true"/>
+  </bean>
+   -->
 
   <!-- Httl -->
   <bean id="httlViewResolver" class="httl.web.springmvc.HttlViewResolver">
     <property name="prefix" value="/WEB-INF/httl/"/>
     <property name="suffix" value=".httl"/>
-    <property name="order" value="9"/>
+    <property name="order" value="9"/>    
     <property name="contentType" value="text/html; charset=UTF-8"/>
+    <property name="cache" value="true"/>
   </bean>
 
   <!-- Pebble -->
@@ -162,6 +176,8 @@
     <property name="suffix" value=".html" />
     <property name="order" value="10"/>
     <property name="pebbleEngine" ref="pebbleEngine" />
+    <property name="cache" value="true"/>
+    <property name="requestContextAttribute" value="rc"/>
   </bean>
   
   <!-- jtwig -->
@@ -179,6 +195,8 @@
     <property name="prefix" value="/WEB-INF/handlebars/"/>
     <property name="suffix" value=".hbs"/>
     <property name="order" value="11"/>
+    <property name="requestContextAttribute" value="rc" />
+    <property name="cache" value="true"/>
   </bean>
 
   <bean id="localeResolver"

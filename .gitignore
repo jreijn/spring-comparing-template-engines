@@ -1,9 +1,11 @@
+*.bak
 *.iml
 .idea
 target
 .project
 .settings
 .classpath
+.DS_Store
 
 
 atlassian-ide-plugin.xml

@@ -24,13 +24,19 @@
     <mustache-spring.version>1.1.1</mustache-spring.version>
     <scalate-core_2.10.version>1.7.1</scalate-core_2.10.version>
     <httl-springmvc.version>1.0.11</httl-springmvc.version>
-    <spring-rythm.version>1.0</spring-rythm.version>
+    <spring-rythm.version>1.1.1-SNAPSHOT</spring-rythm.version>
     <pebble-spring3.version>1.4.5</pebble-spring3.version>
     <mustache-spring-view.version>1.2</mustache-spring-view.version>
     <handlebars.version>2.3.2</handlebars.version>
     <jtwig-spring.version>3.1.1</jtwig-spring.version>
     <spring-jade4j.version>1.0.4</spring-jade4j.version>
   </properties>
+
+  <parent>
+      <groupId>org.sonatype.oss</groupId>
+      <artifactId>oss-parent</artifactId>
+      <version>7</version>
+  </parent>
 
   <dependencies>
 
