@@ -9,27 +9,28 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <tomcat.version>7.0.53</tomcat.version>
+    <tomcat.version>7.0.72</tomcat.version>
     <javax.servlet-api.version>3.0.1</javax.servlet-api.version>
-    <spring.version>4.1.6.RELEASE</spring.version>
-    <jquery.version>2.0.2</jquery.version>
+    <spring.version>4.3.2.RELEASE</spring.version>
+    <jquery.version>3.1.1</jquery.version>
 
     <!-- Template engine versions -->
-    <freemarker.version>2.3.22</freemarker.version>
-    <thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
-    <thymeleaf-spring4.version>2.1.4.RELEASE</thymeleaf-spring4.version>
-    <thymeleaf-extras-conditionalcomments.version>2.1.4.RELEASE</thymeleaf-extras-conditionalcomments.version>
-    <thymeleaf-extras-springsecurity3.version>2.1.4.RELEASE</thymeleaf-extras-springsecurity3.version>
+    <freemarker.version>2.3.25-incubating</freemarker.version>
+    <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
+    <thymeleaf-spring4.version>3.0.2.RELEASE</thymeleaf-spring4.version>
+    <thymeleaf-extras-conditionalcomments.version>3.0.2.RELEASE</thymeleaf-extras-conditionalcomments.version>
+    <thymeleaf-extras-springsecurity3.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity3.version>
     <velocity.version>1.7</velocity.version>
-    <mustache-spring.version>1.1.1</mustache-spring.version>
-    <scalate-core_2.10.version>1.7.1</scalate-core_2.10.version>
+    <mustache-java.version>0.9.4</mustache-java.version>
+    <scalate-core_2.11.version>1.7.1</scalate-core_2.11.version>
     <httl-springmvc.version>1.0.11</httl-springmvc.version>
     <spring-rythm.version>1.1.1-SNAPSHOT</spring-rythm.version>
-    <pebble-spring3.version>1.4.5</pebble-spring3.version>
-    <mustache-spring-view.version>1.2</mustache-spring-view.version>
-    <handlebars.version>2.3.2</handlebars.version>
+    <pebble-spring4.version>2.2.3</pebble-spring4.version>
+    <mustache-spring-view.version>1.3</mustache-spring-view.version>
+    <jmustache.version>1.13</jmustache.version>
+    <handlebars.version>4.0.6</handlebars.version>
     <jtwig-spring.version>3.1.1</jtwig-spring.version>
-    <spring-jade4j.version>1.0.4</spring-jade4j.version>
+    <spring-jade4j.version>1.2.3</spring-jade4j.version>
   </properties>
 
   <parent>
@@ -131,19 +132,19 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.1</version>
+      <version>3.5</version>
     </dependency>
 
     <dependency>
       <groupId>org.scalatra.scalate</groupId>
-      <artifactId>scalate-core_2.10</artifactId>
-      <version>${scalate-core_2.10.version}</version>
+      <artifactId>scalate-core_2.11</artifactId>
+      <version>${scalate-core_2.11.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.scalatra.scalate</groupId>
-      <artifactId>scalate-spring-mvc_2.10</artifactId>
-      <version>${scalate-core_2.10.version}</version>
+      <artifactId>scalate-spring-mvc_2.11</artifactId>
+      <version>${scalate-core_2.11.version}</version>
     </dependency>
 
     <dependency>
@@ -156,6 +157,18 @@
       <groupId>com.github.sps.mustache</groupId>
       <artifactId>mustache-spring-view</artifactId>
       <version>${mustache-spring-view.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.github.spullara.mustache.java</groupId>
+        <artifactId>compiler</artifactId>
+        <version>${mustache-java.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.samskivert</groupId>
+      <artifactId>jmustache</artifactId>
+      <version>${jmustache.version}</version>
     </dependency>
 
     <dependency>
@@ -178,8 +191,8 @@
 
     <dependency>
       <groupId>com.mitchellbosecke</groupId>
-      <artifactId>pebble-spring3</artifactId>
-      <version>${pebble-spring3.version}</version>
+      <artifactId>pebble-spring4</artifactId>
+      <version>${pebble-spring4.version}</version>
     </dependency>
 
     <dependency>
@@ -193,7 +206,7 @@
       <artifactId>handlebars-springmvc</artifactId>
       <version>${handlebars.version}</version>
     </dependency>
-    
+
     <dependency>
       <groupId>com.lyncode</groupId>
       <artifactId>jtwig-spring</artifactId>
