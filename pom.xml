@@ -13,6 +13,7 @@
     <javax.servlet-api.version>3.0.1</javax.servlet-api.version>
     <spring.version>4.3.2.RELEASE</spring.version>
     <jquery.version>3.1.1</jquery.version>
+    <bootstrap.version>3.3.7-1</bootstrap.version>
 
     <!-- Template engine versions -->
     <freemarker.version>2.3.25-incubating</freemarker.version>
@@ -83,7 +84,7 @@
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>bootstrap</artifactId>
-      <version>3.0.1</version>
+      <version>${bootstrap.version}</version>
     </dependency>
 
     <dependency>
