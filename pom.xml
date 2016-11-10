@@ -31,7 +31,7 @@
     <jmustache.version>1.13</jmustache.version>
     <handlebars.version>4.0.6</handlebars.version>
     <jtwig-spring.version>3.1.1</jtwig-spring.version>
-    <spring-jade4j.version>1.2.3</spring-jade4j.version>
+    <spring-jade4j.version>1.2.5</spring-jade4j.version>
   </properties>
 
   <parent>
