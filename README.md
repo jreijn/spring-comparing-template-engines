@@ -4,16 +4,16 @@
 
 This is a demo project, which accompanied my ["Shoot-out! Template engines for the JVM"](http://www.slideshare.net/jreijn/comparing-templateenginesjvm) presentation, which shows the differences among several Java template engines in combination with Spring MVC. Template engines used in this project are:
 
-* JSP + JSTL - v1.2
-* [Freemarker](http://www.freemarker.org) - v2.3.22
-* [Velocity](http://velocity.apache.org) - v1.7
-* [Thymeleaf](http://www.thymeleaf.org/) - v2.1.4.RELEASE
-* Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.8
-* [Scalate](http://scalate.fusesource.org)  - v1.7.1
-* [Jade](https://github.com/neuland/jade4j) - v1.0.4
+* JSP + [JSTL](https://jstl.java.net/) - v1.2
+* [Freemarker](http://www.freemarker.org/) - v2.3.25-incubating
+* [Velocity](http://velocity.apache.org/) - v1.7
+* [Thymeleaf](http://www.thymeleaf.org/) - v3.0.2.RELEASE
+* Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.13
+* [Scalate](http://scalate.fusesource.org/)  - v1.7.1
+* [Jade](https://github.com/neuland/jade4j) - v1.2.5
 * [HTTL](http://httl.github.io/en/) - v1.0.11
-* [Pebble] (http://www.mitchellbosecke.com/pebble/home) - v1.4.5
-* [Handlebars] (https://github.com/jknack/handlebars.java) - v2.3.2
+* [Pebble] (http://www.mitchellbosecke.com/pebble/home) - v2.2.3
+* [Handlebars] (https://github.com/jknack/handlebars.java) - v4.0.6
 * [jtwig] (https://github.com/jtwig/jtwig) - v3.1.1
 
 

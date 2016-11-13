@@ -63,8 +63,8 @@
     <property name="prefix" value="/WEB-INF/mustache/"/>
     <property name="suffix" value=".mustache"/>
     <property name="viewNames" value="*-mustache"/>
-    <property name="templateLoader">
-      <bean class="org.springframework.web.servlet.view.mustache.MustacheTemplateLoader"/>
+    <property name="templateFactory">
+        <bean class="org.springframework.web.servlet.view.mustache.java.MustacheJTemplateFactory" />
     </property>
     <property name="requestContextAttribute" value="rc"/>
   </bean>
@@ -158,19 +158,26 @@
   <bean id="httlViewResolver" class="httl.web.springmvc.HttlViewResolver">
     <property name="prefix" value="/WEB-INF/httl/"/>
     <property name="suffix" value=".httl"/>
-    <property name="order" value="9"/>    
+    <property name="order" value="9"/>
     <property name="contentType" value="text/html; charset=UTF-8"/>
     <property name="cache" value="true"/>
   </bean>
 
   <!-- Pebble -->
-  <bean id="pebbleEngine" class="com.mitchellbosecke.pebble.PebbleEngine">
-    <property name="loader">
-      <bean class="com.mitchellbosecke.pebble.spring.PebbleTemplateLoader" />
-    </property>
+  <bean id="servletContext" class="com.jeroenreijn.examples.factory.ServletContextFactory"/>
+
+  <bean id="templateLoader" class="com.mitchellbosecke.pebble.loader.ServletLoader" >
+    <constructor-arg ref="servletContext" />
   </bean>
 
-  <bean id="pebbleViewResolver" class="com.mitchellbosecke.pebble.spring.PebbleViewResolver">
+  <bean id="springExtension" class="com.mitchellbosecke.pebble.spring4.extension.SpringExtension" />
+
+  <bean id="pebbleEngine" class="com.jeroenreijn.examples.factory.PebbleEngineFactory" factory-method="instance">
+    <constructor-arg ref="templateLoader" />
+    <constructor-arg ref="springExtension" />
+  </bean>
+
+  <bean id="pebbleViewResolver" class="com.mitchellbosecke.pebble.spring4.PebbleViewResolver">
     <property name="viewNames" value="*-pebble"/>
     <property name="prefix" value="/WEB-INF/pebble/" />
     <property name="suffix" value=".html" />
@@ -179,7 +186,7 @@
     <property name="cache" value="true"/>
     <property name="requestContextAttribute" value="rc"/>
   </bean>
-  
+
   <!-- jtwig -->
   <bean id="jtwigViewResolver" class="com.lyncode.jtwig.mvc.JtwigViewResolver">
     <property name="viewNames" value="*-jtwig"/>
@@ -199,15 +206,13 @@
     <property name="cache" value="true"/>
   </bean>
 
-  <bean id="localeResolver"
-        class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+  <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
     <property name="defaultLocale" value="en"/>
   </bean>
 
-  <bean id="mustacheMessageInterceptor" class="org.springframework.web.servlet.i18n.MustacheMessageInterceptor">
+  <bean id="mustacheMessageInterceptor" class="org.springframework.web.servlet.view.mustache.jmustache.LocalizationMessageInterceptor">
     <property name="messageSource" ref="messageSource"/>
     <property name="localeResolver" ref="localeResolver"/>
-    <property name="viewResolver" ref="mustacheViewResolver"/>
   </bean>
 
   <!-- Configuring messages.properties file -->
