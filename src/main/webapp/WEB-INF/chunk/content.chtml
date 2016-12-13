@@ -1,0 +1,14 @@
+<div class="page-header">
+    <h1>{% messages.example.title %} - Chunk</h1>
+</div>
+
+{% loop in $presentations as $presentation %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{% $presentation.title %} - {% $presentation.speaker_name %}</h3>
+    </div>
+    <div class="panel-body">
+        {% $presentation.summary %}
+    </div>
+</div>
+{% endloop %}

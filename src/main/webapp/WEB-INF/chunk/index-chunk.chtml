@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>{% messages.example.title %} - Chunk</title>
+    <link rel="stylesheet" href="{% $rc.context_path %}/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" media="screen"/>
+</head>
+<body>
+<div class="container">
+    {% include content %}
+</div>
+<script src="{% $rc.context_path %}/webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="{% $rc.context_path %}/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+</body>
+</html>
