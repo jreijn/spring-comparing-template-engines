@@ -30,7 +30,8 @@
     <mustache-spring-view.version>1.3</mustache-spring-view.version>
     <jmustache.version>1.13</jmustache.version>
     <handlebars.version>4.0.6</handlebars.version>
-    <jtwig-spring.version>3.1.1</jtwig-spring.version>
+    <jtwig-spring.version>5.80</jtwig-spring.version>
+    <jtwig-translate.version>1.2</jtwig-translate.version>
     <spring-jade4j.version>1.2.5</spring-jade4j.version>
   </properties>
 
@@ -209,9 +210,14 @@
     </dependency>
 
     <dependency>
-      <groupId>com.lyncode</groupId>
+      <groupId>org.jtwig</groupId>
       <artifactId>jtwig-spring</artifactId>
       <version>${jtwig-spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jtwig</groupId>
+      <artifactId>jtwig-spring-translate-extension</artifactId>
+      <version>${jtwig-translate.version}</version>
     </dependency>
 
     <!-- Test -->
@@ -374,6 +380,10 @@
   </build>
 
   <repositories>
+    <repository>
+      <id>jcenter</id>
+      <url>https://dl.bintray.com/jtwig/maven</url>
+    </repository>
     <repository>
       <id>spring-jade4j-releases</id>
       <url>https://raw.github.com/neuland/spring-jade4j/master/releases</url>
