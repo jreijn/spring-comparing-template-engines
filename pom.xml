@@ -32,6 +32,8 @@
     <handlebars.version>4.0.6</handlebars.version>
     <jtwig-spring.version>3.1.1</jtwig-spring.version>
     <spring-jade4j.version>1.2.5</spring-jade4j.version>
+    <chunk.version>3.2.4</chunk.version>
+    <chunk-springmvc.version>0.1.0</chunk-springmvc.version>
   </properties>
 
   <parent>
@@ -212,6 +214,18 @@
       <groupId>com.lyncode</groupId>
       <artifactId>jtwig-spring</artifactId>
       <version>${jtwig-spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.x5dev</groupId>
+      <artifactId>chunk-templates</artifactId>
+      <version>${chunk.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.x5dev</groupId>
+      <artifactId>chunk-springmvc</artifactId>
+      <version>${chunk-springmvc.version}</version>
     </dependency>
 
     <!-- Test -->

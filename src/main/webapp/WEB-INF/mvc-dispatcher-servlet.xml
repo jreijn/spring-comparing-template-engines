@@ -215,6 +215,31 @@
     <property name="localeResolver" ref="localeResolver"/>
   </bean>
 
+  <!-- Chunk -->
+  <bean id="chunkTemplatesConfig" class="java.util.HashMap" scope="prototype">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="default_extension" value="chtml" />
+        <entry key="cache_minutes" value="0" />
+        <entry key="layers" value="" />
+        <entry key="theme_path" value="" />
+        <entry key="hide_errors" value="FALSE" />
+        <entry key="error_log" value="" />
+        <entry key="encoding" value="UTF-8" />
+        <entry key="locale" value="" />
+        <entry key="filters" value="" />
+      </map>
+    </constructor-arg>
+  </bean>
+
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="viewClass" value="com.x5.template.spring.ChunkTemplateView"/>
+    <property name="prefix" value="/WEB-INF/chunk/"/>
+    <property name="viewNames" value="*-chunk"/>
+    <property name="suffix" value=".chtml"/>
+    <property name="requestContextAttribute" value="rc"/>
+  </bean>
+
   <!-- Configuring messages.properties file -->
   <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
         p:basename="messages"/>
