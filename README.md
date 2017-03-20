@@ -1,4 +1,4 @@
-#Comparing Template engines for Spring MVC
+# Comparing Template engines for Spring MVC
 
 [![Build Status](https://travis-ci.org/jreijn/spring-comparing-template-engines.png?branch=master)](https://travis-ci.org/jreijn/spring-comparing-template-engines)
 
@@ -29,37 +29,37 @@ Run the project with
 
 See the demo URLs:
 
-  - http://localhost:8080/spring-comparing-template-engines/jsp
-  - http://localhost:8080/spring-comparing-template-engines/freemarker
-  - http://localhost:8080/spring-comparing-template-engines/velocity
-  - http://localhost:8080/spring-comparing-template-engines/thymeleaf
-  - http://localhost:8080/spring-comparing-template-engines/jade
-  - http://localhost:8080/spring-comparing-template-engines/scalate
-  - http://localhost:8080/spring-comparing-template-engines/mustache
-  - http://localhost:8080/spring-comparing-template-engines/pebble
-  - http://localhost:8080/spring-comparing-template-engines/handlebars
-  - http://localhost:8080/spring-comparing-template-engines/jtwig
+  - http://localhost:8080/jsp
+  - http://localhost:8080/freemarker
+  - http://localhost:8080/velocity
+  - http://localhost:8080/thymeleaf
+  - http://localhost:8080/jade
+  - http://localhost:8080/scalate
+  - http://localhost:8080/mustache
+  - http://localhost:8080/pebble
+  - http://localhost:8080/handlebars
+  - http://localhost:8080/jtwig
 
 ## Benchmarking
 
 In case you want to benchmark the different template engines I would recommend using Apache HTTP server benchmarking tool or Siege an HTTP/HTTPS stress tester.
 You can try any of the following URLs.
 
-    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/jsp
-    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/velocity
-    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/freemarker
-    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/thymeleaf
-    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/mustache
-    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/jade
-    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/pebble
-    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/handlebars
-    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/jtwig
+    $ ab -n 10000 -c 10 http://localhost:8080/jsp
+    $ ab -n 10000 -c 10 http://localhost:8080/velocity
+    $ ab -n 10000 -c 10 http://localhost:8080/freemarker
+    $ ab -n 10000 -c 10 http://localhost:8080/thymeleaf
+    $ ab -n 10000 -c 10 http://localhost:8080/mustache
+    $ ab -n 10000 -c 10 http://localhost:8080/jade
+    $ ab -n 10000 -c 10 http://localhost:8080/pebble
+    $ ab -n 10000 -c 10 http://localhost:8080/handlebars
+    $ ab -n 10000 -c 10 http://localhost:8080/jtwig
 
 
 For creating the below benchmark results I used ApacheBench(Version 2.3) with the following settings:
 
 ```
-ab -n 25000 -c 25 -k http://localhost:8080/spring-comparing-template-engines/jsp
+ab -n 25000 -c 25 -k http://localhost:8080/jsp
 ```
 With 25 concurrent requests and 25.000 requests in total this resulted in the following numbers:
 
