@@ -12,9 +12,9 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Scalate](http://scalate.fusesource.org/)  - v1.7.1
 * [Jade](https://github.com/neuland/jade4j) - v1.2.5
 * [HTTL](http://httl.github.io/en/) - v1.0.11
-* [Pebble] (http://www.mitchellbosecke.com/pebble/home) - v2.2.3
-* [Handlebars] (https://github.com/jknack/handlebars.java) - v4.0.6
-* [jtwig] (https://github.com/jtwig/jtwig) - v3.1.1
+* [Pebble](http://www.mitchellbosecke.com/pebble/home) - v2.2.3
+* [Handlebars](https://github.com/jknack/handlebars.java) - v4.0.6
+* [jtwig](https://github.com/jtwig/jtwig) - v3.1.1
 
 
 ## Build and run
@@ -96,11 +96,11 @@ JSP                     2.227 seconds
 
 *Keep in mind that in the real world, these results will differ depending on the complexity of the templates, hardware, etc, so it's just an indication and if you want to know the truth you will have to run the benchmark yourself to see how such a template engine performs in your specific environment.*
 
-###How were the results measured?
+### How were the results measured?
 
 Before the performance of each template engines was measured, there were at least 2 dry runs with the exact same settings, to make sure that initialization of the engines, warm up of the JVM and additional caches have taken place. There were at least 5 iterations of the same benchmark before calculating the average time it took.
 
-###For Mac OSX users
+### For Mac OSX users
 
 Mac OS X has only 16K ports available that won't be released until socket
 TIME_WAIT is passed. The default timeout for TIME_WAIT is 15 seconds.
@@ -118,6 +118,6 @@ Now if you want to change this you can do so by doing:
 
 In case you still run into problem you might want to read [this thread](http://stackoverflow.com/questions/1216267/ab-program-freezes-after-lots-of-requests-why/1217100#1217100) on ephemeral ports.
 
-##Contributing
+## Contributing
 
 In case you see an improvement to the benchmark or know about ways to improve the results, please file an issue and send a pull request.
