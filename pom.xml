@@ -457,10 +457,10 @@
     <repositories>
         <repository>
             <id>jcenter</id>
-      <url>https://dl.bintray.com/jtwig/maven</url>
-    </repository>
-    <repository>
-      <id>spring-jade4j-releases</id>
+            <url>https://dl.bintray.com/jtwig/maven</url>
+        </repository>
+        <repository>
+            <id>spring-jade4j-releases</id>
             <url>https://raw.github.com/neuland/spring-jade4j/master/releases</url>
         </repository>
         <repository>
