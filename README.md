@@ -12,9 +12,10 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Scalate](http://scalate.fusesource.org/)  - v1.7.1
 * [Jade](https://github.com/neuland/jade4j) - v1.2.5
 * [HTTL](http://httl.github.io/en/) - v1.0.11
-* [Pebble] (http://www.mitchellbosecke.com/pebble/home) - v2.2.3
-* [Handlebars] (https://github.com/jknack/handlebars.java) - v4.0.6
-* [jtwig] (https://github.com/jtwig/jtwig) - v3.1.1
+* [Pebble](http://www.mitchellbosecke.com/pebble/home) - v2.2.3
+* [Handlebars](https://github.com/jknack/handlebars.java) - v4.0.6
+* [jtwig](https://github.com/jtwig/jtwig) - v3.1.1
+* [chunk](https://github.com/tomj74/chunk-templates) - v3.2.4
 
 
 ## Build and run
@@ -39,6 +40,7 @@ See the demo URLs:
   - http://localhost:8080/spring-comparing-template-engines/pebble
   - http://localhost:8080/spring-comparing-template-engines/handlebars
   - http://localhost:8080/spring-comparing-template-engines/jtwig
+  - http://localhost:8080/spring-comparing-template-engines/chunk
 
 ## Benchmarking
 
@@ -54,6 +56,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/pebble
     $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/handlebars
     $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/jtwig
+    $ ab -n 10000 -c 10 http://localhost:8080/spring-comparing-template-engines/chunk
 
 
 For creating the below benchmark results I used ApacheBench(Version 2.3) with the following settings:
