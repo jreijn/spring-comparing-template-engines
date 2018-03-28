@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    {{>head}}
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>{{i18n "example.title"}} - Ickenham</h1>
+            </div>
+            {{#each presentations}}
+                {{>presentation}}
+            {{/each}}
+        </div>
+        {{>scripts}}
+    </body>
+</html>

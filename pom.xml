@@ -23,7 +23,7 @@
         <thymeleaf-extras-springsecurity3.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity3.version>
         <velocity.version>1.7</velocity.version>
         <mustache-java.version>0.9.4</mustache-java.version>
-        <scalate-core_2.11.version>1.7.1</scalate-core_2.11.version>
+        <scalate-core.version>1.7.1</scalate-core.version>
         <httl-springmvc.version>1.0.11</httl-springmvc.version>
         <spring-rythm.version>1.1.1-SNAPSHOT</spring-rythm.version>
         <pebble-spring4.version>2.2.3</pebble-spring4.version>
@@ -35,6 +35,9 @@
         <spring-jade4j.version>1.2.5</spring-jade4j.version>
         <chunk.version>3.2.4</chunk.version>
         <chunk-springmvc.version>0.1.0</chunk-springmvc.version>
+        <scala.version>2.11</scala.version>
+        <ickenham.version>1.2.0</ickenham.version>
+        <ickenham-springmvc.version>1.0.0</ickenham-springmvc.version>
     </properties>
 
     <parent>
@@ -141,14 +144,14 @@
 
         <dependency>
             <groupId>org.scalatra.scalate</groupId>
-            <artifactId>scalate-core_2.11</artifactId>
-            <version>${scalate-core_2.11.version}</version>
+            <artifactId>scalate-core_${scala.version}</artifactId>
+            <version>${scalate-core.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.scalatra.scalate</groupId>
-            <artifactId>scalate-spring-mvc_2.11</artifactId>
-            <version>${scalate-core_2.11.version}</version>
+            <artifactId>scalate-spring-mvc_${scala.version}</artifactId>
+            <version>${scalate-core.version}</version>
         </dependency>
 
         <dependency>
@@ -233,6 +236,18 @@
             <groupId>com.x5dev</groupId>
             <artifactId>chunk-springmvc</artifactId>
             <version>${chunk-springmvc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.enpassant</groupId>
+            <artifactId>ickenham_${scala.version}</artifactId>
+            <version>${ickenham.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.enpassant</groupId>
+            <artifactId>ickenham-spring-mvc_${scala.version}</artifactId>
+            <version>${ickenham-springmvc.version}</version>
         </dependency>
 
         <!-- Test -->

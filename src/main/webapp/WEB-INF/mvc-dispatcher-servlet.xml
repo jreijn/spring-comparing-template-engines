@@ -234,6 +234,19 @@
     </constructor-arg>
   </bean>
 
+  <!-- Ickenham -->
+  <bean id="ickenhamViewResolver"
+      class="com.github.enpassant.ickenham.springmvc.IckenhamViewResolver"
+  >
+    <property name="prefix" value="/WEB-INF/ickenham/"/>
+    <property name="suffix" value=".hbs"/>
+    <property name="viewNames" value="*-ickenham"/>
+    <property name="order" value="9"/>
+    <property name="contentType" value="text/html; charset=UTF-8"/>
+    <property name="cache" value="true"/>
+    <property name="requestContextAttribute" value="rc" />
+  </bean>
+
   <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="viewClass" value="com.x5.template.spring.ChunkTemplateView"/>
     <property name="prefix" value="/WEB-INF/chunk/"/>
