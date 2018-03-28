@@ -16,6 +16,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Handlebars](https://github.com/jknack/handlebars.java) - v4.0.6
 * [jtwig](https://github.com/jtwig/jtwig) - v3.1.1
 * [chunk](https://github.com/tomj74/chunk-templates) - v3.2.4
+* [Ickenham](https://github.com/enpassant/ickenham) - v1.2.0
 
 
 ## Build and run
@@ -41,6 +42,7 @@ See the demo URLs:
   - http://localhost:8080/handlebars
   - http://localhost:8080/jtwig
   - http://localhost:8080/chunk
+  - http://localhost:8080/ickenham
 
 ## Benchmarking
 
@@ -57,6 +59,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/handlebars
     $ ab -n 10000 -c 10 http://localhost:8080/jtwig
     $ ab -n 10000 -c 10 http://localhost:8080/chunk
+    $ ab -n 10000 -c 10 http://localhost:8080/ickenham
 
 
 For creating the below benchmark results I used ApacheBench(Version 2.3) with the following settings:
