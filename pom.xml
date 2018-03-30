@@ -36,8 +36,7 @@
         <chunk.version>3.2.4</chunk.version>
         <chunk-springmvc.version>0.1.0</chunk-springmvc.version>
         <scala.version>2.11</scala.version>
-        <ickenham.version>1.2.0</ickenham.version>
-        <ickenham-springmvc.version>1.0.0</ickenham-springmvc.version>
+        <ickenham-springmvc.version>1.3.0</ickenham-springmvc.version>
     </properties>
 
     <parent>
@@ -236,12 +235,6 @@
             <groupId>com.x5dev</groupId>
             <artifactId>chunk-springmvc</artifactId>
             <version>${chunk-springmvc.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.enpassant</groupId>
-            <artifactId>ickenham_${scala.version}</artifactId>
-            <version>${ickenham.version}</version>
         </dependency>
 
         <dependency>
