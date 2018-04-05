@@ -16,7 +16,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Handlebars](https://github.com/jknack/handlebars.java) - v4.0.6
 * [jtwig](https://github.com/jtwig/jtwig) - v3.1.1
 * [chunk](https://github.com/tomj74/chunk-templates) - v3.2.4
-* [Ickenham](https://github.com/enpassant/ickenham) - v1.3.0
+* [Ickenham](https://github.com/enpassant/ickenham) - v1.4.0
 
 
 ## Build and run
