@@ -180,7 +180,11 @@
             <artifactId>spring-jade4j</artifactId>
             <version>${spring-jade4j.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.github.xmlet</groupId>
+            <artifactId>htmlflow</artifactId>
+            <version>3.2</version>
+        </dependency>
         <!--<dependency>-->
         <!--<groupId>com.googlecode.concurrentlinkedhashmap</groupId>-->
         <!--<artifactId>concurrentlinkedhashmap-lru</artifactId>-->

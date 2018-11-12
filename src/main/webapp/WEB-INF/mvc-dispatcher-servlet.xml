@@ -198,6 +198,14 @@
     <property name="renderer" ref="jtwigRenderer"/>
   </bean>
 
+  <!-- HtmlApi -->
+    <bean id="htmlFlowViewResolver" class="com.jeroenreijn.examples.factory.HtmlFlowViewFactory">
+        <property name="viewNames" value="*-htmlFlow"/>
+        <property name="order" value="13"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="cache" value="true"/>
+    </bean>
+
   <!-- Handlebars -->
   <bean id="handlebarsViewResolver" class="com.github.jknack.handlebars.springmvc.HandlebarsViewResolver">
     <property name="viewNames" value="*-handlebars"/>
