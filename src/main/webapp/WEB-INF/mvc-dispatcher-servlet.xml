@@ -198,10 +198,31 @@
     <property name="renderer" ref="jtwigRenderer"/>
   </bean>
 
-  <!-- HtmlApi -->
+  <!-- HtmlFlow -->
     <bean id="htmlFlowViewResolver" class="com.jeroenreijn.examples.factory.HtmlFlowViewFactory">
         <property name="viewNames" value="*-htmlFlow"/>
         <property name="order" value="13"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="cache" value="true"/>
+    </bean>
+
+    <bean id="rockerViewResolver" class="com.jeroenreijn.examples.factory.RockerViewFactory">
+        <property name="viewNames" value="*-rocker"/>
+        <property name="order" value="14"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="cache" value="true"/>
+    </bean>
+
+    <bean id="j2htmlViewResolver" class="com.jeroenreijn.examples.factory.J2HtmlViewFactory">
+        <property name="viewNames" value="*-j2html"/>
+        <property name="order" value="15"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="cache" value="true"/>
+    </bean>
+
+    <bean id="kotlinHtmlViewResolver" class="com.jeroenreijn.examples.factory.KotlinHtmlViewFactory">
+        <property name="viewNames" value="*-kotlinhtml"/>
+        <property name="order" value="16"/>
         <property name="exposeSpringMacroHelpers" value="true"/>
         <property name="cache" value="true"/>
     </bean>

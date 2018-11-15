@@ -11,15 +11,17 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.13
 * [Scalate](http://scalate.fusesource.org/)  - v1.7.1
 * [Jade](https://github.com/neuland/jade4j) - v1.2.5
-* [HTTL](http://httl.github.io/en/) - v1.0.11
 * [Pebble](http://www.mitchellbosecke.com/pebble/home) - v2.2.3
 * [Handlebars](https://github.com/jknack/handlebars.java) - v4.0.6
 * [jtwig](https://github.com/jtwig/jtwig) - v3.1.1
 * [chunk](https://github.com/tomj74/chunk-templates) - v3.2.4
-
+* [Rocker](https://github.com/fizzed/rocker) - 1.1.0
+* [j2Html](https://j2html.com/) - v1.3.0
+* [KotlinX Html](https://github.com/Kotlin/kotlinx.html) - v0.6.11
+* [HtmlFlow](https://github.com/xmlet/HtmlFlow) - v3.2
 
 ## Build and run
-You need Java 7 and Maven 3 to build and run this project.
+You need Java 8 (or higher) and Maven 3 to build and run this project.
 Build the project with
 
     mvn package
@@ -41,6 +43,10 @@ See the demo URLs:
   - http://localhost:8080/handlebars
   - http://localhost:8080/jtwig
   - http://localhost:8080/chunk
+  - http://localhost:8080/rocker
+  - http://localhost:8080/j2html
+  - http://localhost:8080/kotlinhtml
+  - http://localhost:8080/htmlFlow
 
 ## Benchmarking
 
@@ -57,7 +63,10 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/handlebars
     $ ab -n 10000 -c 10 http://localhost:8080/jtwig
     $ ab -n 10000 -c 10 http://localhost:8080/chunk
-
+    $ ab -n 10000 -c 10 http://localhost:8080/rocker
+    $ ab -n 10000 -c 10 http://localhost:8080/j2html
+    $ ab -n 10000 -c 10 http://localhost:8080/kotlinhtml
+    $ ab -n 10000 -c 10 http://localhost:8080/htmlFlow
 
 For creating the below benchmark results I used ApacheBench(Version 2.3) with the following settings:
 
@@ -67,34 +76,39 @@ ab -n 25000 -c 25 -k http://localhost:8080/jsp
 With 25 concurrent requests and 25.000 requests in total this resulted in the following numbers:
 
 
-## Benchmarks 2015
+## Benchmarks 2018
 
 These tests were done on a local machine with the following specs:
 
 ```
-Mac OS X Version 10.11.1
-2,3 GHz Intel Core i7 Quad core
-ava(TM) SE Runtime Environment (build 1.8.0_51-b16)
-Java HotSpot(TM) 64-Bit Server VM (build 25.51-b03, mixed mode)
+Microsoft Windows 10 Education  OS Version: 10.0.17134 N/A Build 17134
+Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz, 2808 Mhz, 4 Core(s), 8 Logical Processor(s)
+Java(TM) SE Runtime Environment 18.9 (build 11+28)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11+28, mixed mode)
 Apache Tomcat 7.0.53 with 512M RAM
 ```
 
-Results in order (high to low):
+Results in order (low to high):
 
-Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
+Total time taken for processing 25.000 requests with a concurrency level of 25. (**lower is better**)
 
 ```
-jTwig                   4.709 seconds
-Thymeleaf               4.147 seconds
-Scalate - Scaml         3.479 seconds
-Handlebars              2.936 seconds
-Jade4j                  2.735 seconds
-Freemarker              2.637 seconds
-HTTL                    2.531 seconds
-Pebble                  2.512 seconds
-Velocity                2.491 seconds
-Mustache (JMustache)    2.326 seconds
-JSP                     2.227 seconds
+HtmlFlow	1.172 seconds
+Rocker		1.299 seconds
+Jade		3.071 seconds
+Mustache	3.098 seconds
+Pebble		3.172 seconds
+Freemarker	3.224 seconds
+Velocity	3.283 seconds
+Chunk		3.334 seconds
+Jtwig		3.399 seconds
+JSP		3.424 seconds
+Thymeleaf	3.645 seconds
+Handlebars	3.765 seconds
+J2Html		4.561 seconds
+Kotlin		6.111 seconds
+Scalate		7.880 seconds
+
 ```
 
 *Keep in mind that in the real world, these results will differ depending on the complexity of the templates, hardware, etc, so it's just an indication and if you want to know the truth you will have to run the benchmark yourself to see how such a template engine performs in your specific environment.*
