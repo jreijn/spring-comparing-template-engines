@@ -331,6 +331,7 @@
                         </goals>
                         <configuration>
                             <templateDirectory>src/main/resources</templateDirectory>
+                            <javaVersion>1.8</javaVersion>
                         </configuration>
                     </execution>
                 </executions>
