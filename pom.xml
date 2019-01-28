@@ -7,34 +7,7 @@
     <version>0.1.0-SNAPSHOT</version>
     <name>template-engines</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <tomcat.version>7.0.72</tomcat.version>
-        <javax.servlet-api.version>3.0.1</javax.servlet-api.version>
-        <spring.version>4.3.2.RELEASE</spring.version>
-        <jquery.version>3.1.1</jquery.version>
-        <bootstrap.version>3.3.7-1</bootstrap.version>
-
-        <!-- Template engine versions -->
-        <freemarker.version>2.3.25-incubating</freemarker.version>
-        <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
-        <thymeleaf-spring4.version>3.0.2.RELEASE</thymeleaf-spring4.version>
-        <thymeleaf-extras-conditionalcomments.version>3.0.2.RELEASE</thymeleaf-extras-conditionalcomments.version>
-        <thymeleaf-extras-springsecurity3.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity3.version>
-        <velocity.version>1.7</velocity.version>
-        <mustache-java.version>0.9.4</mustache-java.version>
-        <scalate-core_2.11.version>1.7.1</scalate-core_2.11.version>
-        <httl-springmvc.version>1.0.11</httl-springmvc.version>
-        <spring-rythm.version>1.1.1-SNAPSHOT</spring-rythm.version>
-        <pebble-spring4.version>2.2.3</pebble-spring4.version>
-        <mustache-spring-view.version>1.3</mustache-spring-view.version>
-        <jmustache.version>1.13</jmustache.version>
-        <handlebars.version>4.0.6</handlebars.version>
-        <jtwig-spring.version>5.80</jtwig-spring.version>
-        <jtwig-translate.version>1.2</jtwig-translate.version>
-        <spring-jade4j.version>1.2.5</spring-jade4j.version>
-        <chunk.version>3.2.4</chunk.version>
-        <chunk-springmvc.version>0.1.0</chunk-springmvc.version>
+    <properties>        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>        <tomcat.version>7.0.72</tomcat.version>        <javax.servlet-api.version>3.0.1</javax.servlet-api.version>        <spring.version>4.3.2.RELEASE</spring.version>        <jquery.version>3.1.1</jquery.version>        <bootstrap.version>3.3.7-1</bootstrap.version>        <!-- Template engine versions -->        <freemarker.version>2.3.25-incubating</freemarker.version>        <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>        <thymeleaf-spring4.version>3.0.2.RELEASE</thymeleaf-spring4.version>        <thymeleaf-extras-conditionalcomments.version>3.0.2.RELEASE</thymeleaf-extras-conditionalcomments.version>        <thymeleaf-extras-springsecurity3.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity3.version>        <velocity.version>1.7</velocity.version>        <mustache-java.version>0.9.4</mustache-java.version>        <scalate-core_2.11.version>1.7.1</scalate-core_2.11.version>        <httl-springmvc.version>1.0.11</httl-springmvc.version>        <spring-rythm.version>1.1.1-SNAPSHOT</spring-rythm.version>        <pebble-spring4.version>2.2.3</pebble-spring4.version>        <mustache-spring-view.version>1.3</mustache-spring-view.version>        <jmustache.version>1.13</jmustache.version>        <handlebars.version>4.0.6</handlebars.version>        <jtwig-spring.version>5.80</jtwig-spring.version>        <jtwig-translate.version>1.2</jtwig-translate.version>        <spring-jade4j.version>1.2.5</spring-jade4j.version>        <chunk.version>3.2.4</chunk.version>        <chunk-springmvc.version>0.1.0</chunk-springmvc.version><javac.version>9+181-r4173-1</javac.version>
     </properties>
 
     <parent>
@@ -286,6 +259,27 @@
                     </execution>
                 </executions>
             </plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.5.1</version>
+<configuration>
+	<source>8</source>
+	<target>8</target>
+	<showWarnings>true</showWarnings>
+	<compilerArgs>
+		<arg>-XDcompilePolicy=simple</arg>
+		<arg>-Xplugin:ErrorProne -XepAllErrorsAsWarnings -Xep:AndroidJdkLibsChecker:ERROR -Xep:AssistedInjectAndInjectOnSameConstructor:ERROR -Xep:AutoFactoryAtInject:ERROR -Xep:ClassName:ERROR -Xep:ComparisonContractViolated:ERROR -Xep:DepAnn:ERROR -Xep:DivZero:ERROR -Xep:EmptyIf:ERROR -Xep:FuzzyEqualsShouldNotBeUsedInEqualsMethod:ERROR -Xep:InjectInvalidTargetingOnScopingAnnotation:ERROR -Xep:InjectMoreThanOneQualifier:ERROR -Xep:InjectScopeAnnotationOnInterfaceOrAbstractClass:ERROR -Xep:InjectScopeOrQualifierAnnotationRetention:ERROR -Xep:InjectedConstructorAnnotations:ERROR -Xep:InsecureCryptoUsage:ERROR -Xep:IterablePathParameter:ERROR -Xep:JMockTestWithoutRunWithOrRuleAnnotation:ERROR -Xep:Java7ApiChecker:ERROR -Xep:JavaxInjectOnFinalField:ERROR -Xep:LockMethodChecker:ERROR -Xep:LongLiteralLowerCaseSuffix:ERROR -Xep:NoAllocation:ERROR -Xep:NumericEquality:ERROR -Xep:ParameterPackage:ERROR -Xep:RestrictTo:ERROR -Xep:StaticOrDefaultInterfaceMethod:ERROR -Xep:UnlockMethod:ERROR -Xep:AnnotateFormatMethod:ERROR -Xep:AnnotationPosition:ERROR -Xep:AssertFalse:ERROR -Xep:AssistedInjectAndInjectOnConstructors:ERROR -Xep:BinderIdentityRestoredDangerously:ERROR -Xep:BindingToUnqualifiedCommonType:ERROR -Xep:ConstructorInvokesOverridable:ERROR -Xep:ConstructorLeaksThis:ERROR -Xep:EmptyTopLevelDeclaration:ERROR -Xep:EqualsBrokenForNull:ERROR -Xep:ExpectedExceptionChecker:ERROR -Xep:FunctionalInterfaceClash:ERROR -Xep:HardCodedSdCardPath:ERROR -Xep:InconsistentOverloads:ERROR -Xep:InvalidParam:ERROR -Xep:InvalidTag:ERROR -Xep:InvalidThrows:ERROR -Xep:MissingDefault:ERROR -Xep:MutableMethodReturnType:ERROR -Xep:NoFunctionalReturnType:ERROR -Xep:NonCanonicalStaticMemberImport:ERROR -Xep:NullableDereference:ERROR -Xep:PrimitiveArrayPassedToVarargsMethod:ERROR -Xep:ProtosAsKeyOfSetOrMap:ERROR -Xep:ProvidesFix:ERROR -Xep:QualifierWithTypeUse:ERROR -Xep:RedundantThrows:ERROR -Xep:ReturnFromVoid:ERROR -Xep:StaticQualifiedUsingExpression:ERROR -Xep:StringEquality:ERROR -Xep:SystemExitOutsideMain:ERROR -Xep:TestExceptionChecker:ERROR -Xep:UnnecessaryDefaultInEnumSwitch:ERROR -Xep:Unused:ERROR -Xep:UnusedException:ERROR -Xep:Var:ERROR -Xep:BooleanParameter:ERROR -Xep:ClassNamedLikeTypeParameter:ERROR -Xep:ConstantField:ERROR -Xep:EmptySetMultibindingContributions:ERROR -Xep:ExpectedExceptionRefactoring:ERROR -Xep:FieldCanBeFinal:ERROR -Xep:FieldMissingNullable:ERROR -Xep:ImmutableRefactoring:ERROR -Xep:LambdaFunctionalInterface:ERROR -Xep:MethodCanBeStatic:ERROR -Xep:MixedArrayDimensions:ERROR -Xep:MultiVariableDeclaration:ERROR -Xep:MultipleTopLevelClasses:ERROR -Xep:MultipleUnaryOperatorsInMethodCall:ERROR -Xep:PackageLocation:ERROR -Xep:ParameterComment:ERROR -Xep:ParameterNotNullable:ERROR -Xep:PrivateConstructorForNoninstantiableModule:ERROR -Xep:PrivateConstructorForUtilityClass:ERROR -Xep:RemoveUnusedImports:ERROR -Xep:ReturnMissingNullable:ERROR -Xep:ScopeOnModule:ERROR -Xep:SwitchDefault:ERROR -Xep:TestExceptionRefactoring:ERROR -Xep:ThrowsUncheckedException:ERROR -Xep:TryFailRefactoring:ERROR -Xep:TypeParameterNaming:ERROR -Xep:UngroupedOverloads:ERROR -Xep:UnnecessarySetDefault:ERROR -Xep:UnnecessaryStaticImport:ERROR -Xep:UseBinds:ERROR -Xep:WildcardImport:ERROR</arg>
+	</compilerArgs>
+	<annotationProcessorPaths>
+		<path>
+			<groupId>com.google.errorprone</groupId>
+			<artifactId>error_prone_core</artifactId>
+			<version>2.3.2</version>
+		</path>
+	</annotationProcessorPaths>
+</configuration>
+</plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -497,4 +491,26 @@
             </snapshots>
         </repository>
     </repositories>
+<profiles>
+<profile>
+<id>jdk8</id>
+<activation>
+	<jdk>1.8</jdk>
+</activation>
+<build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<configuration>
+				<fork>true</fork>
+				<compilerArgs combine.children="append">
+					<arg>-J-Xbootclasspath/p:${settings.localRepository}/com/google/errorprone/javac/${javac.version}/javac-${javac.version}.jar</arg>
+				</compilerArgs>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
+</profile>
+</profiles>
 </project>
