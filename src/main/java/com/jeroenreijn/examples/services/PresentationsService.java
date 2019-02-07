@@ -1,6 +1,6 @@
 package com.jeroenreijn.examples.services;
 
-import com.jeroenreijn.examples.PresentationsRepository;
+import com.jeroenreijn.examples.repository.PresentationsRepository;
 import com.jeroenreijn.examples.model.Presentation;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +19,4 @@ public class PresentationsService {
     public Iterable<Presentation> findAll() {
         return this.presentationsRepository.findAll();
     }
-
 }
