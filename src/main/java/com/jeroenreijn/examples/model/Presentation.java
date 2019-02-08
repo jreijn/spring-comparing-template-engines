@@ -7,7 +7,6 @@ import java.util.Date;
  * @author Jeroen Reijn
  */
 public class Presentation {
-
     private Long id;
     private String title;
     private String speakerName;
@@ -15,6 +14,9 @@ public class Presentation {
     private String room;
     private Date startTime;
     private Date endTime;
+
+    public Presentation() {
+    }
 
     public Long getId() {
         return id;
