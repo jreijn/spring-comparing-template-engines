@@ -5,14 +5,14 @@
     - render("head.scaml",Map("title" -> title))
     %body
         %div.container
-            %div.page-header
+            %div.pb-2.mt-4.mb-3.border-bottom
                 %h1= title
             - val iter = presentations.iterator
             - while(iter.hasNext)
                 - val item = iter.next 
-                %div.panel.panel-default
-                    %div.panel-heading
-                        %h3.panel-title= item.getTitle + " - " + item.getSpeakerName
-                    %div.panel-body
+                %div.card.mb-3.shadow-sm.rounded
+                    %div.card-header
+                        %h5.card-title= item.getTitle + " - " + item.getSpeakerName
+                    %div.card-body
                         != item.getSummary
         - render("scripts.scaml")

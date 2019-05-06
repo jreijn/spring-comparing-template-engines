@@ -8,15 +8,15 @@
 <%@ include file="head.jspf" %>
 <body>
 <div class="container">
-  <div class="page-header">
+  <div class="pb-2 mt-4 mb-3 border-bottom">
     <h1><spring:message code="example.title"/> - JSP</h1>
   </div>
   <c:forEach items="${presentations}" var="item">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"><c:out value="${item.title}"/> - <c:out value="${item.speakerName}"/></h3>
+    <div class="card mb-3 shadow-sm rounded">
+      <div class="card-header">
+        <h5 class="card-title"><c:out value="${item.title}"/> - <c:out value="${item.speakerName}"/></h5>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
           <c:out value="${item.summary}" escapeXml="false"/>
       </div>
     </div>
