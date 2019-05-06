@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <title th:text="#{example.title} + ' - Thymeleaf'">Title</title>
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
 </head>
 
 <body>
-<div class="page-header" th:fragment="pageHeader">
+<div class="pb-2 mt-4 mb-3 border-bottom" th:fragment="pageHeader">
     <h1 th:text="#{example.title} + ' - Thymeleaf'">Title</h1>
 </div>
 
 <section th:fragment="scripts" th:remove="tag">
     <script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
 </section>
 
 </body>
