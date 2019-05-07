@@ -33,6 +33,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 import com.github.jknack.handlebars.springmvc.HandlebarsViewResolver;
 import com.jeroenreijn.examples.repository.InMemoryPresentationsRepository;
 import com.jeroenreijn.examples.repository.PresentationsRepository;
+import com.jeroenreijn.examples.view.HtmlFlowViewResolver;
 import com.x5.template.spring.ChunkTemplateView;
 
 import de.neuland.jade4j.JadeConfiguration;
@@ -224,6 +225,15 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer  
 		viewResolver.setRequestContextAttribute("rc");
 		viewResolver.setCache(false);
 		viewResolver.setContentType("text/html;charset=UTF-8");
+
+		return viewResolver;
+	}
+	
+	@Bean
+	public ViewResolver htmlFlowViewResolver() {
+		HtmlFlowViewResolver viewResolver = new HtmlFlowViewResolver();
+		viewResolver.setViewNames("*-htmlFlow");
+		viewResolver.setCache(false);
 
 		return viewResolver;
 	}

@@ -5,7 +5,7 @@
 	<groupId>com.jeroenreijn</groupId>
 	<artifactId>spring-comparing-template-engines</artifactId>
 	<packaging>war</packaging>
-	<version>0.2.0-SNAPSHOT</version>
+	<version>0.3.0-SNAPSHOT</version>
 	<name>template-engines</name>
 
 	<properties>
@@ -31,13 +31,14 @@
 		<mustache-spring-view.version>1.4</mustache-spring-view.version>
 		<mustache-java.version>0.9.5</mustache-java.version>
 		<pebble.version>3.0.7</pebble.version>
-		<scalate-core_2.11.version>1.9.0</scalate-core_2.11.version>
+		<scalate-core_2.11.version>1.9.3</scalate-core_2.11.version>
+		<htmlflow.version>3.2</htmlflow.version>
 	</properties>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.2.RELEASE</version>
+		<version>2.1.4.RELEASE</version>
 		<relativePath />
 	</parent>
 
@@ -89,6 +90,7 @@
 			<artifactId>jstl</artifactId>
 		</dependency>
 
+
 		<!-- Template engines -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -106,6 +108,18 @@
 			<groupId>org.jtwig</groupId>
 			<artifactId>jtwig-spring-translate-extension</artifactId>
 			<version>${jtwig-translate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ow2.asm</groupId>
+			<artifactId>asm-xml</artifactId>
+			<version>6.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.parboiled</groupId>
+			<artifactId>parboiled-java</artifactId>
+			<version>1.2.0</version>
 		</dependency>
 
 
@@ -199,6 +213,13 @@
 			<version>${scalate-core_2.11.version}</version>
 		</dependency>
 
+
+		<dependency>
+			<groupId>com.github.xmlet</groupId>
+			<artifactId>htmlflow</artifactId>
+			<version>${htmlflow.version}</version>
+		</dependency>
+
 		<!-- Test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -218,7 +239,7 @@
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>scala-maven-plugin</artifactId>
-				<version>3.4.6</version>
+				<version>4.0.1</version>
 			</plugin>
 		</plugins>
 
@@ -227,7 +248,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.3</version>
+					<version>3.8.1</version>
 					<configuration>
 						<source>1.8</source>
 						<target>1.8</target>
