@@ -34,6 +34,7 @@ import com.github.jknack.handlebars.springmvc.HandlebarsViewResolver;
 import com.jeroenreijn.examples.repository.InMemoryPresentationsRepository;
 import com.jeroenreijn.examples.repository.PresentationsRepository;
 import com.jeroenreijn.examples.view.HtmlFlowViewResolver;
+import com.jeroenreijn.examples.view.TrimouViewResolver;
 import com.x5.template.spring.ChunkTemplateView;
 
 import de.neuland.jade4j.JadeConfiguration;
@@ -238,6 +239,18 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer  
 		return viewResolver;
 	}
 
+	@Bean
+	public ViewResolver trimouViewResolver() {
+		MessageSource messageSource = applicationContext.getBean(MessageSource.class);
+		TrimouViewResolver viewResolver = new TrimouViewResolver(messageSource);
+		viewResolver.setPrefix("classpath:/templates/trimou/");
+		viewResolver.setSuffix(".trimou");
+		viewResolver.setViewNames("*-trimou");
+		viewResolver.setCache(false);
+
+		return viewResolver;
+	}
+	
 	@Controller
 	static class FaviconController {
 		@RequestMapping("favicon.ico")
