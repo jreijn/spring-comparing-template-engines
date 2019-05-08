@@ -33,6 +33,7 @@
 		<pebble.version>3.0.7</pebble.version>
 		<scalate-core_2.11.version>1.9.3</scalate-core_2.11.version>
 		<htmlflow.version>3.2</htmlflow.version>
+		<trimou.version>2.5.0.Final</trimou.version>
 	</properties>
 
 	<parent>
@@ -218,6 +219,13 @@
 			<groupId>com.github.xmlet</groupId>
 			<artifactId>htmlflow</artifactId>
 			<version>${htmlflow.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.trimou</groupId>
+			<artifactId>trimou-core</artifactId>
+			<version>${trimou.version}</version>
 		</dependency>
 
 		<!-- Test -->

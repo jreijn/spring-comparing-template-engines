@@ -18,6 +18,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [jtwig](http://jtwig.org/) - v5.86.1
 * [chunk](http://www.x5software.com/chunk/) - v3.5.0
 * [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v3.2
+* [Trimou](http://trimou.org/) - v2.5.0.Final
 
 
 ## Build and run
@@ -45,6 +46,7 @@ See the demo URLs:
   - http://localhost:8080/httl  
   - http://localhost:8080/chunk
   - http://localhost:8080/htmlFlow
+  - http://localhost:8080/trimou
 
 ## Benchmarking
 
@@ -64,6 +66,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/httl
     $ ab -n 10000 -c 10 http://localhost:8080/chunk
     $ ab -n 10000 -c 10 http://localhost:8080/htmlFlow
+    $ ab -n 10000 -c 10 http://localhost:8080/trimou
 
 
 For creating the below benchmark results I used ApacheBench (version 2.4.25) with the following settings:
@@ -137,6 +140,7 @@ Chunk                   11.59 seconds
 Mustache (JMustache)    10.93 seconds
 Freemarker              9.968 seconds
 JSP                     9.395 seconds
+Trimou                  9.310 seconds
 HtmlFlow                8.705 seconds
 ```
 
