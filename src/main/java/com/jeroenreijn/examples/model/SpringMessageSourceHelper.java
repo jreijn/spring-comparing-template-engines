@@ -37,7 +37,6 @@ public class SpringMessageSourceHelper extends LocaleAwareValueHelper {
 				append(options, messageSource.getMessage(msgCode, msgArguments, defaultMessage, locale));
 			}
 		} catch (NoSuchMessageException e) {
-			// LOGGER.warn("Message code {} has not been found", msgCode);
 			append(options, msgCode);
 		}
 	}

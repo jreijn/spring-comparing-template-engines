@@ -29,6 +29,8 @@ public class TrimouView extends AbstractTemplateView {
 			final HttpServletResponse response) throws Exception {
 		Objects.requireNonNull(mustache, "mustache must not be null");
 
+		response.setCharacterEncoding("UTF-8");
+
 		try (PrintWriter writer = response.getWriter()) {
 			mustache.render(writer, model);
 		}

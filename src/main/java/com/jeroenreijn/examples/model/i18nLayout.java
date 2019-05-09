@@ -2,13 +2,13 @@ package com.jeroenreijn.examples.model;
 
 import java.io.IOException;
 import java.io.Writer;
-import com.samskivert.mustache.Mustache;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.context.MessageSource;
 import org.springframework.web.servlet.LocaleResolver;
 
+import com.samskivert.mustache.Mustache;
 import com.samskivert.mustache.Template.Fragment;
 
 public class i18nLayout implements Mustache.Lambda {

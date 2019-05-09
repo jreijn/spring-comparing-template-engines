@@ -15,27 +15,27 @@ import org.springframework.web.servlet.LocaleResolver;
 @Configuration
 @Import({ WebMvcConfig.class })
 public class JtwigConfig implements JtwigViewResolverConfigurer {
-    @Autowired
-    private MessageSource messageSource;
+	@Autowired
+	private MessageSource messageSource;
 
-    @Autowired
-    private LocaleResolver localeResolver;
+	@Autowired
+	private LocaleResolver localeResolver;
 
-    @Override
-    public void configure(JtwigViewResolver viewResolver) {
-        viewResolver.setRenderer(
-                new JtwigRenderer(
-                        EnvironmentConfigurationBuilder
-                                .configuration()
-                                .extensions().add(new SpringTranslateExtension(SpringTranslateExtensionConfiguration
-                                .builder(messageSource)
-                                .withLocaleResolver(localeResolver)
-                                .build())).and()
-                                .build()
-                )
-        );
-        viewResolver.setViewNames("*-jtwig");
-        viewResolver.setPrefix("/WEB-INF/jtwig/");
-        viewResolver.setSuffix(".twig");
-    }
+	@Override
+	public void configure(JtwigViewResolver viewResolver) {
+		viewResolver.setRenderer(
+				new JtwigRenderer(
+						EnvironmentConfigurationBuilder
+								.configuration()
+								.extensions().add(new SpringTranslateExtension(SpringTranslateExtensionConfiguration
+								.builder(messageSource)
+								.withLocaleResolver(localeResolver)
+								.build())).and()
+								.build()
+				)
+		);
+		viewResolver.setViewNames("*-jtwig");
+		viewResolver.setPrefix("/WEB-INF/jtwig/");
+		viewResolver.setSuffix(".twig");
+	}
 }
