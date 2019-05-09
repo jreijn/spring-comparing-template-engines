@@ -149,7 +149,7 @@ Rocker                  9.923 seconds
 
 *Keep in mind that in the real world, these results will differ depending on the complexity of the templates, hardware, etc, so it's just an indication and if you want to know the truth you will have to run the benchmark yourself to see how such a template engine performs in your specific environment.*
 
-*Chunk produces pages with variable length. I haven't investigated it yet. ab might fail, and for Chunk use: $ ab -n 25000 -c 25 -l http://localhost:8080/chunk
+*Chunk produces pages with variable length. I haven't investigated it yet. ab might fail, and for Chunk use: $ ab -n 25000 -c 25 -l http://localhost:8080/chunk *
 
 ### How were the results measured?
 
