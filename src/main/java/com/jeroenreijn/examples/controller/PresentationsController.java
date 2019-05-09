@@ -20,10 +20,10 @@ public class PresentationsController {
 
 	@Autowired
 	PresentationsService presentationsService;
-	
+
 	@Autowired
 	MessageSource messageSource;
-	
+
 	@Autowired
 	LocaleResolver localeResolver;
 
@@ -37,7 +37,7 @@ public class PresentationsController {
 			final ModelMap model) {
 		model.addAttribute("presentations", presentationsService.findAll());
 		model.addAttribute("i18n", new i18nLayout(request, messageSource, localeResolver));
-		
+
 		return "index-" + template;
 	}
 }

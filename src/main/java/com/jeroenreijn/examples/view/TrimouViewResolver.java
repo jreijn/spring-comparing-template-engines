@@ -2,15 +2,14 @@ package com.jeroenreijn.examples.view;
 
 import java.util.Locale;
 
+import org.springframework.context.MessageSource;
+import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.view.AbstractTemplateViewResolver;
 import org.trimou.Mustache;
 import org.trimou.engine.MustacheEngine;
 import org.trimou.engine.MustacheEngineBuilder;
 
 import com.jeroenreijn.examples.model.SpringMessageSourceHelper;
-
-import org.springframework.context.MessageSource;
-import org.springframework.web.servlet.View;
-import org.springframework.web.servlet.view.AbstractTemplateViewResolver;
 
 public class TrimouViewResolver extends AbstractTemplateViewResolver {
 	private SpringResourceTemplateLocator loader = new SpringResourceTemplateLocator();
@@ -19,8 +18,10 @@ public class TrimouViewResolver extends AbstractTemplateViewResolver {
 	public TrimouViewResolver(MessageSource messageSource) {
 		this.setViewClass(this.requiredViewClass());
 
-		this.engine = MustacheEngineBuilder.newBuilder().addTemplateLocator(loader)
-				.registerHelper("springMsg", new SpringMessageSourceHelper(messageSource)).build();
+		this.engine = MustacheEngineBuilder.newBuilder()
+				.addTemplateLocator(loader)
+				.registerHelper("springMsg", new SpringMessageSourceHelper(messageSource))
+				.build();
 	}
 
 	@Override
