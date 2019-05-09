@@ -19,6 +19,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [chunk](http://www.x5software.com/chunk/) - v3.5.0
 * [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v3.2
 * [Trimou](http://trimou.org/) - v2.5.0.Final
+* [Rocker](https://github.com/fizzed/rocker/) - v1.2.1
 
 
 ## Build and run
@@ -47,6 +48,7 @@ See the demo URLs:
   - http://localhost:8080/chunk
   - http://localhost:8080/htmlFlow
   - http://localhost:8080/trimou
+  - http://localhost:8080/rocker
 
 ## Benchmarking
 
@@ -67,7 +69,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/chunk
     $ ab -n 10000 -c 10 http://localhost:8080/htmlFlow
     $ ab -n 10000 -c 10 http://localhost:8080/trimou
-
+    $ ab -n 10000 -c 10 http://localhost:8080/rocker
 
 For creating the below benchmark results I used ApacheBench (version 2.4.25) with the following settings:
 
@@ -128,23 +130,26 @@ Results in order (high to low):
 Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
 
 ```
-Jade4j                  345.0 seconds
-Handlebars              108.6 seconds
-Scalate - Scaml         23.32 seconds
-HTTL                    21.26 seconds
-Pebble                  16.84 seconds
-Velocity                15.26 seconds
-jTwig                   13.00 seconds
-Thymeleaf               12.60 seconds
-Chunk                   11.59 seconds
-Mustache (JMustache)    10.93 seconds
-Freemarker              9.968 seconds
-JSP                     9.395 seconds
-Trimou                  9.310 seconds
-HtmlFlow                8.705 seconds
+Jade4j                  382.0 seconds
+Handlebars              112.7 seconds
+Scalate - Scaml         25.46 seconds
+HTTL                    24.11 seconds
+Velocity                21.28 seconds
+Pebble                  18.43 seconds
+jTwig                   14.49 seconds
+Thymeleaf               13.70 seconds
+Mustache (JMustache)    12.61 seconds
+Chunk                   12.50 seconds
+Freemarker              11.67 seconds
+Trimou                  10.81 seconds
+HtmlFlow                10.34 seconds
+JSP                     10.31 seconds
+Rocker                  9.923 seconds
 ```
 
 *Keep in mind that in the real world, these results will differ depending on the complexity of the templates, hardware, etc, so it's just an indication and if you want to know the truth you will have to run the benchmark yourself to see how such a template engine performs in your specific environment.*
+
+*Chunk produces pages with variable length. I haven't investigated it yet. ab might fail, and for Chunk use: $ ab -n 25000 -c 25 -l http://localhost:8080/chunk
 
 ### How were the results measured?
 

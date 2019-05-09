@@ -8,12 +8,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.view.AbstractTemplateView;
 
-public class HtmlFlowView extends AbstractTemplateView {
+import com.fizzed.rocker.Rocker;
+
+public class RockerView extends AbstractTemplateView {
 
 	@Override
 	protected void renderMergedTemplateModel(Map<String, Object> model, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		String html = HtmlFlowIndexView.getView().render(model);
+		String html = Rocker.template("index.rocker.html")
+				.bind("presentations", model.get("presentations"))
+				.bind("i18n", model.get("i18n"))
+				.render()
+				.toString();
 
 		response.setContentLength(html.length());
 		response.setContentType("text/html");
@@ -24,4 +30,5 @@ public class HtmlFlowView extends AbstractTemplateView {
 			writer.flush();
 		}
 	}
+
 }

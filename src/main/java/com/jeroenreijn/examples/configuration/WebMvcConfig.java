@@ -34,6 +34,7 @@ import com.github.jknack.handlebars.springmvc.HandlebarsViewResolver;
 import com.jeroenreijn.examples.repository.InMemoryPresentationsRepository;
 import com.jeroenreijn.examples.repository.PresentationsRepository;
 import com.jeroenreijn.examples.view.HtmlFlowViewResolver;
+import com.jeroenreijn.examples.view.RockerViewResolver;
 import com.jeroenreijn.examples.view.TrimouViewResolver;
 import com.x5.template.spring.ChunkTemplateView;
 
@@ -45,7 +46,7 @@ import httl.web.springmvc.HttlViewResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.jeroenreijn.examples.controller", "com.jeroenreijn.examples.factory" })
-public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer  {
+public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 	private ApplicationContext applicationContext;
 
 	@Override
@@ -130,7 +131,7 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer  
 		viewResolver.setCache(false);
 
 		return viewResolver;
-	} 
+	}
 
 	@Bean(name = "chunkTemplatesConfig")
 	@Scope("prototype")
@@ -219,7 +220,7 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer  
 
 	@Bean
 	public ViewResolver scalateViewResolver() {
- 		ScalateViewResolver viewResolver = new ScalateViewResolver();
+		ScalateViewResolver viewResolver = new ScalateViewResolver();
 		viewResolver.setPrefix("/WEB-INF/scalate/");
 		viewResolver.setSuffix(".scaml");
 		viewResolver.setViewNames("*-scalate");
@@ -229,7 +230,7 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer  
 
 		return viewResolver;
 	}
-	
+
 	@Bean
 	public ViewResolver htmlFlowViewResolver() {
 		HtmlFlowViewResolver viewResolver = new HtmlFlowViewResolver();
@@ -250,7 +251,16 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer  
 
 		return viewResolver;
 	}
-	
+
+	@Bean
+	public ViewResolver rockerViewResolver() {
+		RockerViewResolver viewResolver = new RockerViewResolver();
+		viewResolver.setViewNames("*-rocker");
+		viewResolver.setCache(false);
+
+		return viewResolver;
+	}
+
 	@Controller
 	static class FaviconController {
 		@RequestMapping("favicon.ico")
