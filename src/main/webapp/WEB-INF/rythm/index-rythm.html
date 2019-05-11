@@ -1,14 +1,14 @@
 @args Iterable<Presentation> presentations
 @extends(layout)
-<div class="page-header">
+<div class="pb-2 mt-4 mb-3 border-bottom">
     <h1>@i18n("example.title") - Rythm</h1>
 </div>
 @for(Presentation presentation : presentations) {
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">@presentation.getTitle() - @presentation.getSpeakerName()</h3>
+<div class="card mb-3 shadow-sm rounded">
+    <div class="card-header">
+        <h3 class="card-title">@presentation.getTitle() - @presentation.getSpeakerName()</h3>
     </div>
-    <div class="panel-body">
+    <div class="card-body">
         @presentation.getSummary()
     </div>
 </div>

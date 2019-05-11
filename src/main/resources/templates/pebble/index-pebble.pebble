@@ -1,0 +1,19 @@
+{% extends 'base' %}
+
+{% block content %}
+<div class="pb-2 mt-4 mb-3 border-bottom">
+    <h1>{{ i18n("messages","example.title") }} - Pebble</h1>
+</div>
+
+{% for presentation in presentations %}
+<div class="card mb-3 shadow-sm rounded">
+    <div class="card-header">
+        <h5 class="card-title">{{ presentation.title }} - {{presentation.speakerName }}</h5>
+    </div>
+    <div class="card-body">
+        {{presentation.summary | raw}}
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content%}

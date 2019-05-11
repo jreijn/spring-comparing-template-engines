@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    {{>head}}
+    <body>
+        <div class="container">
+            <div class="pb-2 mt-4 mb-3 border-bottom">
+                <h1>{{springMsg "example.title" "Unknown i18n"}} - Trimou</h1>
+            </div>
+            {{#presentations}}
+                {{>presentation}}
+            {{/presentations}}
+        </div>
+        {{>scripts}}
+    </body>
+</html>
