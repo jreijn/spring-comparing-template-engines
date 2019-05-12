@@ -5,7 +5,7 @@
 	<groupId>com.jeroenreijn</groupId>
 	<artifactId>spring-comparing-template-engines</artifactId>
 	<packaging>war</packaging>
-	<version>0.4.0-SNAPSHOT</version>
+	<version>0.5.0-SNAPSHOT</version>
 	<name>template-engines</name>
 
 	<properties>
@@ -35,7 +35,10 @@
 		<scalate-core.version>1.9.3</scalate-core.version>
 		<htmlflow.version>3.2</htmlflow.version>
 		<trimou.version>2.5.0.Final</trimou.version>
+		<rocker.version>1.2.1</rocker.version>
 		<ickenham-springmvc.version>1.4.1</ickenham-springmvc.version>
+		<rythm.version>1.3.0</rythm.version>
+		<rythm-spring.version>1.2.2</rythm-spring.version>
 	</properties>
 
 	<parent>
@@ -233,13 +236,27 @@
 		<dependency>
 			<groupId>com.fizzed</groupId>
 			<artifactId>rocker-runtime</artifactId>
-			<version>1.2.1</version>
+			<version>${rocker.version}</version>
 		</dependency>
+
 
 		<dependency>
 			<groupId>com.github.enpassant</groupId>
 			<artifactId>ickenham-spring-mvc_${scala.version}</artifactId>
 			<version>${ickenham-springmvc.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.rythmengine</groupId>
+			<artifactId>rythm-engine</artifactId>
+			<version>${rythm.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.rythmengine</groupId>
+			<artifactId>spring-rythm</artifactId>
+			<version>${rythm-spring.version}</version>
 		</dependency>
 
 		<!-- Test -->
@@ -290,6 +307,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.0.0</version>
 				<executions>
 					<execution>
 						<id>add-source</id>
