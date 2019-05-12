@@ -13,8 +13,8 @@ import org.springframework.core.io.ResourceLoader;
 import org.trimou.engine.locator.AbstractTemplateLocator;
 import org.trimou.engine.priority.WithPriority;
 
-public class TrimouSpringResourceTemplateLocator extends AbstractTemplateLocator implements ResourceLoaderAware {
-	private static final Logger LOGGER = LoggerFactory.getLogger(TrimouSpringResourceTemplateLocator.class);
+public class SpringResourceTemplateLocator extends AbstractTemplateLocator implements ResourceLoaderAware {
+	private static final Logger LOGGER = LoggerFactory.getLogger(SpringResourceTemplateLocator.class);
 
 	static final String DEFAULT_CHARSET = "UTF-8";
 	public static final String DEFAULT_PREFIX = "classpath:/templates/";
@@ -26,7 +26,7 @@ public class TrimouSpringResourceTemplateLocator extends AbstractTemplateLocator
 
 	private ResourceLoader resourceLoader = new DefaultResourceLoader();
 
-	public TrimouSpringResourceTemplateLocator() {
+	public SpringResourceTemplateLocator() {
 		super(WithPriority.DEFAULT_PRIORITY);
 	}
 

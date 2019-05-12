@@ -5,8 +5,6 @@ import java.util.Locale;
 import java.util.Map;
 
 import org.fusesource.scalate.spring.view.ScalateViewResolver;
-import org.rythmengine.spring.web.RythmConfigurer;
-import org.rythmengine.spring.web.RythmViewResolver;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -271,28 +269,6 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 		viewResolver.setSuffix(".hbs");
 		viewResolver.setViewNames("*-ickenham");
 		viewResolver.setRequestContextAttribute("rc");
-		viewResolver.setCache(false);
-		viewResolver.setContentType("text/html;charset=UTF-8");
-
-		return viewResolver;
-	}
-
-	@Bean
-	public RythmConfigurer rythmConfigurer() {
-		RythmConfigurer conf = new RythmConfigurer();
-		conf.setDevMode(true);
-		conf.setResourceLoaderPath("/WEB-INF/rythm/");
-		conf.setAutoImports("com.jeroenreijn.examples.model.*");
-
-		return conf;
-	}
-
-	@Bean
-	public ViewResolver rythmViewResolver() {
-		RythmViewResolver viewResolver = new RythmViewResolver();
-		viewResolver.setPrefix("/WEB-INF/rythm/");
-		viewResolver.setSuffix(".html");
-		viewResolver.setViewNames("*-rythm");
 		viewResolver.setCache(false);
 		viewResolver.setContentType("text/html;charset=UTF-8");
 

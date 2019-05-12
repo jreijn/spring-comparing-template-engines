@@ -12,7 +12,7 @@ import org.trimou.engine.MustacheEngineBuilder;
 import com.jeroenreijn.examples.model.SpringMessageSourceHelper;
 
 public class TrimouViewResolver extends AbstractTemplateViewResolver {
-	private TrimouSpringResourceTemplateLocator loader = new TrimouSpringResourceTemplateLocator();
+	private SpringResourceTemplateLocator loader = new SpringResourceTemplateLocator();
 	private MustacheEngine engine;
 
 	public TrimouViewResolver(MessageSource messageSource) {
