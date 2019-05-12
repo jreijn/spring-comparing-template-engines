@@ -20,6 +20,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v3.2
 * [Trimou](http://trimou.org/) - v2.5.0.Final
 * [Rocker](https://github.com/fizzed/rocker/) - v1.2.1
+* [Ickenham](https://github.com/enpassant/ickenham) - v1.4.0
 
 
 ## Build and run
@@ -49,6 +50,7 @@ See the demo URLs:
   - http://localhost:8080/htmlFlow
   - http://localhost:8080/trimou
   - http://localhost:8080/rocker
+  - http://localhost:8080/ickenham
 
 ## Benchmarking
 
@@ -70,6 +72,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/htmlFlow
     $ ab -n 10000 -c 10 http://localhost:8080/trimou
     $ ab -n 10000 -c 10 http://localhost:8080/rocker
+    $ ab -n 10000 -c 10 http://localhost:8080/ickenham
 
 For creating the below benchmark results I used ApacheBench (version 2.4.25) with the following settings:
 
