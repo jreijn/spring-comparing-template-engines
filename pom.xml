@@ -31,11 +31,11 @@
 		<mustache-spring-view.version>1.4</mustache-spring-view.version>
 		<mustache-java.version>0.9.5</mustache-java.version>
 		<pebble.version>3.0.7</pebble.version>
+		<scala.version>2.11</scala.version>
 		<scalate-core.version>1.9.3</scalate-core.version>
 		<htmlflow.version>3.2</htmlflow.version>
 		<trimou.version>2.5.0.Final</trimou.version>
-                <scala.version>2.11</scala.version>
-                <ickenham-springmvc.version>1.4.0</ickenham-springmvc.version>
+		<ickenham-springmvc.version>1.4.1</ickenham-springmvc.version>
 	</properties>
 
 	<parent>
@@ -203,17 +203,17 @@
 		</dependency>
 
 
-                <dependency>
-                    <groupId>org.scalatra.scalate</groupId>
-                    <artifactId>scalate-core_${scala.version}</artifactId>
-                    <version>${scalate-core.version}</version>
-                </dependency>
+		<dependency>
+			<groupId>org.scalatra.scalate</groupId>
+			<artifactId>scalate-core_${scala.version}</artifactId>
+			<version>${scalate-core.version}</version>
+		</dependency>
 
-                <dependency>
-                    <groupId>org.scalatra.scalate</groupId>
-                    <artifactId>scalate-spring-mvc_${scala.version}</artifactId>
-                    <version>${scalate-core.version}</version>
-                </dependency>
+		<dependency>
+			<groupId>org.scalatra.scalate</groupId>
+			<artifactId>scalate-spring-mvc_${scala.version}</artifactId>
+			<version>${scalate-core.version}</version>
+		</dependency>
 
 
 		<dependency>
@@ -236,11 +236,11 @@
 			<version>1.2.1</version>
 		</dependency>
 
-                <dependency>
-                    <groupId>com.github.enpassant</groupId>
-                    <artifactId>ickenham-spring-mvc_${scala.version}</artifactId>
-                    <version>${ickenham-springmvc.version}</version>
-                </dependency>
+		<dependency>
+			<groupId>com.github.enpassant</groupId>
+			<artifactId>ickenham-spring-mvc_${scala.version}</artifactId>
+			<version>${ickenham-springmvc.version}</version>
+		</dependency>
 
 		<!-- Test -->
 		<dependency>
@@ -290,7 +290,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.0.0</version>
 				<executions>
 					<execution>
 						<id>add-source</id>

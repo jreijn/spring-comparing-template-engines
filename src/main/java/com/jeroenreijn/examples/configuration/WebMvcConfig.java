@@ -269,7 +269,7 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 		viewResolver.setSuffix(".hbs");
 		viewResolver.setViewNames("*-ickenham");
 		viewResolver.setRequestContextAttribute("rc");
-		viewResolver.setCache(true);
+		viewResolver.setCache(false);
 		viewResolver.setContentType("text/html;charset=UTF-8");
 
 		return viewResolver;
