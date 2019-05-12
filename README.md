@@ -20,6 +20,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v3.2
 * [Trimou](http://trimou.org/) - v2.5.0.Final
 * [Rocker](https://github.com/fizzed/rocker/) - v1.2.1
+* [Ickenham](https://github.com/enpassant/ickenham) - v1.4.1
 
 
 ## Build and run
@@ -49,6 +50,7 @@ See the demo URLs:
   - http://localhost:8080/htmlFlow
   - http://localhost:8080/trimou
   - http://localhost:8080/rocker
+  - http://localhost:8080/ickenham
 
 ## Benchmarking
 
@@ -70,6 +72,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/htmlFlow
     $ ab -n 10000 -c 10 http://localhost:8080/trimou
     $ ab -n 10000 -c 10 http://localhost:8080/rocker
+    $ ab -n 10000 -c 10 http://localhost:8080/ickenham
 
 For creating the below benchmark results I used ApacheBench (version 2.4.25) with the following settings:
 
@@ -95,7 +98,7 @@ Apache Tomcat 9.0.14
 
 Results in order (high to low):
 
-Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
+Total time taken for processing 25.000 requests with a concurrency level of 25 (lower is better).
 
 ```
 Jade4j                  567.7 seconds
@@ -130,21 +133,22 @@ Results in order (high to low):
 Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
 
 ```
-Jade4j                  382.0 seconds
-Handlebars              112.7 seconds
-Scalate - Scaml         25.46 seconds
-HTTL                    24.11 seconds
-Velocity                21.28 seconds
-Pebble                  18.43 seconds
-jTwig                   14.49 seconds
-Thymeleaf               13.70 seconds
-Mustache (JMustache)    12.61 seconds
-Chunk                   12.50 seconds
-Freemarker              11.67 seconds
-Trimou                  10.81 seconds
-HtmlFlow                10.34 seconds
-JSP                     10.31 seconds
-Rocker                  9.923 seconds
+Jade4j              	388.5 seconds
+Handlebars          	103.0 seconds
+Scalate - Scaml     	19.41 seconds
+HTTL                	19.37 seconds
+Velocity            	18.19 seconds
+Pebble              	14.36 seconds
+jTwig               	11.42 seconds
+Mustache (JMustache)	10.93 seconds
+Thymeleaf           	10.27 seconds
+Chunk               	9.961 seconds
+Ickenham	            8.470 seconds
+Freemarker          	7.977 seconds
+JSP                 	7.618 seconds
+Rocker              	7.299 seconds
+HtmlFlow            	6.890 seconds
+Trimou              	6.853 seconds
 ```
 
 *Keep in mind that in the real world, these results will differ depending on the complexity of the templates, hardware, etc, so it's just an indication and if you want to know the truth you will have to run the benchmark yourself to see how such a template engine performs in your specific environment.*

@@ -30,6 +30,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
+import com.github.enpassant.ickenham.springmvc.IckenhamViewResolver;
 import com.github.jknack.handlebars.springmvc.HandlebarsViewResolver;
 import com.jeroenreijn.examples.repository.InMemoryPresentationsRepository;
 import com.jeroenreijn.examples.repository.PresentationsRepository;
@@ -257,6 +258,19 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 		RockerViewResolver viewResolver = new RockerViewResolver();
 		viewResolver.setViewNames("*-rocker");
 		viewResolver.setCache(false);
+
+		return viewResolver;
+	}
+
+	@Bean
+	public ViewResolver ickenhamViewResolver() {
+		IckenhamViewResolver viewResolver = new IckenhamViewResolver();
+		viewResolver.setPrefix("/WEB-INF/ickenham/");
+		viewResolver.setSuffix(".hbs");
+		viewResolver.setViewNames("*-ickenham");
+		viewResolver.setRequestContextAttribute("rc");
+		viewResolver.setCache(false);
+		viewResolver.setContentType("text/html;charset=UTF-8");
 
 		return viewResolver;
 	}

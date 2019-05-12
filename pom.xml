@@ -31,9 +31,11 @@
 		<mustache-spring-view.version>1.4</mustache-spring-view.version>
 		<mustache-java.version>0.9.5</mustache-java.version>
 		<pebble.version>3.0.7</pebble.version>
-		<scalate-core_2.11.version>1.9.3</scalate-core_2.11.version>
+		<scala.version>2.11</scala.version>
+		<scalate-core.version>1.9.3</scalate-core.version>
 		<htmlflow.version>3.2</htmlflow.version>
 		<trimou.version>2.5.0.Final</trimou.version>
+		<ickenham-springmvc.version>1.4.1</ickenham-springmvc.version>
 	</properties>
 
 	<parent>
@@ -203,14 +205,14 @@
 
 		<dependency>
 			<groupId>org.scalatra.scalate</groupId>
-			<artifactId>scalate-core_2.11</artifactId>
-			<version>${scalate-core_2.11.version}</version>
+			<artifactId>scalate-core_${scala.version}</artifactId>
+			<version>${scalate-core.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.scalatra.scalate</groupId>
-			<artifactId>scalate-spring-mvc_2.11</artifactId>
-			<version>${scalate-core_2.11.version}</version>
+			<artifactId>scalate-spring-mvc_${scala.version}</artifactId>
+			<version>${scalate-core.version}</version>
 		</dependency>
 
 
@@ -232,6 +234,12 @@
 			<groupId>com.fizzed</groupId>
 			<artifactId>rocker-runtime</artifactId>
 			<version>1.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.enpassant</groupId>
+			<artifactId>ickenham-spring-mvc_${scala.version}</artifactId>
+			<version>${ickenham-springmvc.version}</version>
 		</dependency>
 
 		<!-- Test -->
@@ -282,7 +290,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.0.0</version>
 				<executions>
 					<execution>
 						<id>add-source</id>
