@@ -22,6 +22,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Rocker](https://github.com/fizzed/rocker/) - v1.2.1
 * [Ickenham](https://github.com/enpassant/ickenham) - v1.4.1
 * [Rythm](http://rythmengine.org/) - v1.3.0
+* [Groovy Templates](https://groovy.apache.org/) - v2.5.6
 
 ## Build and run
 You need Java 8 and Maven 3 to build and run this project.
@@ -52,6 +53,7 @@ See the demo URLs:
   - http://localhost:8080/rocker
   - http://localhost:8080/ickenham
   - http://localhost:8080/rythm
+  - http://localhost:8080/groovy
 
 ## Benchmarking
 
@@ -75,6 +77,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/rocker
     $ ab -n 10000 -c 10 http://localhost:8080/ickenham
     $ ab -n 10000 -c 10 http://localhost:8080/rythm
+    $ ab -n 10000 -c 10 http://localhost:8080/groovy
 
 For creating the below benchmark results I used ApacheBench (version 2.4.25) with the following settings:
 
@@ -135,6 +138,7 @@ Results in order (high to low):
 Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
 
 ```
+Groovy                 ~ 2400 seconds
 Jade4j                  388.5 seconds
 Handlebars              103.0 seconds
 Scalate - Scaml         19.41 seconds
