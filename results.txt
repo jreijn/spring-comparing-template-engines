@@ -1,0 +1,21 @@
+for 1000 requests...
+aloha@aloha-HP-Pavilion-dv7-Notebook-PC:~$ ./tests.sh 192.168.0.192
+jsp Time taken for tests: 5.322 seconds
+velocity Time taken for tests: 5.415 seconds
+freemarker Time taken for tests: 5.414 seconds
+thymeleaf Time taken for tests: 5.370 seconds
+mustache Time taken for tests: 5.491 seconds
+jade Time taken for tests: 14.634 seconds
+pebble Time taken for tests: 5.314 seconds
+handlebars Time taken for tests: 6.153 seconds
+jtwig Time taken for tests: 5.523 seconds
+scalate Time taken for tests: 5.412 seconds
+httl Time taken for tests: 5.456 seconds
+chunk Time taken for tests: 5.408 seconds
+htmlFlow Time taken for tests: 5.332 seconds
+trimou Time taken for tests: 5.860 seconds
+rocker Time taken for tests: 5.873 seconds
+ickenham Time taken for tests: 5.473 seconds
+rythm Time taken for tests: 5.186 seconds
+groovy Time taken for tests: 32.121 seconds
+liqp Time taken for tests: 5.405 seconds

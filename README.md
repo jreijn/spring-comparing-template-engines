@@ -23,6 +23,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Ickenham](https://github.com/enpassant/ickenham) - v1.4.1
 * [Rythm](http://rythmengine.org/) - v1.3.0
 * [Groovy Templates](https://groovy.apache.org/) - v2.5.6
+* [Liqp - Jekyll](https://github.com/bkiers/Liqp) - v0.7.9
 
 ## Build and run
 You need Java 8 and Maven 3 to build and run this project.
@@ -54,6 +55,7 @@ See the demo URLs:
   - http://localhost:8080/ickenham
   - http://localhost:8080/rythm
   - http://localhost:8080/groovy
+  - http://localhost:8080/liqp
 
 ## Benchmarking
 
@@ -78,6 +80,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/ickenham
     $ ab -n 10000 -c 10 http://localhost:8080/rythm
     $ ab -n 10000 -c 10 http://localhost:8080/groovy
+    $ ab -n 10000 -c 10 http://localhost:8080/liqp
 
 For creating the below benchmark results I used ApacheBench (version 2.4.25) with the following settings:
 

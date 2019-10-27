@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import com.jeroenreijn.examples.view.*;
 import org.fusesource.scalate.spring.view.ScalateViewResolver;
 import org.rythmengine.spring.web.RythmConfigurer;
 import org.rythmengine.spring.web.RythmViewResolver;
@@ -36,9 +37,6 @@ import com.github.enpassant.ickenham.springmvc.IckenhamViewResolver;
 import com.github.jknack.handlebars.springmvc.HandlebarsViewResolver;
 import com.jeroenreijn.examples.repository.InMemoryPresentationsRepository;
 import com.jeroenreijn.examples.repository.PresentationsRepository;
-import com.jeroenreijn.examples.view.HtmlFlowViewResolver;
-import com.jeroenreijn.examples.view.RockerViewResolver;
-import com.jeroenreijn.examples.view.TrimouViewResolver;
 import com.x5.template.spring.ChunkTemplateView;
 
 import de.neuland.jade4j.JadeConfiguration;
@@ -295,6 +293,23 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 		viewResolver.setViewNames("*-rythm");
 		viewResolver.setCache(false);
 		viewResolver.setContentType("text/html;charset=UTF-8");
+
+		return viewResolver;
+	}
+
+	@Bean
+	public LiqpViewResolver liqpViewResolver() {
+		LiqpViewResolver viewResolver = new LiqpViewResolver();
+//		viewResolver.setOrder(0);
+		viewResolver.setViewClass(LiqpView.class);
+		viewResolver.setPrefix("classpath:./templates/liqp/");
+        viewResolver.setSuffix(".liqp");
+		viewResolver.setViewNames("*-liqp");
+//		viewResolver.setRequestContextAttribute("rc");
+		viewResolver.setCache(false);
+//		viewResolver.setApplicationContext(this.applicationContext);
+		viewResolver.setContentType("text/html;charset=UTF-8");
+
 
 		return viewResolver;
 	}
