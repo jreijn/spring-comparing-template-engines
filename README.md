@@ -151,12 +151,12 @@ HTTL                    22.86 seconds
 jTwig                   21.23 seconds
 Liqp                    19.60 seconds
 Ickenham                19.50 seconds
-Chunk                   18.54 seconds
 Thymeleaf               18.33 seconds
 Rythm                   17.84 seconds
 Rocker                  17.63 seconds
 Mustache (JMustache)    15.75 seconds
 HtmlFlow                15.62 seconds
+Chunk                   15.04 seconds
 Trimou                  15.02 seconds
 Freemarker              14.74 seconds
 JSP                     11.22 seconds
