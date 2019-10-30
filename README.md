@@ -122,7 +122,7 @@ Mustache (JMustache)    8.836 seconds
 JSP                     7.888 seconds
 ```
 
-## Benchmarks 05.2019
+## Benchmarks 10.2019
 
 These tests were done on a local machine with the following specs:
 
@@ -130,9 +130,9 @@ These tests were done on a local machine with the following specs:
 Spring-Boot: 2.1.4.RELEASE
 Windows 10 (1803, build: 17134.706)
 3,60 GHz Intel Core i5-8350U Quad core
-java version "1.8.0_212"
-Java(TM) SE Runtime Environment (build 1.8.0_212-b10)
-Java HotSpot(TM) 64-Bit Server VM (build 25.212-b10, mixed mode)
+java version "1.8.0_221"
+Java(TM) SE Runtime Environment (build 1.8.0_221-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.221-b11, mixed mode)
 Apache Tomcat 9.0.17
 ```
 
@@ -141,24 +141,25 @@ Results in order (high to low):
 Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
 
 ```
-Groovy                 ~ 2400 seconds
-Jade4j                  388.5 seconds
-Handlebars              103.0 seconds
-Scalate - Scaml         19.41 seconds
-HTTL                    19.37 seconds
-Velocity                18.19 seconds
-Pebble                  14.36 seconds
-Rythm                   12.23 seconds
-jTwig                   11.42 seconds
-Mustache (JMustache)    10.93 seconds
-Thymeleaf               10.27 seconds
-Chunk                   9.961 seconds
-Ickenham                8.470 seconds
-Freemarker              7.977 seconds
-JSP                     7.618 seconds
-Rocker                  7.299 seconds
-HtmlFlow                6.890 seconds
-Trimou                  6.853 seconds
+Groovy                  ~ 800 seconds
+Jade4j                  684.7 seconds
+Handlebars              161.8 seconds
+Scalate - Scaml         34.38 seconds
+Velocity                27.49 seconds
+Pebble                  25.63 seconds
+HTTL                    22.86 seconds
+jTwig                   21.23 seconds
+Liqp                    19.60 seconds
+Ickenham                19.50 seconds
+Chunk                   18.54 seconds
+Thymeleaf               18.33 seconds
+Rythm                   17.84 seconds
+Rocker                  17.63 seconds
+Mustache (JMustache)    15.75 seconds
+HtmlFlow                15.62 seconds
+Trimou                  15.02 seconds
+Freemarker              14.74 seconds
+JSP                     11.22 seconds
 ```
 
 *Keep in mind that in the real world, these results will differ depending on the complexity of the templates, hardware, etc, so it's just an indication and if you want to know the truth you will have to run the benchmark yourself to see how such a template engine performs in your specific environment.*

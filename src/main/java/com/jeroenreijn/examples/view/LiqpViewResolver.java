@@ -1,17 +1,25 @@
 package com.jeroenreijn.examples.view;
 
-import lombok.extern.slf4j.Slf4j;
+import liqp.filters.Filter;
+import org.springframework.context.MessageSource;
 import org.springframework.web.servlet.view.AbstractTemplateViewResolver;
 
-@Slf4j
-public class LiqpViewResolver extends AbstractTemplateViewResolver {
-    public LiqpViewResolver() {
-        setViewClass(requiredViewClass());
-        log.info("initialized.........");
-    }
+import java.util.Locale;
 
-    @Override
-    protected Class<?> requiredViewClass() {
-        return LiqpView.class;
-    }
+public class LiqpViewResolver extends AbstractTemplateViewResolver {
+	public LiqpViewResolver(MessageSource messageSource) {
+		this.setViewClass(this.requiredViewClass());
+
+		Filter.registerFilter(new Filter("i18n") {
+			@Override
+			public Object apply(Object value, Object... params) {
+				return messageSource.getMessage(value.toString(), null, Locale.ENGLISH);
+			}
+		});
+	}
+
+	@Override
+	protected Class<?> requiredViewClass() {
+		return LiqpView.class;
+	}
 }

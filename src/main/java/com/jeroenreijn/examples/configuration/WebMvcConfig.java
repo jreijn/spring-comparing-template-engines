@@ -299,17 +299,13 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 
 	@Bean
 	public LiqpViewResolver liqpViewResolver() {
-		LiqpViewResolver viewResolver = new LiqpViewResolver();
-//		viewResolver.setOrder(0);
+		LiqpViewResolver viewResolver = new LiqpViewResolver(applicationContext.getBean(MessageSource.class));
 		viewResolver.setViewClass(LiqpView.class);
 		viewResolver.setPrefix("classpath:./templates/liqp/");
-        viewResolver.setSuffix(".liqp");
+		viewResolver.setSuffix(".liqp");
 		viewResolver.setViewNames("*-liqp");
-//		viewResolver.setRequestContextAttribute("rc");
 		viewResolver.setCache(false);
-//		viewResolver.setApplicationContext(this.applicationContext);
 		viewResolver.setContentType("text/html;charset=UTF-8");
-
 
 		return viewResolver;
 	}
