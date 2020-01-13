@@ -11,9 +11,9 @@ import htmlflow.DynamicHtml;
 import htmlflow.HtmlView;
 
 public class HtmlFlowIndexView {
-	public static HtmlView<Map<String, Object>> getView() {
-		return DynamicHtml.view(HtmlFlowIndexView::templatePresentations);
-	}
+	public static final HtmlView<Map<String, Object>> view = DynamicHtml
+		.view(HtmlFlowIndexView::templatePresentations)
+		.threadSafe();
 
 	private static void templatePresentations(DynamicHtml<Map<String, Object>> view, Map<String, Object> map) {
 		@SuppressWarnings("unchecked")
@@ -46,14 +46,14 @@ public class HtmlFlowIndexView {
 									.div().attrClass("card mb-3 shadow-sm rounded")
 										.div().attrClass("card-header")
 											.h5()
-												.dynamic(h5 -> h5
+												.of(h5 -> h5
 													.attrClass("card-title")
 													.text(presentation.getTitle() + " - " + presentation.getSpeakerName())
 												)
 											.__() // h5
 										.__() // div
 										.div()
-											.dynamic(d -> d
+											.of(d -> d
 												.attrClass("card-body")
 												.text(presentation.getSummary())
 											)
