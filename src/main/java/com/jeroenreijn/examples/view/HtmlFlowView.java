@@ -13,7 +13,7 @@ public class HtmlFlowView extends AbstractTemplateView {
 	@Override
 	protected void renderMergedTemplateModel(Map<String, Object> model, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		String html = HtmlFlowIndexView.getView().render(model);
+		String html = HtmlFlowIndexView.view.render(model);
 
 		response.setContentLength(html.length());
 		response.setContentType("text/html");
