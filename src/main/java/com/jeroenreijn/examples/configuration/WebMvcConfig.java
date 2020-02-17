@@ -310,6 +310,16 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 		return viewResolver;
 	}
 
+	@Bean
+	public ViewResolver kotlinxHtmlViewResolver() {
+		KotlinxHtmlViewResolver viewResolver = new KotlinxHtmlViewResolver();
+		viewResolver.setViewNames("*-kotlinx");
+		viewResolver.setCache(false);
+
+		return viewResolver;
+	}
+
+
 	@Controller
 	static class FaviconController {
 		@RequestMapping("favicon.ico")
