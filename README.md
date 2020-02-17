@@ -17,13 +17,14 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Handlebars](http://jknack.github.io/handlebars.java/) - v4.1.2
 * [jtwig](http://jtwig.org/) - v5.86.1
 * [chunk](http://www.x5software.com/chunk/) - v3.5.0
-* [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v3.2
+* [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v3.5
 * [Trimou](http://trimou.org/) - v2.5.0.Final
 * [Rocker](https://github.com/fizzed/rocker/) - v1.2.1
 * [Ickenham](https://github.com/enpassant/ickenham) - v1.4.1
 * [Rythm](http://rythmengine.org/) - v1.3.0
 * [Groovy Templates](https://groovy.apache.org/) - v2.5.6
 * [Liqp - Jekyll](https://github.com/bkiers/Liqp) - v0.7.9
+* [kolinx.html](https://github.com/Kotlin/kotlinx.html) - v7.1
 
 ## Build and run
 You need Java 8 and Maven 3 to build and run this project.
@@ -56,6 +57,7 @@ See the demo URLs:
   - http://localhost:8080/rythm
   - http://localhost:8080/groovy
   - http://localhost:8080/liqp
+  - http://localhost:8080/kotlinx
 
 ## Benchmarking
 
@@ -81,6 +83,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/rythm
     $ ab -n 10000 -c 10 http://localhost:8080/groovy
     $ ab -n 10000 -c 10 http://localhost:8080/liqp
+    $ ab -n 10000 -c 10 http://localhost:8080/kotlinx
 
 For creating the below benchmark results I used ApacheBench (version 2.4.25) with the following settings:
 
