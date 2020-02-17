@@ -296,7 +296,28 @@
 
 	<build>
 		<finalName>template-engines</finalName>
+
 		<plugins>
+			<plugin>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-maven-plugin</artifactId>
+				<version>${kotlin.version}</version>
+				<executions>
+					<execution>
+						<id>compile</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<sourceDirs>
+								<sourceDir>${project.basedir}/src/main/java</sourceDir>
+							</sourceDirs>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>com.fizzed</groupId>
 				<artifactId>rocker-maven-plugin</artifactId>
@@ -361,25 +382,6 @@
 						<source>1.8</source>
 						<target>1.8</target>
 					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.jetbrains.kotlin</groupId>
-					<artifactId>kotlin-maven-plugin</artifactId>
-					<version>${kotlin.version}</version>
-					<executions>
-						<execution>
-							<id>compile</id>
-							<phase>process-sources</phase>
-							<goals>
-								<goal>compile</goal>
-							</goals>
-							<configuration>
-								<sourceDirs>
-									<sourceDir>${project.basedir}/src/main/java</sourceDir>
-								</sourceDirs>
-							</configuration>
-						</execution>
-					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>

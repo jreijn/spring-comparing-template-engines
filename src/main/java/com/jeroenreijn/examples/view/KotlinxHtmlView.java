@@ -14,7 +14,7 @@ public class KotlinxHtmlView extends AbstractTemplateView {
 	protected void renderMergedTemplateModel(Map<String, Object> model, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		Iterable<Presentation> presentations = (Iterable<Presentation>) model.get("presentations");
-		String html = com.jeroenreijn.examples.view.KotlinxHtmlIndexView.Companion.presentationsTemplate(presentations);
+		String html = KotlinxHtmlIndexView.Companion.presentationsTemplate(presentations);
 
 		response.setContentLength(html.length());
 		response.setContentType("text/html");

@@ -7,10 +7,10 @@ import kotlinx.html.dom.serialize
 import kotlinx.html.stream.appendHTML
 import java.lang.StringBuilder
 
-public class KotlinxHtmlIndexView {
-    public companion object {
+class KotlinxHtmlIndexView {
+    companion object {
 
-        public fun presentationsTemplate(presentations : Iterable<Presentation> ): String {
+        fun presentationsTemplate(presentations : Iterable<Presentation> ): String {
             val output = StringBuilder()
             output
                 .appendHTML()
