@@ -5,7 +5,7 @@
 	<groupId>com.jeroenreijn</groupId>
 	<artifactId>spring-comparing-template-engines</artifactId>
 	<packaging>war</packaging>
-	<version>0.6.0-SNAPSHOT</version>
+	<version>0.7.0-SNAPSHOT</version>
 	<name>template-engines</name>
 
 	<properties>
@@ -33,13 +33,15 @@
 		<pebble.version>3.0.7</pebble.version>
 		<scala.version>2.11</scala.version>
 		<scalate-core.version>1.9.3</scalate-core.version>
-		<htmlflow.version>3.2</htmlflow.version>
+		<htmlflow.version>3.5</htmlflow.version>
 		<trimou.version>2.5.0.Final</trimou.version>
 		<rocker.version>1.2.1</rocker.version>
 		<ickenham-springmvc.version>1.4.1</ickenham-springmvc.version>
 		<rythm.version>1.3.0</rythm.version>
 		<rythm-spring.version>1.2.2</rythm-spring.version>
 		<liqp.version>0.7.9</liqp.version>
+		<kotlin.version>1.3.61</kotlin.version>
+		<kotlinx.html.version>0.7.1</kotlinx.html.version>
 	</properties>
 
 	<parent>
@@ -94,13 +96,6 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<!-- Template engines -->
@@ -266,6 +261,17 @@
 			<version>${rythm-spring.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-stdlib</artifactId>
+			<version>${kotlin.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jetbrains.kotlinx</groupId>
+			<artifactId>kotlinx-html-jvm</artifactId>
+			<version>${kotlinx.html.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -289,7 +295,28 @@
 
 	<build>
 		<finalName>template-engines</finalName>
+
 		<plugins>
+			<plugin>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-maven-plugin</artifactId>
+				<version>${kotlin.version}</version>
+				<executions>
+					<execution>
+						<id>compile</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<sourceDirs>
+								<sourceDir>${project.basedir}/src/main/java</sourceDir>
+							</sourceDirs>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>com.fizzed</groupId>
 				<artifactId>rocker-maven-plugin</artifactId>
@@ -355,7 +382,6 @@
 						<target>1.8</target>
 					</configuration>
 				</plugin>
-
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -412,6 +438,11 @@
 	</build>
 
 	<repositories>
+		<repository>
+			<id>jcenter</id>
+			<name>jcenter</name>
+			<url>https://jcenter.bintray.com</url>
+		</repository>
 	</repositories>
 
 </project>
