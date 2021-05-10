@@ -10,3 +10,4 @@ target
 .cache-tests
 
 atlassian-ide-plugin.xml
+.factorypath
