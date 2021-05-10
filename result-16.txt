@@ -1,5 +1,20 @@
-jsp Time taken for tests:   1.657 seconds
-velocity Time taken for tests:   0.856 seconds
-freemarker Time taken for tests:   0.640 seconds
-thymeleaf Time taken for tests:   0.613 seconds
-mustache Time taken for tests:   0.536 seconds
+jsp 
+velocity 
+freemarker 
+thymeleaf 
+mustache 
+jade 
+pebble 
+handlebars 
+jtwig 
+scalate 
+httl 
+chunk 
+htmlFlow 
+trimou 
+rocker 
+ickenham 
+rythm 
+groovy 
+liqp 
+kotlinx 
