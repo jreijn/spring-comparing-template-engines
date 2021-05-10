@@ -6,7 +6,7 @@ TESTS=(jsp velocity freemarker thymeleaf mustache jade pebble handlebars jtwig s
 
 mvn -version
 mvn package
-java --add-opens java.base/java.lang=ALL-UNNAMED -jar ./target/template-engines.war > log.log & 
+java --add-opens java.base/java.lang=ALL-UNNAMED -jar ./target/template-engines.war #> log.log & 
 JPID=$!
 sleep 7
 
