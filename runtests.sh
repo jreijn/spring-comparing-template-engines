@@ -5,7 +5,9 @@ TESTS=(jsp velocity freemarker thymeleaf mustache jade pebble handlebars jtwig s
 > result-$1.txt
 
 mvn -version
-mvn spring-boot:run > log.log & 
+mvn spring-boot:run &
+sleep 7
+
 JPID=$!
 
 for ip in "${TESTS[@]}"; do
