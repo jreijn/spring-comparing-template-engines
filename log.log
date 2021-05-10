@@ -1,0 +1,15 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+2021-05-10 21:23:40.208  INFO 2405 --- [           main] com.jeroenreijn.examples.Launch          : Starting Launch v0.7.0-SNAPSHOT using Java 16.0.1 on fv-az173-805 with PID 2405 (/home/runner/work/spring-comparing-template-engines/spring-comparing-template-engines/target/template-engines.war started by runner in /home/runner/work/spring-comparing-template-engines/spring-comparing-template-engines)
+2021-05-10 21:23:40.212  INFO 2405 --- [           main] com.jeroenreijn.examples.Launch          : The following profiles are active: active
+2021-05-10 21:23:40.531  WARN 2405 --- [kground-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-05-10 21:23:42.436  INFO 2405 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-10 21:23:42.449  INFO 2405 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-10 21:23:42.449  INFO 2405 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
