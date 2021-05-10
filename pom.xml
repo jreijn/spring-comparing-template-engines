@@ -173,11 +173,11 @@
 			<version>3.1</version>
 		</dependency>
 
-		<!-- <dependency>
+		<dependency>
 			<groupId>com.alibaba.boot</groupId>
 			<artifactId>velocity-spring-boot-starter</artifactId>
 			<version>1.0.4.RELEASE</version>
-		</dependency> -->
+		</dependency> 
 
 
 		<dependency>
