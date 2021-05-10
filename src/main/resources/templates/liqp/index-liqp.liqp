@@ -4,13 +4,13 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <title>{{ example.title }} - Liqp</title>
-    <link rel="stylesheet" href="{{rc.contextPath}}/webjars/bootstrap/4.3.1/css/bootstrap.min.css" media="screen"/>
+    <title>{{ "example.title" | i18n }} - Liqp</title>
+    <link rel="stylesheet" href="{{contextPath}}/webjars/bootstrap/4.3.1/css/bootstrap.min.css" media="screen"/>
 </head>
 <body>
 <div class="container">
     <div class="pb-2 mt-4 mb-3 border-bottom">
-        <h1>{{ example.title }} - Liqp</h1>
+        <h1>{{ "example.title" | i18n }} - Liqp</h1>
     </div>
 
     {% for presentation in presentations %}
@@ -25,7 +25,7 @@
     {% endfor %}
 
 </div>
-<script src="{{rc.contextPath}}/webjars/jquery/3.1.1/jquery.min.js"></script>
-<script src="{{rc.contextPath}}/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="{{contextPath}}/webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="{{contextPath}}/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

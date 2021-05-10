@@ -1,19 +1,20 @@
 package com.jeroenreijn.examples.view;
 
-import java.io.PrintWriter;
-import java.util.Map;
+import com.jeroenreijn.examples.model.Presentation;
+import org.springframework.web.servlet.view.AbstractTemplateView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
+import java.util.Map;
 
-import org.springframework.web.servlet.view.AbstractTemplateView;
-
-public class HtmlFlowView extends AbstractTemplateView {
+public class KotlinxHtmlView extends AbstractTemplateView {
 
 	@Override
 	protected void renderMergedTemplateModel(Map<String, Object> model, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		String html = HtmlFlowIndexView.view.render(model);
+		Iterable<Presentation> presentations = (Iterable<Presentation>) model.get("presentations");
+		String html = KotlinxHtmlIndexView.Companion.presentationsTemplate(presentations);
 
 		response.setContentLength(html.length());
 		response.setContentType("text/html");
