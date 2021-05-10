@@ -14,6 +14,7 @@ for ip in "${TESTS[@]}"; do
   echo "$ip $result" >> result-$1.txt
 done
 kill -9 $JPID
+git config pull.rebase true
 git pull
 sleep $[ ( $RANDOM % 20 ) + 1 ]s
 exit 0
