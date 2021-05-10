@@ -4,7 +4,7 @@ JVMVER=$1
 TESTS=(jsp velocity freemarker thymeleaf mustache jade pebble handlebars jtwig scalate httl chunk htmlFlow trimou rocker ickenham rythm groovy liqp kotlinx)
 > result-$1.txt
 
-java --add-opens java.base/java.lang=ALL-UNNAMED -jar target/emplate-engines.war > log.log & 
+java --add-opens java.base/java.lang=ALL-UNNAMED -jar target/template-engines.war > log.log & 
 JPID=$!
 
 for ip in "${TESTS[@]}"; do
