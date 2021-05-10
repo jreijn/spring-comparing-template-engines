@@ -57,10 +57,7 @@ See the demo URLs:
   - http://localhost:8080/rythm
   - http://localhost:8080/groovy
   - http://localhost:8080/liqp
-<<<<<<< HEAD
-=======
   - http://localhost:8080/kotlinx
->>>>>>> 19ddeaa2c9d11e77d34ec03a255d8c3ae5c8697f
 
 ## Benchmarking
 
@@ -86,10 +83,7 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/rythm
     $ ab -n 10000 -c 10 http://localhost:8080/groovy
     $ ab -n 10000 -c 10 http://localhost:8080/liqp
-<<<<<<< HEAD
-=======
     $ ab -n 10000 -c 10 http://localhost:8080/kotlinx
->>>>>>> 19ddeaa2c9d11e77d34ec03a255d8c3ae5c8697f
 
 For creating the below benchmark results I used ApacheBench (version 2.4.25) with the following settings:
 
