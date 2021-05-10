@@ -4,6 +4,8 @@ JVMVER=$1
 TESTS=(jsp velocity freemarker thymeleaf mustache jade pebble handlebars jtwig scalate httl chunk htmlFlow trimou rocker ickenham rythm groovy liqp kotlinx)
 > result-$1.txt
 
+mvn -version
+
 mvn spring-boot:run > log.log & 
 JPID=$!
 
