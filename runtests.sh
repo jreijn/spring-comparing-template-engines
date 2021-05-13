@@ -5,10 +5,9 @@ TESTS=(jsp velocity freemarker thymeleaf mustache jade pebble handlebars jtwig s
 > result-$1.txt
 
 mvn -version
-mvn package
-java --add-opens java.base/java.lang=ALL-UNNAMED -jar ./target/template-engines.war #> log.log & 
+mvn spring-boot:run > log.log & 
 JPID=$!
-sleep 7
+sleep 37 # waiting for spring boot to start
 
 for ip in "${TESTS[@]}"; do
   result=`ab -q -n 1000 -c 10 http://localhost:8080/$ip | grep "Time taken for tests"`

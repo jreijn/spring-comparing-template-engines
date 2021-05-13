@@ -28,6 +28,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import org.springframework.web.servlet.view.velocity.VelocityConfigurer;
+import org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
@@ -121,6 +123,25 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 		viewResolver.setCache(false);
 
 		return viewResolver;
+	}
+
+	@Bean
+	public ViewResolver velocityViewResolver() {
+		VelocityLayoutViewResolver bean = new VelocityLayoutViewResolver();
+		bean.setPrefix("/WEB-INF/velocity/");
+		bean.setViewNames("*-velocity");
+		bean.setLayoutUrl("/WEB-INF/velocity/layout.vm");
+		bean.setSuffix(".vm");
+		bean.setToolboxConfigLocation("/WEB-INF/velocity/toolbox.xml");
+		bean.setCache(false);
+		return bean;
+	}
+
+	@Bean
+	public VelocityConfigurer velocityConfig() {
+		VelocityConfigurer velocityConfigurer = new VelocityConfigurer();
+		velocityConfigurer.setResourceLoaderPath("/");
+		return velocityConfigurer;
 	}
 
 	@Bean
