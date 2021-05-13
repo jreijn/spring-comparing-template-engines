@@ -165,11 +165,24 @@
 			<version>1.7</version>
 		</dependency>
 
+		<!--<dependency>
+			<groupId>org.apache.velocity.tools</groupId>
+			<artifactId>velocity-tools-view</artifactId>
+			<version>3.0</version>
+		</dependency>-->
+
+
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity-tools</artifactId>
 			<version>2.0</version>
 		</dependency>
+
+		<!--<dependency>
+			<groupId>org.apache.velocity.tools</groupId>
+			<artifactId>velocity-tools-generic</artifactId>
+			<version>3.0</version>
+		</dependency>-->
 
 		<dependency>
 			<groupId>de.neuland-bfi</groupId>
@@ -182,6 +195,7 @@
 			<artifactId>spring-webmvc-velocity</artifactId>
 			<version>1.4.3.18.RELEASE</version>
 		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
