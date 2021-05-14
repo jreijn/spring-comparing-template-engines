@@ -1,463 +1,445 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.jeroenreijn</groupId>
-	<artifactId>spring-comparing-template-engines</artifactId>
-	<packaging>war</packaging>
-	<version>0.7.0-SNAPSHOT</version>
-	<name>template-engines</name>
-
-	<properties>
-		<start-class>com.jeroenreijn.examples.Launch</start-class>
-
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<javax.servlet-api.version>4.0.1</javax.servlet-api.version>
-		<jquery.version>3.1.1</jquery.version>
-		<bootstrap.version>5.0.0</bootstrap.version>
-
-		<!-- Template engine versions -->
-		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
-		<jtwig-spring.version>5.87.0.RELEASE</jtwig-spring.version>
-		<jtwig-translate.version>5.86.1.RELEASE</jtwig-translate.version>
-		<handlebars.version>4.1.2</handlebars.version>
-		<chunk.version>3.5.0</chunk.version>
-		<chunk-springmvc.version>0.1.0</chunk-springmvc.version>
-		<freemarker.version>2.3.28</freemarker.version>
-		<httl-springmvc.version>1.0.11</httl-springmvc.version>
-		<spring-jade4j.version>1.2.7</spring-jade4j.version>
-		<mustache-spring-view.version>1.4</mustache-spring-view.version>
-		<mustache-java.version>0.9.5</mustache-java.version>
-		<pebble.version>3.0.7</pebble.version>
-		<scala.version>2.11</scala.version>
-		<scalate-core.version>1.9.6</scalate-core.version>
-		<htmlflow.version>3.5</htmlflow.version>
-		<rocker.version>1.3.0</rocker.version>
-		<trimou.version>2.5.1.Final</trimou.version>
-		<ickenham-springmvc.version>1.4.1</ickenham-springmvc.version>
-		<rythm.version>1.4.1</rythm.version>
-		<rythm-spring.version>1.2.2</rythm-spring.version>
-		<liqp.version>0.7.9</liqp.version>
-		<kotlin.version>1.5.0</kotlin.version>
-		<kotlinx.html.version>0.7.2</kotlinx.html.version>
-	</properties>
-
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
-		<relativePath />
-	</parent>
-
-	<dependencies>
-
-		<!-- Core -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-autoconfigure</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>${bootstrap.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>jquery</artifactId>
-			<version>${jquery.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-
-		<!-- Template engines -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.jtwig</groupId>
-			<artifactId>jtwig-spring-boot-starter</artifactId>
-			<version>${jtwig-spring.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jtwig</groupId>
-			<artifactId>jtwig-spring-translate-extension</artifactId>
-			<version>${jtwig-translate.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.ow2.asm</groupId>
-			<artifactId>asm-xml</artifactId>
-			<version>6.2.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.parboiled</groupId>
-			<artifactId>parboiled-java</artifactId>
-			<version>1.3.2</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.github.jknack</groupId>
-			<artifactId>handlebars-springmvc</artifactId>
-			<version>${handlebars.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.x5dev</groupId>
-			<artifactId>chunk-templates</artifactId>
-			<version>${chunk.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.x5dev</groupId>
-			<artifactId>chunk-springmvc</artifactId>
-			<version>${chunk-springmvc.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.github.httl</groupId>
-			<artifactId>httl-springmvc</artifactId>
-			<version>${httl-springmvc.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.apache.velocity</groupId>
-			<artifactId>velocity</artifactId>
-			<version>1.7</version>
-		</dependency>
-
-		<!--<dependency>
-			<groupId>org.apache.velocity.tools</groupId>
-			<artifactId>velocity-tools-view</artifactId>
-			<version>3.0</version>
-		</dependency>-->
-
-
-		<dependency>
-			<groupId>org.apache.velocity</groupId>
-			<artifactId>velocity-tools</artifactId>
-			<version>2.0</version>
-		</dependency>
-
-		<!--<dependency>
-			<groupId>org.apache.velocity.tools</groupId>
-			<artifactId>velocity-tools-generic</artifactId>
-			<version>3.0</version>
-		</dependency>-->
-
-		<dependency>
-			<groupId>de.neuland-bfi</groupId>
-			<artifactId>spring-jade4j</artifactId>
-			<version>${spring-jade4j.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.alibaba.spring</groupId>
-			<artifactId>spring-webmvc-velocity</artifactId>
-			<version>1.4.3.18.RELEASE</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mustache</artifactId>
-		</dependency>
-
-
-		<dependency>
-			<groupId>io.pebbletemplates</groupId>
-			<artifactId>pebble</artifactId>
-			<version>${pebble.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>io.pebbletemplates</groupId>
-			<artifactId>pebble-spring-boot-2-starter</artifactId>
-			<version>${pebble.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.scalatra.scalate</groupId>
-			<artifactId>scalate-core_${scala.version}</artifactId>
-			<version>${scalate-core.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.scalatra.scalate</groupId>
-			<artifactId>scalate-spring-mvc_${scala.version}</artifactId>
-			<version>${scalate-core.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.github.xmlet</groupId>
-			<artifactId>htmlflow</artifactId>
-			<version>${htmlflow.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.trimou</groupId>
-			<artifactId>trimou-core</artifactId>
-			<version>${trimou.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.fizzed</groupId>
-			<artifactId>rocker-runtime</artifactId>
-			<version>${rocker.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.github.enpassant</groupId>
-			<artifactId>ickenham-spring-mvc_${scala.version}</artifactId>
-			<version>${ickenham-springmvc.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.rythmengine</groupId>
-			<artifactId>rythm-engine</artifactId>
-			<version>${rythm.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.rythmengine</groupId>
-			<artifactId>spring-rythm</artifactId>
-			<version>${rythm-spring.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jetbrains.kotlin</groupId>
-			<artifactId>kotlin-stdlib</artifactId>
-			<version>${kotlin.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jetbrains.kotlinx</groupId>
-			<artifactId>kotlinx-html-jvm</artifactId>
-			<version>${kotlinx.html.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-groovy-templates</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>nl.big-o</groupId>
-			<artifactId>liqp</artifactId>
-			<version>${liqp.version}</version>
-		</dependency>
-
-		<!-- Test -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-
-	</dependencies>
-
-	<build>
-		<finalName>template-engines</finalName>
-
-		<plugins>
-			
-			<plugin>
-				<groupId>org.jetbrains.kotlin</groupId>
-				<artifactId>kotlin-maven-plugin</artifactId>
-				<version>${kotlin.version}</version>
-				<executions>
-					<execution>
-						<id>compile</id>
-						<phase>process-sources</phase>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-						<configuration>
-							<sourceDirs>
-								<sourceDir>${project.basedir}/src/main/java</sourceDir>
-							</sourceDirs>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>com.fizzed</groupId>
-				<artifactId>rocker-maven-plugin</artifactId>
-				<version>1.2.1</version>
-				<configuration>
-					<javaVersion>1.8</javaVersion>
-					<templateDirectory>${project.basedir}/src/main/resources/templates/rocker</templateDirectory>
-					<targetCharset>utf-8</targetCharset>
-					<outputDirectory>${project.build.directory}/generated-sources/rocker/</outputDirectory>
-					<skipTouch>true</skipTouch>
-				</configuration>
-				<executions>
-					<execution>
-						<id>generate-rocker-templates</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<jvmArguments>
-						--illegal-access=permit
-						--add-opens java.base/java.lang=ALL-UNNAMED
-					</jvmArguments>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>net.alchim31.maven</groupId>
-				<artifactId>scala-maven-plugin</artifactId>
-				<version>4.0.1</version>
-			</plugin>
-
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.2.0</version>
-				<executions>
-					<execution>
-						<id>add-source</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-source</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>${project.build.directory}/generated-sources/rocker/</source>
-							</sources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.1</version>
-					<configuration>
-						<source>1.8</source>
-						<target>1.8</target>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>com.fizzed</groupId>
-										<artifactId>
-											rocker-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.2.0,)
-										</versionRange>
-										<goals>
-											<goal>generate</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<execute></execute>
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.codehaus.mojo</groupId>
-										<artifactId>build-helper-maven-plugin</artifactId>
-										<versionRange>[3.0.0,)</versionRange>
-										<goals>
-											<goal>parse-version</goal>
-											<goal>add-source</goal>
-											<goal>maven-version</goal>
-											<goal>add-resource</goal>
-											<goal>add-test-resource</goal>
-											<goal>add-test-source</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<execute>
-											<runOnConfiguration>true</runOnConfiguration>
-											<runOnIncremental>true</runOnIncremental>
-										</execute>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-
-	</build>
-
-	<repositories>
-		<repository>
-			<id>jcenter</id>
-			<name>jcenter</name>
-			<url>https://jcenter.bintray.com</url>
-		</repository>
-	</repositories>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.jeroenreijn</groupId>
+    <artifactId>spring-comparing-template-engines</artifactId>
+    <packaging>war</packaging>
+    <version>0.7.0-SNAPSHOT</version>
+    <name>template-engines</name>
+
+    <properties>
+        <start-class>com.jeroenreijn.examples.Launch</start-class>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+        <jquery.version>3.1.1</jquery.version>
+        <bootstrap.version>5.0.0</bootstrap.version>
+
+        <!-- Template engine versions -->
+        <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
+        <jtwig-spring.version>5.87.0.RELEASE</jtwig-spring.version>
+        <jtwig-translate.version>5.86.1.RELEASE</jtwig-translate.version>
+        <handlebars.version>4.1.2</handlebars.version>
+        <chunk.version>3.5.0</chunk.version>
+        <chunk-springmvc.version>0.1.0</chunk-springmvc.version>
+        <freemarker.version>2.3.28</freemarker.version>
+        <httl-springmvc.version>1.0.11</httl-springmvc.version>
+        <spring-jade4j.version>1.2.7</spring-jade4j.version>
+        <mustache-spring-view.version>1.4</mustache-spring-view.version>
+        <mustache-java.version>0.9.5</mustache-java.version>
+        <pebble.version>3.0.7</pebble.version>
+        <scala.version>2.11</scala.version>
+        <scalate-core.version>1.9.6</scalate-core.version>
+        <htmlflow.version>3.5</htmlflow.version>
+        <rocker.version>1.3.0</rocker.version>
+        <trimou.version>2.5.1.Final</trimou.version>
+        <ickenham-springmvc.version>1.4.1</ickenham-springmvc.version>
+        <rythm.version>1.4.1</rythm.version>
+        <rythm-spring.version>1.2.2</rythm-spring.version>
+        <liqp.version>0.7.9</liqp.version>
+        <kotlin.version>1.5.0</kotlin.version>
+        <kotlinx.html.version>0.7.2</kotlinx.html.version>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+        <relativePath/>
+    </parent>
+
+    <dependencies>
+
+        <!-- Core -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>${bootstrap.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>${jquery.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+
+        <!-- Template engines -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.jtwig</groupId>
+            <artifactId>jtwig-spring-boot-starter</artifactId>
+            <version>${jtwig-spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jtwig</groupId>
+            <artifactId>jtwig-spring-translate-extension</artifactId>
+            <version>${jtwig-translate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-xml</artifactId>
+            <version>6.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.parboiled</groupId>
+            <artifactId>parboiled-java</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.github.jknack</groupId>
+            <artifactId>handlebars-springmvc</artifactId>
+            <version>${handlebars.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.x5dev</groupId>
+            <artifactId>chunk-templates</artifactId>
+            <version>${chunk.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.x5dev</groupId>
+            <artifactId>chunk-springmvc</artifactId>
+            <version>${chunk-springmvc.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.github.httl</groupId>
+            <artifactId>httl-springmvc</artifactId>
+            <version>${httl-springmvc.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-tools</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.neuland-bfi</groupId>
+            <artifactId>spring-jade4j</artifactId>
+            <version>${spring-jade4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.spring</groupId>
+            <artifactId>spring-webmvc-velocity</artifactId>
+            <version>1.4.3.18.RELEASE</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mustache</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.pebbletemplates</groupId>
+            <artifactId>pebble</artifactId>
+            <version>${pebble.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.pebbletemplates</groupId>
+            <artifactId>pebble-spring-boot-2-starter</artifactId>
+            <version>${pebble.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.scalatra.scalate</groupId>
+            <artifactId>scalate-core_${scala.version}</artifactId>
+            <version>${scalate-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scalatra.scalate</groupId>
+            <artifactId>scalate-spring-mvc_${scala.version}</artifactId>
+            <version>${scalate-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.xmlet</groupId>
+            <artifactId>htmlflow</artifactId>
+            <version>${htmlflow.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.trimou</groupId>
+            <artifactId>trimou-core</artifactId>
+            <version>${trimou.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.fizzed</groupId>
+            <artifactId>rocker-runtime</artifactId>
+            <version>${rocker.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.github.enpassant</groupId>
+            <artifactId>ickenham-spring-mvc_${scala.version}</artifactId>
+            <version>${ickenham-springmvc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.rythmengine</groupId>
+            <artifactId>rythm-engine</artifactId>
+            <version>${rythm.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.rythmengine</groupId>
+            <artifactId>spring-rythm</artifactId>
+            <version>${rythm-spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-html-jvm</artifactId>
+            <version>${kotlinx.html.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-groovy-templates</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>nl.big-o</groupId>
+            <artifactId>liqp</artifactId>
+            <version>${liqp.version}</version>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>template-engines</finalName>
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>${project.basedir}/src/main/java</sourceDir>
+                            </sourceDirs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.fizzed</groupId>
+                <artifactId>rocker-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <javaVersion>1.8</javaVersion>
+                    <templateDirectory>${project.basedir}/src/main/resources/templates/rocker</templateDirectory>
+                    <targetCharset>utf-8</targetCharset>
+                    <outputDirectory>${project.build.directory}/generated-sources/rocker/</outputDirectory>
+                    <skipTouch>true</skipTouch>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>generate-rocker-templates</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <jvmArguments>
+                        --illegal-access=permit
+                        --add-opens java.base/java.lang=ALL-UNNAMED
+                    </jvmArguments>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>4.0.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${project.build.directory}/generated-sources/rocker/</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>com.fizzed</groupId>
+                                        <artifactId>
+                                            rocker-maven-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [1.2.0,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>generate</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <execute></execute>
+                                    </action>
+                                </pluginExecution>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>org.codehaus.mojo</groupId>
+                                        <artifactId>build-helper-maven-plugin</artifactId>
+                                        <versionRange>[3.0.0,)</versionRange>
+                                        <goals>
+                                            <goal>parse-version</goal>
+                                            <goal>add-source</goal>
+                                            <goal>maven-version</goal>
+                                            <goal>add-resource</goal>
+                                            <goal>add-test-resource</goal>
+                                            <goal>add-test-source</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <execute>
+                                            <runOnConfiguration>true</runOnConfiguration>
+                                            <runOnIncremental>true</runOnIncremental>
+                                        </execute>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+    </build>
+
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter</name>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
 
 </project>
