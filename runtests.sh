@@ -20,11 +20,12 @@ kill -9 $JPID
 git config pull.rebase true
 sleep $[ ( $JVMVER % 20 ) + 1 ]s
 
-git checkout gh-pages
-git switch gh-pages
 
 sonuc=`cat result-$1.txt`
 date=`date`
+
+#git checkout gh-pages
+#git switch gh-pages
 cat > index.md <<EOL
 
 ## Spring template engine performance tests
@@ -39,9 +40,9 @@ $sonuc
 
 EOL
 
-git add .
-git commit -m "updating the page"
-git push
-git switch master
-git push
+#git add .
+#git commit -m "updating the page"
+#git push
+#git switch master
+#git push
 exit 0
