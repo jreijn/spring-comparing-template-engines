@@ -17,10 +17,10 @@ kill -9 $JPID
 git config pull.rebase true
 sleep $[ ( $JVMVER % 20 ) + 1 ]s
 git pull
-git checkout gh-pages
-res=`cat result-$1.txt`
+git switch gh-pages
+sonuc=`cat result-$1.txt`
 date=`date`
-cat >index.md <<EOL
+cat > index.md <<EOL
 
 ## Spring template engine performance tests
 
@@ -28,11 +28,10 @@ Runs performance test from [Github Actions](https://github.com/ozkanpakdil/sprin
 
 ### Results from $date
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+\`\`\`
+$sonuc
+\`\`\`
 
-```JAVA11
-$res
-```
 EOL
 
 exit 0
