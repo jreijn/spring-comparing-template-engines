@@ -10,7 +10,7 @@ TESTS=(jsp velocity freemarker thymeleaf mustache jade pebble handlebars jtwig s
 mvn -version
 mvn -B spring-boot:run &
 JPID=$!
-sleep 37 # waiting for spring boot to start
+sleep 80 # waiting for spring boot to start
 
 for ip in "${TESTS[@]}"; do
   result=`ab -q -n 1000 -c 10 http://localhost:8080/$ip | grep "Time taken for tests"`
