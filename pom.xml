@@ -30,7 +30,7 @@
         <pebble.version>3.0.7</pebble.version>
         <scala.version>2.11</scala.version>
         <scalate-core.version>1.9.6</scalate-core.version>
-        <htmlflow.version>3.5</htmlflow.version>
+        <htmlflow.version>3.7</htmlflow.version>
         <rocker.version>1.3.0</rocker.version>
         <trimou.version>2.5.1.Final</trimou.version>
         <ickenham-springmvc.version>1.4.1</ickenham-springmvc.version>
