@@ -1,20 +1,20 @@
-jsp Time taken for tests:   1.416 seconds
-velocity Time taken for tests:   0.792 seconds
-freemarker Time taken for tests:   0.748 seconds
-thymeleaf Time taken for tests:   1.799 seconds
-mustache Time taken for tests:   0.583 seconds
-jade Time taken for tests:   14.265 seconds
-pebble Time taken for tests:   2.769 seconds
-handlebars Time taken for tests:   4.129 seconds
+jsp 
+velocity 
+freemarker 
+thymeleaf 
+mustache 
+jade 
+pebble 
+handlebars 
 jtwig 
-scalate Time taken for tests:   3.606 seconds
-httl Time taken for tests:   0.500 seconds
-chunk Time taken for tests:   0.435 seconds
-htmlFlow Time taken for tests:   0.273 seconds
-trimou Time taken for tests:   0.331 seconds
-rocker Time taken for tests:   0.320 seconds
-ickenham Time taken for tests:   1.808 seconds
-rythm Time taken for tests:   0.844 seconds
-groovy Time taken for tests:   24.092 seconds
-liqp Time taken for tests:   1.482 seconds
-kotlinx Time taken for tests:   0.454 seconds
+scalate 
+httl 
+chunk 
+htmlFlow 
+trimou 
+rocker 
+ickenham 
+rythm 
+groovy 
+liqp 
+kotlinx 
