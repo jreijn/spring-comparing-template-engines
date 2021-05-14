@@ -5,7 +5,7 @@ TESTS=(jsp velocity freemarker thymeleaf mustache jade pebble handlebars jtwig s
 > result-$1.txt
 
 mvn -version
-mvn spring-boot:run &
+mvn -B spring-boot:run &
 JPID=$!
 sleep 37 # waiting for spring boot to start
 
