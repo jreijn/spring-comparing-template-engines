@@ -25,3 +25,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: java ${{ matrix.java }} result adding back to repo
+          push_options: '--force'
