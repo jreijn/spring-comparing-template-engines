@@ -16,8 +16,10 @@ done
 kill -9 $JPID
 git config pull.rebase true
 sleep $[ ( $JVMVER % 20 ) + 1 ]s
-git pull
+
+git checkout gh-pages
 git switch gh-pages
+
 sonuc=`cat result-$1.txt`
 date=`date`
 cat > index.md <<EOL
