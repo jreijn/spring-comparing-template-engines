@@ -15,6 +15,6 @@ for ip in "${TESTS[@]}"; do
 done
 kill -9 $JPID
 git config pull.rebase true
+sleep $[ ( $JVMVER % 20 ) + 1 ]s
 git pull
-sleep $[ ( $RANDOM % 20 ) + 1 ]s
 exit 0
