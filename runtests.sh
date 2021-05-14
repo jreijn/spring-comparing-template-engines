@@ -36,4 +36,9 @@ $sonuc
 
 EOL
 
+git add .
+git commit -m "updating the page"
+git push
+git switch master
+git push
 exit 0
