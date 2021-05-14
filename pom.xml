@@ -181,7 +181,7 @@
         <dependency>
             <groupId>com.alibaba.spring</groupId>
             <artifactId>spring-webmvc-velocity</artifactId>
-            <version>1.4.3.18.RELEASE</version>
+            <version>4.3.18.RELEASE</version>
         </dependency>
 
 
