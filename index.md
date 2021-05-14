@@ -3,8 +3,28 @@
 
 Runs performance test from [Github Actions](https://github.com/ozkanpakdil/spring-comparing-template-engines/actions) and updates here.
 
-### Results from Fri May 14 10:59:25 UTC 2021
+### Results from Fri May 14 11:15:03 UTC 2021
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+```
+jsp Time taken for tests:   1.455 seconds
+velocity Time taken for tests:   0.808 seconds
+freemarker Time taken for tests:   0.755 seconds
+thymeleaf Time taken for tests:   1.768 seconds
+mustache Time taken for tests:   0.568 seconds
+jade Time taken for tests:   14.954 seconds
+pebble Time taken for tests:   2.832 seconds
+handlebars Time taken for tests:   4.162 seconds
+jtwig 
+scalate Time taken for tests:   3.669 seconds
+httl Time taken for tests:   0.450 seconds
+chunk Time taken for tests:   0.447 seconds
+htmlFlow Time taken for tests:   0.308 seconds
+trimou Time taken for tests:   0.330 seconds
+rocker Time taken for tests:   0.311 seconds
+ickenham Time taken for tests:   1.874 seconds
+rythm Time taken for tests:   0.793 seconds
+groovy Time taken for tests:   24.735 seconds
+liqp Time taken for tests:   1.603 seconds
+kotlinx Time taken for tests:   0.467 seconds
+```
 
