@@ -12,9 +12,11 @@ mvn -B spring-boot:run &
 JPID=$!
 sleep 80 # waiting for spring boot to start
 
+echo "|Engine Name | Seconds|" >> result-$1.txt
+echo "|------------|--------|" >> result-$1.txt
 for template in "${TESTS[@]}"; do
-  result=`ab -q -n 10000 -c 10 http://localhost:8080/$template | grep "Time taken for tests"`
-  echo "$template $result" >> result-$1.txt
+  result=`ab -q -n 10000 -c 10 http://localhost:8080/$template | grep "Time taken for tests"| grep -Eo '[+-]?[0-9]+([.][0-9]+)?'`
+  echo "|$template | $result|" >> result-$1.txt
 done
 kill -9 $JPID
 git config pull.rebase true
