@@ -23,6 +23,7 @@ sleep $[ ( $JVMVER % 20 ) + 1 ]s
 
 sonuc=`cat result-$1.txt`
 date=`date`
+javaver=`java -version`
 
 cat > index.md <<EOL
 
@@ -39,7 +40,7 @@ cat > index.md <<EOL
 Runs performance test(ab -q -n 1000 -c 10 http://localhost:8080/$template | grep "Time taken for tests") from [Github Actions](https://github.com/ozkanpakdil/spring-comparing-template-engines/actions) and updates here.
 
 ### Results from $date
-
+results taken from jvm :$javaver
 \`\`\`
 $sonuc
 \`\`\`
