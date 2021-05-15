@@ -47,5 +47,13 @@ $sonuc
 
 If you are planning to use any template engine from the list, choose wisely, lowest is the best performance.
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+         google_ad_client: "ca-pub-7118095690658891",
+         enable_page_level_ads: true
+    });
+</script>
+
 EOL
 exit 0
