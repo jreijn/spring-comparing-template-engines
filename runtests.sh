@@ -45,5 +45,7 @@ results taken from mvn and jvm :$javaver
 
 $sonuc
 
+If you are planning to use any template engine from the list, choose wisely, lowest is the best performance.
+
 EOL
 exit 0
