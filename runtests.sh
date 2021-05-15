@@ -27,17 +27,17 @@ javaver=`java -version`
 
 cat > index.md <<EOL
 
-     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-     <script>
-          (adsbygoogle = window.adsbygoogle || []).push({
-               google_ad_client: "ca-pub-7118095690658891",
-               enable_page_level_ads: true
-          });
-     </script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+         google_ad_client: "ca-pub-7118095690658891",
+         enable_page_level_ads: true
+    });
+</script>
 
 ## Spring template engine performance tests
 
-Runs performance test(ab -q -n 1000 -c 10 http://localhost:8080/$template | grep "Time taken for tests") from [Github Actions](https://github.com/ozkanpakdil/spring-comparing-template-engines/actions) and updates here.
+Runs performance test(ab -q -n 1000 -c 10 http://localhost:8080/$template) from [Github Actions](https://github.com/ozkanpakdil/spring-comparing-template-engines/actions) and updates here.
 
 ### Results from $date
 results taken from jvm :$javaver
