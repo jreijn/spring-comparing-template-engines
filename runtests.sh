@@ -13,7 +13,7 @@ JPID=$!
 sleep 80 # waiting for spring boot to start
 
 for template in "${TESTS[@]}"; do
-  result=`ab -q -n 1000 -c 10 http://localhost:8080/$template | grep "Time taken for tests"`
+  result=`ab -q -n 10000 -c 10 http://localhost:8080/$template | grep "Time taken for tests"`
   echo "$template $result" >> result-$1.txt
 done
 kill -9 $JPID
@@ -36,7 +36,7 @@ cat > index.md <<EOL
 
 ## Spring template engine performance tests
 
-Runs performance test(ab -q -n 1000 -c 10 http://localhost:8080/$TEMPLATE) from [Github Actions](https://github.com/ozkanpakdil/spring-comparing-template-engines/actions) and updates here.
+Runs performance test(ab -q -n 10000 -c 10 http://localhost:8080/$TEMPLATE) from [Github Actions](https://github.com/ozkanpakdil/spring-comparing-template-engines/actions) and updates here.
 
 ### Results from $date
 results taken from mvn and jvm :$javaver
