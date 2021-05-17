@@ -38,7 +38,7 @@ cat > index.md <<EOL
 
 ## Spring template engine performance tests
 
-Runs performance test(ab -q -n 10000 -c 10 http://localhost:8080/$TEMPLATE) from [Github Actions](https://github.com/ozkanpakdil/spring-comparing-template-engines/actions) and updates here.
+Runs performance test(ab -q -n 10000 -c 10 http://localhost:8080/TEMPLATE) from [Github Actions](https://github.com/ozkanpakdil/spring-comparing-template-engines/actions) and updates here.
 
 ### Results from $date
 results taken from mvn and jvm :$javaver
