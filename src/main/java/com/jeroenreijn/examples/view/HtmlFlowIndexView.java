@@ -31,7 +31,7 @@ public class HtmlFlowIndexView {
 					.title().text("JFall 2013 Presentations - HtmlFlow").__()
 					.link()
 						.attrRel(EnumRelType.STYLESHEET)
-						.attrHref("/webjars/bootstrap/5.0.0/css/bootstrap.min.css")
+						.attrHref("/webjars/bootstrap/5.0.1/css/bootstrap.min.css")
 						.attrMedia(EnumMediaType.SCREEN)
 					.__() // link
 				.__() // head
@@ -62,8 +62,8 @@ public class HtmlFlowIndexView {
 							) // foreach
 						)
 					.__() // container
-				.script().attrSrc("/webjars/jquery/3.1.1/jquery.min.js").__()
-				.script().attrSrc("/webjars/bootstrap/5.0.0/js/bootstrap.min.js").__()
+				.script().attrSrc("/webjars/jquery/3.6.0/jquery.min.js").__()
+				.script().attrSrc("/webjars/bootstrap/5.0.1/js/bootstrap.min.js").__()
 				.__() // body
 			.__(); // html
 	}
