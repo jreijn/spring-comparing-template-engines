@@ -12,14 +12,14 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
-        <jquery.version>3.1.1</jquery.version>
+        <jquery.version>3.6.0</jquery.version>
         <bootstrap.version>5.0.0</bootstrap.version>
 
         <!-- Template engine versions -->
         <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
         <jtwig-spring.version>5.87.0.RELEASE</jtwig-spring.version>
         <jtwig-translate.version>5.86.1.RELEASE</jtwig-translate.version>
-        <handlebars.version>4.1.2</handlebars.version>
+        <handlebars.version>4.2.0</handlebars.version>
         <chunk.version>3.6.1</chunk.version>
         <chunk-springmvc.version>0.1.0</chunk-springmvc.version>
         <freemarker.version>2.3.28</freemarker.version>
@@ -27,7 +27,7 @@
         <spring-jade4j.version>1.2.7</spring-jade4j.version>
         <mustache-spring-view.version>1.4</mustache-spring-view.version>
         <mustache-java.version>0.9.5</mustache-java.version>
-        <pebble.version>3.0.7</pebble.version>
+        <pebble.version>3.0.10</pebble.version>
         <scala.version>2.11</scala.version>
         <scalate-core.version>1.9.6</scalate-core.version>
         <htmlflow.version>3.7</htmlflow.version>
@@ -181,7 +181,7 @@
         <dependency>
             <groupId>com.alibaba.spring</groupId>
             <artifactId>spring-webmvc-velocity</artifactId>
-            <version>1.4.3.18.RELEASE</version>
+            <version>4.3.18.RELEASE</version>
         </dependency>
 
 
