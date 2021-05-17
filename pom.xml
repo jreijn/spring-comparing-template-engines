@@ -27,7 +27,7 @@
         <spring-jade4j.version>1.2.7</spring-jade4j.version>
         <mustache-spring-view.version>1.4</mustache-spring-view.version>
         <mustache-java.version>0.9.5</mustache-java.version>
-        <pebble.version>3.0.7</pebble.version>
+        <pebble.version>3.0.10</pebble.version>
         <scala.version>2.11</scala.version>
         <scalate-core.version>1.9.6</scalate-core.version>
         <htmlflow.version>3.7</htmlflow.version>
