@@ -20,7 +20,7 @@
         <jtwig-spring.version>5.87.0.RELEASE</jtwig-spring.version>
         <jtwig-translate.version>5.86.1.RELEASE</jtwig-translate.version>
         <handlebars.version>4.1.2</handlebars.version>
-        <chunk.version>3.5.0</chunk.version>
+        <chunk.version>3.6.1</chunk.version>
         <chunk-springmvc.version>0.1.0</chunk-springmvc.version>
         <freemarker.version>2.3.28</freemarker.version>
         <httl-springmvc.version>1.0.11</httl-springmvc.version>
