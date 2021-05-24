@@ -33,7 +33,7 @@
         <htmlflow.version>3.7</htmlflow.version>
         <rocker.version>1.3.0</rocker.version>
         <trimou.version>2.5.1.Final</trimou.version>
-        <ickenham-springmvc.version>1.4.1</ickenham-springmvc.version>
+        <ickenham-springmvc.version>1.5.0</ickenham-springmvc.version>
         <rythm.version>1.4.1</rythm.version>
         <rythm-spring.version>1.2.2</rythm-spring.version>
         <liqp.version>0.7.9</liqp.version>
