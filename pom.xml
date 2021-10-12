@@ -37,7 +37,7 @@
         <rythm.version>1.4.1</rythm.version>
         <rythm-spring.version>1.2.2</rythm-spring.version>
         <liqp.version>0.8.0</liqp.version>
-        <kotlin.version>1.5.21</kotlin.version>
+        <kotlin.version>1.5.31</kotlin.version>
         <kotlinx.html.version>0.7.3</kotlinx.html.version>
     </properties>
 
