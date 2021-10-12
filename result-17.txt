@@ -1,0 +1,22 @@
+|Engine Name | Seconds|
+|------------|--------|
+|jsp | 3.988|
+|velocity | 3.248|
+|freemarker | 3.216|
+|thymeleaf | 6.607|
+|mustache | 3.360|
+|jade | 139.225|
+|pebble | 25.590|
+|handlebars | 17.237|
+|jtwig | |
+|scalate | 8.239|
+|httl | 3.675|
+|chunk | 3.499|
+|htmlFlow | 2.476|
+|trimou | 2.788|
+|rocker | 2.699|
+|ickenham | 18.558|
+|rythm | 3.743|
+|groovy | 894.904|
+|liqp | 7.702|
+|kotlinx | 3.863|
