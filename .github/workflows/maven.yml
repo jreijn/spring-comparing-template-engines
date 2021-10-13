@@ -10,7 +10,7 @@ jobs:
     timeout-minutes: 30
     strategy:
       matrix:
-        java: [11]
+        java: [17]
 
     steps:
       - name: Cache Maven packages
