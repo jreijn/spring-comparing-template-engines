@@ -1,20 +1,22 @@
-jsp Time taken for tests:   1.307 seconds
-velocity Time taken for tests:   0.871 seconds
-freemarker Time taken for tests:   0.663 seconds
-thymeleaf Time taken for tests:   1.731 seconds
-mustache Time taken for tests:   0.568 seconds
-jade Time taken for tests:   12.617 seconds
-pebble Time taken for tests:   0.536 seconds
-handlebars Time taken for tests:   3.793 seconds
-jtwig Time taken for tests:   1.088 seconds
-scalate Time taken for tests:   4.370 seconds
-httl Time taken for tests:   0.564 seconds
-chunk Time taken for tests:   0.505 seconds
-htmlFlow Time taken for tests:   0.297 seconds
-trimou Time taken for tests:   0.380 seconds
-rocker Time taken for tests:   0.319 seconds
-ickenham Time taken for tests:   0.687 seconds
-rythm Time taken for tests:   0.887 seconds
-groovy Time taken for tests:   28.703 seconds
-liqp Time taken for tests:   1.567 seconds
-kotlinx Time taken for tests:   0.437 seconds
+|Engine Name | Seconds|
+|------------|--------|
+|jsp | 5.436|
+|velocity | 4.396|
+|freemarker | 4.232|
+|thymeleaf | 9.582|
+|mustache | 4.651|
+|jade | 191.245|
+|pebble | 5.803|
+|handlebars | 22.906|
+|jtwig | 8.786|
+|scalate | 11.529|
+|httl | 6.308|
+|chunk | 5.331|
+|htmlFlow | 4.303|
+|trimou | 4.369|
+|rocker | 4.087|
+|ickenham | 7.203|
+|rythm | 5.172|
+|groovy | 1130.678|
+|liqp | 9.837|
+|kotlinx | 4.659|
