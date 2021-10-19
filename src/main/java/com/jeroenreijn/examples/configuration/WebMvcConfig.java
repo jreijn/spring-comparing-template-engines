@@ -27,6 +27,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.springframework.web.servlet.resource.WebJarsResourceResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 import org.thymeleaf.spring5.SpringTemplateEngine;
@@ -67,7 +68,7 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/robots.txt").addResourceLocations("/robots.txt");
-        registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/").resourceChain(true).addResolver(new WebJarsResourceResolver());
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
     }
 

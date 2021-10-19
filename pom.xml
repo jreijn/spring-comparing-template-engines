@@ -14,6 +14,7 @@
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <jquery.version>3.6.0</jquery.version>
         <bootstrap.version>5.1.3</bootstrap.version>
+        <webjars-locator.version>0.42</webjars-locator.version>
 
         <!-- Template engine versions -->
         <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
@@ -82,6 +83,12 @@
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
             <version>${jquery.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>webjars-locator</artifactId>
+            <version>${webjars-locator.version}</version>
         </dependency>
 
         <dependency>

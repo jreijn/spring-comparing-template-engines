@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
   <title>[@spring.message code="example.title"/] - Freemarker</title>
-  <link rel="stylesheet" href="${springMacroRequestContext.getContextPath()}/webjars/bootstrap/5.0.1/css/bootstrap.min.css" media="screen" />
+  <link rel="stylesheet" href="${springMacroRequestContext.getContextPath()}/webjars/bootstrap/css/bootstrap.min.css" media="screen" />
 </head>
 [/#macro]
 
@@ -16,6 +16,6 @@
 [/#macro]
 
 [#macro scripts]
-<script src="${springMacroRequestContext.getContextPath()}/webjars/jquery/3.6.0/jquery.min.js"></script>
-<script src="${springMacroRequestContext.getContextPath()}/webjars/bootstrap/5.0.1/js/bootstrap.min.js"></script>
+<script src="${springMacroRequestContext.getContextPath()}/webjars/jquery/jquery.min.js"></script>
+<script src="${springMacroRequestContext.getContextPath()}/webjars/bootstrap/js/bootstrap.min.js"></script>
 [/#macro]

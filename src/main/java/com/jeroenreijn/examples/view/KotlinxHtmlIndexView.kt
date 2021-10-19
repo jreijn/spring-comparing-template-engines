@@ -20,7 +20,7 @@ class KotlinxHtmlIndexView {
                             meta {name = "viewport"; content = "width=device-width, initial-scale=1.0" }
                             meta {httpEquiv=MetaHttpEquiv.contentLanguage; content="IE=Edge" }
                             title { text("JFall 2013 Presentations - htmlApi")}
-                            link {rel=LinkRel.stylesheet; href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css"; media = LinkMedia.screen}
+                            link {rel=LinkRel.stylesheet; href="/webjars/bootstrap/css/bootstrap.min.css"; media = LinkMedia.screen}
                         }
                         body {
                             div {
@@ -48,8 +48,8 @@ class KotlinxHtmlIndexView {
                                 }
                             }
 
-                            script { src = "/webjars/jquery/3.6.0/jquery.min.js" }
-                            script { src = "/webjars/bootstrap/5.0.1/js/bootstrap.min.js" }
+                            script { src = "/webjars/jquery/jquery.min.js" }
+                            script { src = "/webjars/bootstrap/js/bootstrap.min.js" }
                         }
                     }
             return output.toString()
