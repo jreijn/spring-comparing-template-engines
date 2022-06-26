@@ -15,7 +15,6 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [HTTL](http://httl.github.io/en/) - v1.0.11
 * [Pebble](https://pebbletemplates.io/) - v3.0.7
 * [Handlebars](http://jknack.github.io/handlebars.java/) - v4.1.2
-* [jtwig](http://jtwig.org/) - v5.86.1
 * [chunk](http://www.x5software.com/chunk/) - v3.5.0
 * [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v3.5
 * [Trimou](http://trimou.org/) - v2.5.0.Final
@@ -47,7 +46,6 @@ See the demo URLs:
   - http://localhost:8080/mustache
   - http://localhost:8080/pebble
   - http://localhost:8080/handlebars
-  - http://localhost:8080/jtwig
   - http://localhost:8080/httl  
   - http://localhost:8080/chunk
   - http://localhost:8080/htmlFlow
@@ -72,7 +70,6 @@ You can try any of the following URLs.
     $ ab -n 10000 -c 10 http://localhost:8080/jade
     $ ab -n 10000 -c 10 http://localhost:8080/pebble
     $ ab -n 10000 -c 10 http://localhost:8080/handlebars
-    $ ab -n 10000 -c 10 http://localhost:8080/jtwig
     $ ab -n 10000 -c 10 http://localhost:8080/scalate
     $ ab -n 10000 -c 10 http://localhost:8080/httl
     $ ab -n 10000 -c 10 http://localhost:8080/chunk
