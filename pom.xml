@@ -30,7 +30,7 @@
         <mustache-java.version>0.9.5</mustache-java.version>
         <pebble.version>3.1.6</pebble.version>
         <scala.version>2.11</scala.version>
-        <scalate-core.version>1.9.3</scalate-core.version>
+        <scalate-core.version>1.9.8</scalate-core.version>
         <htmlflow.version>3.5</htmlflow.version>
         <trimou.version>2.5.0.Final</trimou.version>
         <rocker.version>1.2.1</rocker.version>
