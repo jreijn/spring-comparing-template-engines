@@ -52,4 +52,12 @@ class PresentationsIT {
                 .andExpect(view().name("index-kotlinx"));
     }
 
+    @Test
+    void whenIckenham_thenReturns200() throws Exception {
+        mockMvc.perform(get("/ickenham").contentType("text/html"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(Matchers.containsString("JFall 2013 Presentations - Ickenham")))
+                .andExpect(view().name("index-ickenham"));
+    }
+
 }

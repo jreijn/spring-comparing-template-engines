@@ -21,13 +21,8 @@ jobs:
       with:
         distribution: 'adopt'
         java-version: '8'
-    - name: Cache Maven packages
-      uses: actions/cache@v2
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-m2
-    - name: Build & Test
-      run: mvn -B package --file pom.xml
-    - name: Run Integration Tests
+        cache: maven
+    - name: Build
+      run: mvn -B package --file pom.xml -DskipTests
+    - name: Run Unit & Integration Tests
       run: mvn -B verify --file pom.xml
