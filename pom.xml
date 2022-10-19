@@ -29,8 +29,8 @@
         <mustache-spring-view.version>1.4</mustache-spring-view.version>
         <mustache-java.version>0.9.5</mustache-java.version>
         <pebble.version>3.1.6</pebble.version>
-        <scala.version>2.11</scala.version>
-        <scalate-core.version>1.9.3</scalate-core.version>
+        <scala.version>2.12</scala.version>
+        <scalate-core.version>1.9.8</scalate-core.version>
         <htmlflow.version>3.5</htmlflow.version>
         <trimou.version>2.5.0.Final</trimou.version>
         <rocker.version>1.2.1</rocker.version>
@@ -329,7 +329,7 @@
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.0.1</version>
+                <version>4.7.2</version>
             </plugin>
 
             <plugin>
