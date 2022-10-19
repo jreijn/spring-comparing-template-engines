@@ -60,4 +60,13 @@ class PresentationsIT {
                 .andExpect(view().name("index-ickenham"));
     }
 
+    @Test
+    void whenScalate_thenReturns200() throws Exception {
+        mockMvc.perform(get("/scalate").contentType("text/html"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(Matchers.containsString("JFall 2013 Presentations - Scalate")))
+                .andExpect(view().name("index-scalate"));
+    }
+
+
 }
