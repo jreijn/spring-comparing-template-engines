@@ -26,3 +26,12 @@ jobs:
       run: mvn -B package --file pom.xml -DskipTests
     - name: Run Unit & Integration Tests
       run: mvn -B verify --file pom.xml
+    - name: Report
+      uses: dorny/test-reporter@v1
+      if: always()
+      with:
+        name: Maven Tests
+        path: target/*-reports/TEST-*.xml
+        reporter: java-junit
+        fail-on-error: true
+
