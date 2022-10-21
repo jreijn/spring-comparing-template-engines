@@ -1,10 +1,20 @@
 package com.jeroenreijn.examples.configuration;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-
-import com.jeroenreijn.examples.view.*;
+import com.github.enpassant.ickenham.springmvc.IckenhamViewResolver;
+import com.github.jknack.handlebars.springmvc.HandlebarsViewResolver;
+import com.jeroenreijn.examples.repository.InMemoryPresentationsRepository;
+import com.jeroenreijn.examples.repository.PresentationsRepository;
+import com.jeroenreijn.examples.view.HtmlFlowViewResolver;
+import com.jeroenreijn.examples.view.KotlinxHtmlViewResolver;
+import com.jeroenreijn.examples.view.LiqpView;
+import com.jeroenreijn.examples.view.LiqpViewResolver;
+import com.jeroenreijn.examples.view.RockerViewResolver;
+import com.jeroenreijn.examples.view.TrimouViewResolver;
+import com.x5.template.spring.ChunkTemplateView;
+import de.neuland.jade4j.JadeConfiguration;
+import de.neuland.jade4j.spring.template.SpringTemplateLoader;
+import de.neuland.jade4j.spring.view.JadeViewResolver;
+import httl.web.springmvc.HttlViewResolver;
 import org.fusesource.scalate.spring.view.ScalateViewResolver;
 import org.rythmengine.spring.web.RythmConfigurer;
 import org.rythmengine.spring.web.RythmViewResolver;
@@ -19,13 +29,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 import org.thymeleaf.spring5.SpringTemplateEngine;
@@ -33,16 +40,8 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
-import com.github.enpassant.ickenham.springmvc.IckenhamViewResolver;
-import com.github.jknack.handlebars.springmvc.HandlebarsViewResolver;
-import com.jeroenreijn.examples.repository.InMemoryPresentationsRepository;
-import com.jeroenreijn.examples.repository.PresentationsRepository;
-import com.x5.template.spring.ChunkTemplateView;
-
-import de.neuland.jade4j.JadeConfiguration;
-import de.neuland.jade4j.spring.template.SpringTemplateLoader;
-import de.neuland.jade4j.spring.view.JadeViewResolver;
-import httl.web.springmvc.HttlViewResolver;
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 @EnableWebMvc
@@ -73,9 +72,7 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 
 	@Bean
 	public PresentationsRepository presentationsRepository() {
-		PresentationsRepository inMemory = new InMemoryPresentationsRepository();
-
-		return inMemory;
+		return new InMemoryPresentationsRepository();
 	}
 
 	@Bean
