@@ -111,7 +111,7 @@
         <dependency>
             <groupId>org.parboiled</groupId>
             <artifactId>parboiled-java</artifactId>
-            <version>1.2.0</version>
+            <version>1.4.1</version>
         </dependency>
 
 
