@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven
+name: 'CI'
 
 on:
   push:
@@ -11,9 +11,7 @@ on:
 
 jobs:
   Build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
@@ -26,12 +24,9 @@ jobs:
       run: mvn -B package --file pom.xml -DskipTests
     - name: Run Unit & Integration Tests
       run: mvn -B verify --file pom.xml
-    - name: Report
-      uses: dorny/test-reporter@v1
-      if: always()
+    - name: Upload Test Artifacts
+      uses: actions/upload-artifact@v3
+      if: success() || failure()
       with:
-        name: Maven Tests
+        name: test-results
         path: target/*-reports/TEST-*.xml
-        reporter: java-junit
-        fail-on-error: true
-
