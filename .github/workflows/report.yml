@@ -12,5 +12,5 @@ jobs:
         with:
           artifact: test-results            # artifact name
           name: Maven Tests
-          path: target/*-reports/TEST-*.xml
+          path: '*/*.xml'
           reporter: java-junit
