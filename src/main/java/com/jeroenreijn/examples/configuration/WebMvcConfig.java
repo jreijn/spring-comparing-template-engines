@@ -45,7 +45,7 @@ import java.util.Map;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "com.jeroenreijn.examples.controller", "com.jeroenreijn.examples.factory" })
+@ComponentScan(basePackages = { "com.jeroenreijn.examples.controller", "com.jeroenreijn.examples" })
 public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 	private ApplicationContext applicationContext;
 

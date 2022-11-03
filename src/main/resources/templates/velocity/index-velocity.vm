@@ -14,7 +14,7 @@
           </div>
       </div>
   #end
-  #scripts()
 </div>
+#scripts()
 </body>
 </html>
