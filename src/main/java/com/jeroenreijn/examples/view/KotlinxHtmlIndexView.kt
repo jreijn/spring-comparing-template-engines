@@ -10,13 +10,14 @@ class KotlinxHtmlIndexView {
         fun presentationsTemplate(presentations : Iterable<Presentation> ): String {
             val output = StringBuilder()
             output
+                .appendLine("<!DOCTYPE html>")
                 .appendHTML()
                     .html {
                         head {
                             meta {charset = "utf-8" }
                             meta {name = "viewport"; content = "width=device-width, initial-scale=1.0" }
-                            meta {httpEquiv=MetaHttpEquiv.contentLanguage; content="IE=Edge" }
-                            title { text("JFall 2013 Presentations - htmlApi")}
+                            meta {httpEquiv="x-ua-compatible"; content="IE=Edge" }
+                            title { text("JFall 2013 Presentations - kotlinx.html")}
                             link {rel=LinkRel.stylesheet; href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css"; media = LinkMedia.screen;}
                         }
                         body {
@@ -32,7 +33,7 @@ class KotlinxHtmlIndexView {
                                         classes = setOf("card mb-3 shadow-sm rounded")
                                         div {
                                             classes = setOf("card-header")
-                                            h3 {
+                                            h5 {
                                                 classes = setOf("card-title")
                                                 text( it.title + " - " + it.speakerName)
                                             }

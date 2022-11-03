@@ -1,10 +1,11 @@
 doctype html
 html
   head
-    meta(name="charset", content="UTF-8")
-    title #{i18n.message("example.title")} - Jade4j
-    link(rel="stylesheet", href=springMacroRequestContext.contextPath + "/webjars/bootstrap/4.3.1/css/bootstrap.min.css")
+    meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+    title #{i18n.message("example.title")} - Jade4j
+    link(rel="stylesheet", href=springMacroRequestContext.contextPath + "/webjars/bootstrap/4.3.1/css/bootstrap.min.css", media="screen")
   body
     .container
         .pb-2.mt-4.mb-3.border-bottom

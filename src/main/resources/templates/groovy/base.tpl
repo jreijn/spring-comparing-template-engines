@@ -1,5 +1,5 @@
 yieldUnescaped '<!DOCTYPE html>'
-html(lang:'en') {
+html {
   head {
     include template: 'head.tpl'
   }
@@ -11,7 +11,6 @@ html(lang:'en') {
 
 	  mainBody()
     }
+    include template: 'scripts.tpl'
   }
-
-  include template: 'scripts.tpl'
 }
