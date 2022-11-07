@@ -301,7 +301,7 @@
             <plugin>
                 <groupId>com.fizzed</groupId>
                 <artifactId>rocker-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>1.3.0</version>
                 <configuration>
                     <javaVersion>1.8</javaVersion>
                     <templateDirectory>${project.basedir}/src/main/resources/templates/rocker</templateDirectory>
