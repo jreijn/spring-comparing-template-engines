@@ -37,7 +37,7 @@
         <ickenham-springmvc.version>1.5.0</ickenham-springmvc.version>
         <rythm.version>1.4.1</rythm.version>
         <rythm-spring.version>1.2.2</rythm-spring.version>
-        <liqp.version>0.7.9</liqp.version>
+        <liqp.version>0.8.3.3</liqp.version>
         <kotlin.version>1.7.20</kotlin.version>
         <kotlinx.html.version>0.8.0</kotlinx.html.version>
     </properties>
