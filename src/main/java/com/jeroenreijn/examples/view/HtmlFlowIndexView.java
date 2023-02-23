@@ -1,25 +1,23 @@
 package com.jeroenreijn.examples.view;
 
-import java.util.Map;
+import java.util.stream.Stream;
 
+import htmlflow.HtmlFlow;
+import htmlflow.HtmlPage;
 import org.xmlet.htmlapifaster.EnumMediaType;
 import org.xmlet.htmlapifaster.EnumRelType;
 
 import com.jeroenreijn.examples.model.Presentation;
 
-import htmlflow.DynamicHtml;
 import htmlflow.HtmlView;
 
 public class HtmlFlowIndexView {
-	public static final HtmlView<Map<String, Object>> view = DynamicHtml
+	public static final HtmlView view = HtmlFlow
 		.view(HtmlFlowIndexView::templatePresentations)
 		.threadSafe();
 
-	private static void templatePresentations(DynamicHtml<Map<String, Object>> view, Map<String, Object> map) {
-		@SuppressWarnings("unchecked")
-		Iterable<Presentation> presentations = (Iterable<Presentation>) map.get("presentations");
-
-		view
+	private static void templatePresentations(HtmlPage page) {
+		page
 			.html()
 				.head()
 					.meta().attrCharset("UTF-8").__()
@@ -40,26 +38,26 @@ public class HtmlFlowIndexView {
 						.div().attrClass("pb-2 mt-4 mb-3 border-bottom")
 							.h1().text("JFall 2013 Presentations - HtmlFlow").__()
 						.__() // div
-						.dynamic(container ->
-							presentations.forEach(presentation ->
-								container
-									.div().attrClass("card mb-3 shadow-sm rounded")
+						.<Stream<Presentation>>dynamic((container, presentations) ->
+								presentations.forEach(presentation ->
+									container
+										.div().attrClass("card mb-3 shadow-sm rounded")
 										.div().attrClass("card-header")
-											.h5()
-												.of(h5 -> h5
-													.attrClass("card-title")
-													.text(presentation.getTitle() + " - " + presentation.getSpeakerName())
-												)
-											.__() // h5
+										.h5()
+										.of(h5 -> h5
+											.attrClass("card-title")
+											.text(presentation.getTitle() + " - " + presentation.getSpeakerName())
+										)
+										.__() // h5
 										.__() // div
 										.div()
-											.of(d -> d
-												.attrClass("card-body")
-												.text(presentation.getSummary())
-											)
+										.of(d -> d
+											.attrClass("card-body")
+											.text(presentation.getSummary())
+										)
 										.__() // div
-									.__() // div
-							) // foreach
+										.__() // div
+									)
 						)
 					.__() // container
 				.script().attrSrc("/webjars/jquery/3.1.1/jquery.min.js").__()
