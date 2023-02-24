@@ -18,7 +18,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [chunk](http://www.x5software.com/chunk/) - v3.6.2
 * [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v4.0
 * [Trimou](http://trimou.org/) - v2.5.1.Final
-* [Rocker](https://github.com/fizzed/rocker/) - v1.2.1
+* [Rocker](https://github.com/fizzed/rocker/) - v1.3.0
 * [Ickenham](https://github.com/enpassant/ickenham) - v1.5.0
 * [Rythm](http://rythmengine.org/) - v1.4.1
 * [Groovy Templates](https://groovy.apache.org/) - v2.5.6
