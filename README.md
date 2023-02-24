@@ -9,21 +9,21 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Velocity](http://velocity.apache.org/) - v1.7
 * [Velocity Tools](http://velocity.apache.org/tools/) - v2.0
 * [Thymeleaf](http://www.thymeleaf.org/) - v3.0.11.RELEASE
-* Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.14
-* [Scalate](http://scalate.fusesource.org/)  - v1.9.3
-* [Jade4j](https://github.com/neuland/jade4j) - v1.2.7
+* Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.15
+* [Scalate](http://scalate.fusesource.org/)  - v1.9.8
+* [Jade4j](https://github.com/neuland/jade4j) - v1.3.1
 * [HTTL](http://httl.github.io/en/) - v1.0.11
-* [Pebble](https://pebbletemplates.io/) - v3.0.7
-* [Handlebars](http://jknack.github.io/handlebars.java/) - v4.1.2
-* [chunk](http://www.x5software.com/chunk/) - v3.5.0
-* [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v3.5
-* [Trimou](http://trimou.org/) - v2.5.0.Final
+* [Pebble](https://pebbletemplates.io/) - v3.1.6
+* [Handlebars](http://jknack.github.io/handlebars.java/) - v4.3.1
+* [chunk](http://www.x5software.com/chunk/) - v3.6.2
+* [HtmlFlow](https://github.com/xmlet/HtmlFlow/) - v4.0
+* [Trimou](http://trimou.org/) - v2.5.1.Final
 * [Rocker](https://github.com/fizzed/rocker/) - v1.2.1
-* [Ickenham](https://github.com/enpassant/ickenham) - v1.4.1
-* [Rythm](http://rythmengine.org/) - v1.3.0
+* [Ickenham](https://github.com/enpassant/ickenham) - v1.5.0
+* [Rythm](http://rythmengine.org/) - v1.4.1
 * [Groovy Templates](https://groovy.apache.org/) - v2.5.6
-* [Liqp - Jekyll](https://github.com/bkiers/Liqp) - v0.7.9
-* [kolinx.html](https://github.com/Kotlin/kotlinx.html) - v7.1
+* [Liqp - Jekyll](https://github.com/bkiers/Liqp) - v0.8.5.1
+* [kolinx.html](https://github.com/Kotlin/kotlinx.html) - v1.7.20
 
 ## Build and run
 You need Java 8 and Maven 3 to build and run this project.

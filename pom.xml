@@ -5,7 +5,7 @@
     <groupId>com.jeroenreijn</groupId>
     <artifactId>spring-comparing-template-engines</artifactId>
     <packaging>war</packaging>
-    <version>0.9.0-SNAPSHOT</version>
+    <version>0.9.1-SNAPSHOT</version>
     <name>template-engines</name>
 
     <properties>
@@ -13,8 +13,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
-        <jquery.version>3.6.1</jquery.version>
-        <bootstrap.version>4.3.1</bootstrap.version>
+        <bootstrap.version>5.2.3</bootstrap.version>
 
         <!-- Template engine versions -->
         <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
@@ -29,7 +28,7 @@
         <mustache-spring-view.version>1.4</mustache-spring-view.version>
         <mustache-java.version>0.9.5</mustache-java.version>
         <pebble.version>3.1.6</pebble.version>
-        <scala.version>2.12</scala.version>
+        <scala.version>2.13</scala.version>
         <scalate-core.version>1.9.8</scalate-core.version>
         <htmlflow.version>4.0</htmlflow.version>
         <trimou.version>2.5.1.Final</trimou.version>
@@ -37,7 +36,7 @@
         <ickenham-springmvc.version>1.5.0</ickenham-springmvc.version>
         <rythm.version>1.4.1</rythm.version>
         <rythm-spring.version>1.2.2</rythm-spring.version>
-        <liqp.version>0.8.5.0</liqp.version>
+        <liqp.version>0.8.5.1</liqp.version>
         <kotlin.version>1.7.20</kotlin.version>
         <kotlinx.html.version>0.8.0</kotlinx.html.version>
     </properties>
@@ -77,12 +76,6 @@
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
             <version>${bootstrap.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery</artifactId>
-            <version>${jquery.version}</version>
         </dependency>
 
         <dependency>

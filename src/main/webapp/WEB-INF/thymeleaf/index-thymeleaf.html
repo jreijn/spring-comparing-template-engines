@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="includes :: head">
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
 </head>
 <body>
 <div class="container">
@@ -13,7 +13,6 @@
         <div class="card-body" th:utext="${item.summary}">Summary</div>
     </div>
 </div>
-<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}" th:replace="includes :: scripts"></script>
 <script th:remove="all" type="text/javascript" th:src="@{/static/js/thymol.js}"></script>
 </body>
 </html>
