@@ -1,15 +1,13 @@
 package com.jeroenreijn.examples.model;
 
-import java.io.IOException;
-import java.io.Writer;
-
-import javax.servlet.http.HttpServletRequest;
-
+import com.samskivert.mustache.Mustache;
+import com.samskivert.mustache.Template.Fragment;
 import org.springframework.context.MessageSource;
 import org.springframework.web.servlet.LocaleResolver;
 
-import com.samskivert.mustache.Mustache;
-import com.samskivert.mustache.Template.Fragment;
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.io.Writer;
 
 public class i18nLayout implements Mustache.Lambda {
 	private HttpServletRequest request;
@@ -23,9 +21,7 @@ public class i18nLayout implements Mustache.Lambda {
 	}
 
 	public String message(String key) {
-		String text = messageSource.getMessage(key, null, localeResolver.resolveLocale(request));
-
-		return text;
+		return messageSource.getMessage(key, null, localeResolver.resolveLocale(request));
 	}
 
 	@Override

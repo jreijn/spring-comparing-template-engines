@@ -1,5 +1,7 @@
 package com.jeroenreijn.examples.model;
 
+import liqp.parser.Inspectable;
+
 import java.util.Date;
 
 /**
@@ -7,7 +9,7 @@ import java.util.Date;
  *
  * @author Jeroen Reijn
  */
-public class Presentation {
+public class Presentation implements Inspectable {
 	private Long id;
 	private String title;
 	private String speakerName;
