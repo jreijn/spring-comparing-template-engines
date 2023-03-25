@@ -39,6 +39,7 @@
         <liqp.version>0.8.5.1</liqp.version>
         <kotlin.version>1.7.20</kotlin.version>
         <kotlinx.html.version>0.8.0</kotlinx.html.version>
+        <snakeyaml.version>1.33</snakeyaml.version>
     </properties>
 
     <parent>
@@ -258,6 +259,12 @@
             <version>${liqp.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${snakeyaml.version}</version>
+        </dependency>
+             
         <!-- Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
