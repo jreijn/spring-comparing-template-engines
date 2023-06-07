@@ -22,8 +22,8 @@
         <chunk-springmvc.version>0.1.0</chunk-springmvc.version>
         <freemarker.version>2.3.28</freemarker.version>
         <httl-springmvc.version>1.0.11</httl-springmvc.version>
-        <velocity.version>1.7</velocity.version>
-        <velocity-tools.version>2.0</velocity-tools.version>
+        <velocity.version>2.3</velocity.version>
+        <velocity-tools.version>3.1</velocity-tools.version>
         <spring-jade4j.version>1.3.1</spring-jade4j.version>
         <mustache-spring-view.version>1.4</mustache-spring-view.version>
         <mustache-java.version>0.9.5</mustache-java.version>
@@ -37,8 +37,8 @@
         <rythm.version>1.4.1</rythm.version>
         <rythm-spring.version>1.2.2</rythm-spring.version>
         <liqp.version>0.8.5.1</liqp.version>
-        <kotlin.version>1.7.20</kotlin.version>
-        <kotlinx.html.version>0.8.0</kotlinx.html.version>
+        <kotlin.version>1.8.21</kotlin.version>
+        <kotlinx.html.version>0.8.1</kotlinx.html.version>
     </properties>
 
     <parent>
@@ -143,13 +143,13 @@
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
-            <version>2.0</version>
+            <version>${velocity.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.velocity.tools</groupId>
             <artifactId>velocity-tools-view</artifactId>
-            <version>3.0</version>
+            <version>${velocity-tools.version}</version>
         </dependency>
 
         <dependency>
