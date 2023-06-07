@@ -6,8 +6,8 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 
 * JSP + [JSTL](https://jstl.java.net/) - v1.2
 * [Freemarker](http://www.freemarker.org/) - v2.3.28.RELEASE
-* [Velocity](http://velocity.apache.org/) - v1.7
-* [Velocity Tools](http://velocity.apache.org/tools/) - v2.0
+* [Velocity](http://velocity.apache.org/) - v2.3
+* [Velocity Tools](http://velocity.apache.org/tools/) - v3.1
 * [Thymeleaf](http://www.thymeleaf.org/) - v3.0.11.RELEASE
 * Mustache - Based on [JMustache](https://github.com/samskivert/jmustache) - v1.15
 * [Scalate](http://scalate.fusesource.org/)  - v1.9.8
@@ -23,7 +23,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Rythm](http://rythmengine.org/) - v1.4.1
 * [Groovy Templates](https://groovy.apache.org/) - v2.5.6
 * [Liqp - Jekyll](https://github.com/bkiers/Liqp) - v0.8.5.1
-* [kolinx.html](https://github.com/Kotlin/kotlinx.html) - v1.7.20
+* [kolinx.html](https://github.com/Kotlin/kotlinx.html) - v1.8.21
 
 ## Build and run
 You need Java 8 and Maven 3 to build and run this project.
