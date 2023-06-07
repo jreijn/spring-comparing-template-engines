@@ -10,9 +10,9 @@ import java.io.IOException;
 import java.io.Writer;
 
 public class i18nLayout implements Mustache.Lambda {
-	private HttpServletRequest request;
-	private MessageSource messageSource;
-	private LocaleResolver localeResolver;
+	private final HttpServletRequest request;
+	private final MessageSource messageSource;
+	private final LocaleResolver localeResolver;
 
 	public i18nLayout(HttpServletRequest request, MessageSource messageSource, LocaleResolver localeResolver) {
 		this.request = request;

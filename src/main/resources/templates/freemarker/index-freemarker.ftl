@@ -1,7 +1,7 @@
 [#ftl]
 [#import "includes.ftl" as example/]
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 [@example.head/]
 <body>
 <div class="container">

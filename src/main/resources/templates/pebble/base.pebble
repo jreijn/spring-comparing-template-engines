@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     {% block content %}
-        {# This section is to be overriden by child templates #}
+        {# This section is to be overridden by child templates #}
     {% endblock content %}
 </div>
 <script src="{{rc.contextPath}}/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>

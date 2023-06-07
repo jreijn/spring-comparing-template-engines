@@ -12,8 +12,8 @@ import org.trimou.engine.MustacheEngineBuilder;
 import com.jeroenreijn.examples.model.SpringMessageSourceHelper;
 
 public class TrimouViewResolver extends AbstractTemplateViewResolver {
-	private TrimouSpringResourceTemplateLocator loader = new TrimouSpringResourceTemplateLocator();
-	private MustacheEngine engine;
+	private final TrimouSpringResourceTemplateLocator loader = new TrimouSpringResourceTemplateLocator();
+	private final MustacheEngine engine;
 
 	public TrimouViewResolver(MessageSource messageSource) {
 		this.setViewClass(this.requiredViewClass());
