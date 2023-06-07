@@ -20,7 +20,7 @@ public class TrimouSpringResourceTemplateLocator extends AbstractTemplateLocator
 	public static final String DEFAULT_PREFIX = "classpath:/templates/";
 	public static final String DEFAULT_SUFFIX = ".trimou";
 
-	private String charset = DEFAULT_CHARSET;
+	private final String charset = DEFAULT_CHARSET;
 	private String prefix = DEFAULT_PREFIX;
 	private String suffix = DEFAULT_SUFFIX;
 
