@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <title>{% messages.example.title %} - Chunk</title>
-    <link rel="stylesheet" href="{% $rc.context_path %}/webjars/bootstrap/5.2.3/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" href="{% $rc.context_path %}/webjars/bootstrap/5.3.0/css/bootstrap.min.css" media="screen"/>
 </head>
 <body>
 <div class="container">
     {% include content %}
 </div>
-<script src="{% $rc.context_path %}/webjars/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+<script src="{% $rc.context_path %}/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 </body>
 </html>

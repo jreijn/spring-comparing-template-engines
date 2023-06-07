@@ -1,1 +1,1 @@
-script(src: '/webjars/bootstrap/5.2.3/js/bootstrap.min.js') {}
+script(src: '/webjars/bootstrap/5.3.0/js/bootstrap.min.js') {}
