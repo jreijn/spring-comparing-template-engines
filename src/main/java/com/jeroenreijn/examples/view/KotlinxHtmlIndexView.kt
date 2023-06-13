@@ -16,7 +16,7 @@ class KotlinxHtmlIndexView {
                             meta {charset = "utf-8" }
                             meta {name = "viewport"; content = "width=device-width, initial-scale=1.0" }
                             meta {httpEquiv=MetaHttpEquiv.contentLanguage; content="IE=Edge" }
-                            title { text("JFall 2013 Presentations - htmlApi")}
+                            title { text("JFall 2013 Presentations - kotlinx.html")}
                             link {rel=LinkRel.stylesheet; href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css"; media = LinkMedia.screen;}
                         }
                         body {
