@@ -22,7 +22,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Ickenham](https://github.com/enpassant/ickenham) - v1.5.0
 * [Rythm](http://rythmengine.org/) - v1.4.1
 * [Groovy Templates](https://groovy.apache.org/) - v2.5.6
-* [Liqp - Jekyll](https://github.com/bkiers/Liqp) - v0.8.5.1
+* [Liqp - Jekyll](https://github.com/bkiers/Liqp) - v0.8.5.3
 * [kolinx.html](https://github.com/Kotlin/kotlinx.html) - v1.8.22
 
 ## Build and run
