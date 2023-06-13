@@ -23,7 +23,7 @@ This is a demo project, which accompanied my ["Shoot-out! Template engines for t
 * [Rythm](http://rythmengine.org/) - v1.4.1
 * [Groovy Templates](https://groovy.apache.org/) - v2.5.6
 * [Liqp - Jekyll](https://github.com/bkiers/Liqp) - v0.8.5.1
-* [kolinx.html](https://github.com/Kotlin/kotlinx.html) - v1.8.21
+* [kolinx.html](https://github.com/Kotlin/kotlinx.html) - v1.8.22
 
 ## Build and run
 You need Java 8 and Maven 3 to build and run this project.
