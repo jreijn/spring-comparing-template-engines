@@ -109,17 +109,17 @@ Results in order (high to low):
 Total time taken for processing 25.000 requests with a concurrency level of 25 (lower is better).
 
 ```
-Jade4j                  567.7 seconds
-Handlebars              147.7 seconds
-Scalate - Scaml         33.33 seconds
-Pebble                  27.92 seconds
-HTTL                    24.61 seconds
-Thymeleaf               24.09 seconds
-Velocity                23.07 seconds
-Freemarker              11.80 seconds
-jTwig                   10.95 seconds
-Mustache (JMustache)    8.836 seconds
-JSP                     7.888 seconds
+Jade4j                  567.7   seconds
+Handlebars              147.7   seconds
+Scalate - Scaml          33.33  seconds
+Pebble                   27.92  seconds
+HTTL                     24.61  seconds
+Thymeleaf                24.09  seconds
+Velocity                 23.07  seconds
+Freemarker               11.80  seconds
+jTwig                    10.95  seconds
+Mustache (JMustache)      8.836 seconds
+JSP                       7.888 seconds
 ```
 
 ## Benchmarks 10.2019
@@ -141,25 +141,25 @@ Results in order (high to low):
 Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
 
 ```
-Groovy                  ~ 800 seconds
-Jade4j                  684.7 seconds
-Handlebars              161.8 seconds
-Scalate - Scaml         34.38 seconds
-Velocity                27.49 seconds
-Pebble                  25.63 seconds
-HTTL                    22.86 seconds
-jTwig                   21.23 seconds
-Liqp                    19.60 seconds
-Ickenham                19.50 seconds
-Thymeleaf               18.33 seconds
-Rythm                   17.84 seconds
-Rocker                  17.63 seconds
-Mustache (JMustache)    15.75 seconds
-HtmlFlow                15.62 seconds
-Chunk                   15.04 seconds
-Trimou                  15.02 seconds
-Freemarker              14.74 seconds
-JSP                     11.22 seconds
+Groovy                  ~ 800    seconds
+Jade4j                    684.7  seconds
+Handlebars                161.8  seconds
+Scalate - Scaml            34.38 seconds
+Velocity                   27.49 seconds
+Pebble                     25.63 seconds
+HTTL                       22.86 seconds
+jTwig                      21.23 seconds
+Liqp                       19.60 seconds
+Ickenham                   19.50 seconds
+Thymeleaf                  18.33 seconds
+Rythm                      17.84 seconds
+Rocker                     17.63 seconds
+Mustache (JMustache)       15.75 seconds
+HtmlFlow                   15.62 seconds
+Chunk                      15.04 seconds
+Trimou                     15.02 seconds
+Freemarker                 14.74 seconds
+JSP                        11.22 seconds
 ```
 
 *Keep in mind that in the real world, these results will differ depending on the complexity of the templates, hardware, etc, so it's just an indication and if you want to know the truth you will have to run the benchmark yourself to see how such a template engine performs in your specific environment.*
