@@ -9,5 +9,5 @@ target
 .cache-main
 .cache-tests
 .gradle
-
+.vscode
 atlassian-ide-plugin.xml
